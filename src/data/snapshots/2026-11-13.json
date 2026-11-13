@@ -1,0 +1,1638 @@
+{
+  "id": "2026-11-13",
+  "updatedAt": "2026-11-13T08:26:00-05:00",
+  "updatedLabel": "Friday, Nov 13, 2026, 8:26 AM ET",
+  "timezone": "America/New_York",
+  "title": "TDDR Rising Narratives — Friday morning, Nov 13",
+  "summary": "A snapshot of opposition narratives as of 8:26 AM ET Friday, Nov 13, 2026: from the Right and from the Far Left. Built for TDDR (Too Dumb Didn't Read). Overnight, Van Hollen's challenge to Schumer kept climbing and was trending in the U.S., and a fresh Washington Post peg sent 'Electoral College' back up the right-wing feed. Every count, quote, and fact-check is from sources and X queries opened this morning. Nothing here is invented.",
+  "trends": {
+    "pulledAtLabel": "Friday, Nov 13, 2026, 8:24 AM ET",
+    "names": [
+      "Van Hollen",
+      "Electoral College"
+    ],
+    "detail": "U.S. trends were pulled at 8:24 AM ET with x.get_trends_by_woeid (WOEID 23424977, max 50). The list was dominated by Friday-the-13th and other non-political terms. The political names we used from that list were 'Van Hollen' and 'Electoral College.' Trend objects did not include tweet_count, so we did not invent trend volumes. Other narratives in this set were not on that U.S. list at 8:24 AM ET."
+  },
+  "countsPulledLabel": "Post counts and samples pulled between about 8:24 and 8:28 AM ET Friday",
+  "hottestQueryDetail": "Van Hollen challenges Schumer — the left finally has a name on the ballot (45,183 posts in the last 24 hours)",
+  "factCheckOutletsDetail": "AP, AP Fact Focus, Snopes",
+  "oppositionNote": {
+    "lead": "What 'opposition' means here",
+    "body": "Right = narratives the Right is pushing after the Democratic midterm wave. Far Left = pressure on Democratic leadership and the incoming majority from the party's left. Some stories are being worked by both sides; the tag is the primary opposition frame."
+  },
+  "methodology": [
+    "Last updated Friday, Nov 13, 2026, 8:26 AM ET. This is a research snapshot for TDDR, not a live API. It will go stale as the day moves. X trends were pulled for the United States at 8:24 AM ET.",
+    "For each narrative we ran one English-language X search with x.get_posts_counts_recent, counted matches in a window from 8:00 AM ET Thursday, Nov 12, through 8:26 AM ET Friday, Nov 13 — 26 minutes longer than 24 hours; the 8 AM Friday bar is a 26-minute partial — and over a seven-day window whose first UTC slice starts about 8:25 AM ET Nov 6 (the earliest the recent-count API would return). We counted named news or fact-check outlets we actually opened or retrieved, and noted whether the phrase appeared on the U.S. trends list at 8:24 AM ET.",
+    "Score = 50% volume index + 30% acceleration index + 20% coverage index. Volume index is 100 × log10(1 + last-24h posts) / log10(1 + the highest last-24h count in this set). Acceleration index is 100 × min(last-24h / prior daily average, 3) / 3, so a triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6. Coverage index is 70 × min(outlets, 7) / 7, plus 30 if the topic was on the U.S. X trends list this morning.",
+    "Counts are query matches, not unique posts or unique users, and queries can overlap. Replies are included. Sentiment is a qualitative label from relevancy-sorted post samples and from quotes in news coverage, not a scientific poll. If a signal was thin, the card says so. Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows. Hourly charts are labeled in ET."
+  ],
+  "formula": {
+    "volumeWeight": 0.5,
+    "accelWeight": 0.3,
+    "coverageWeight": 0.2,
+    "accelCap": 3,
+    "coverageOutletCap": 7,
+    "coverageOutletPoints": 70,
+    "trendBonus": 30,
+    "sevenDayWindow": "a seven-day window whose first UTC slice starts about 8:25 AM ET Nov 6",
+    "volumeCeilingPosts": 45183,
+    "last24hWindow": "8:00 AM ET Nov 12, 2026 through 8:26 AM ET Nov 13, 2026 (26 minutes longer than 24 hours; last hour is a partial bar)"
+  },
+  "chartCaption": "Scores are the composite described in the methodology. Compare with the last-24-hour volume chart.",
+  "volumeChartCaption": "X query matches from 8:00 AM ET Nov 12 through 8:26 AM ET Nov 13 (not unique across narratives). The window is 26 minutes longer than 24 hours.",
+  "dailyChartCaption": "Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows. Nov 6* starts about 8:25 AM ET; Nov 13* is 7:00 PM ET Thursday through 8:26 AM ET Friday.",
+  "noFactCheckNote": "If a card has no fact-check row, we did not find a rated fact-check for the core claim in this snapshot — not that the claim is true.",
+  "feedCaption": "Eight narratives, scored inside this Friday-morning set. Open a card for talking points, amplifiers, and sources.",
+  "disinfo": {
+    "caption": "Claims in this snapshot that have a fact-check we opened.",
+    "caveatLead": "A fact-check is not a volume score.",
+    "caveatBody": "'Electoral College' was trending in the U.S. this morning, and a lot of that conversation still treats a popular-vote compact as abolition. Separately, Miller's 'astronomical' noncitizen-voting claim is still being used as a midterm alibi. Ratings below are from pages we opened.",
+    "links": [
+      {
+        "title": "Snopes: Can Democrats effectively abolish the Electoral College after midterm wins?",
+        "site": "Snopes",
+        "date": "Nov 5, 2026",
+        "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/"
+      },
+      {
+        "title": "The Washington Post: Movement to end electoral college gets boost after Democratic wins",
+        "site": "The Washington Post",
+        "date": "Nov 13, 2026",
+        "href": "https://www.washingtonpost.com/politics/2026/11/13/movement-end-electoral-college-gets-boost-after-democratic-wins/"
+      },
+      {
+        "title": "AP: Trump's crusade against noncitizen voting reveals how rare it is",
+        "site": "AP",
+        "href": "https://apnews.com/article/homeland-security-justice-department-midterms-noncitizen-voting-09b8391612fc87676267a254c55eaee8"
+      },
+      {
+        "title": "Snopes: Noncitizens don't vote in large numbers in US elections",
+        "site": "Snopes",
+        "href": "https://www.snopes.com/articles/474177/noncitizen-voting-in-us-elections/"
+      },
+      {
+        "title": "AP Fact Focus: False claims of rigged elections fade in Democratic rout",
+        "site": "AP Fact Focus",
+        "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6"
+      }
+    ]
+  },
+  "sourceListIntro": "Every outlet and post linked from a narrative card, plus the fact-checks, in one list.",
+  "sourceList": [
+    {
+      "title": "Sen. Chris Van Hollen says he will challenge Sen. Chuck Schumer for majority leader",
+      "site": "NBC News",
+      "date": "Nov 12, 2026, 9:03 PM ET",
+      "href": "https://www.nbcnews.com/politics/congress/sen-chris-van-hollen-says-will-challenge-sen-chuck-schumer-majority-le-rcna609100"
+    },
+    {
+      "title": "Van Hollen to challenge Schumer for Senate majority leader",
+      "site": "NPR",
+      "date": "Nov 12, 2026",
+      "href": "https://www.npr.org/2026/11/12/nx-s1-6039357/chris-van-hollen-chuck-schumer-senate-majority-leader"
+    },
+    {
+      "title": "Van Hollen to challenge Schumer for Senate Democratic leader",
+      "site": "AP",
+      "date": "Nov 12, 2026",
+      "href": "https://apnews.com/article/van-hollen-schumer-senate-democratic-leader-6d74c189cb6c065c9a810a1cf1a53436"
+    },
+    {
+      "title": "Van Hollen will challenge Schumer to lead Senate Democrats",
+      "site": "The Washington Post",
+      "date": "Nov 12, 2026",
+      "href": "https://www.washingtonpost.com/politics/2026/11/12/van-hollen-announces-challenge-schumer-lead-senate/"
+    },
+    {
+      "title": "Chris Van Hollen says he will run for Senate majority leader",
+      "site": "Politico",
+      "date": "Nov 12, 2026",
+      "href": "https://www.politico.com/live-updates/2026/11/12/congress/chris-van-hollen-senate-majority-leader-01164433"
+    },
+    {
+      "title": "Chris Van Hollen challenges Chuck Schumer for Senate Majority Leader",
+      "site": "The Hill",
+      "date": "Nov 12, 2026",
+      "href": "https://thehill.com/homenews/senate/6217923-van-hollen-challenges-schumer/"
+    },
+    {
+      "title": "Sanders backs Van Hollen's challenge of Schumer for Senate Dem leader post",
+      "site": "Fox News",
+      "date": "Nov 12, 2026",
+      "href": "https://www.foxnews.com/politics/sen-bernie-sanders-supports-chris-van-hollen-bid-challenge-schumer-senate-democratic-leader-post"
+    },
+    {
+      "title": "Manu Raju: Van Hollen is still 'actively listening' about a bid against Schumer",
+      "site": "X",
+      "date": "Nov 12, 2026",
+      "href": "https://x.com/mkraju/status/2120975591079911470"
+    },
+    {
+      "title": "Democrats mulling Iran war funding cutoff strategy",
+      "site": "Roll Call",
+      "date": "Nov 12, 2026, 9:24 PM",
+      "href": "https://rollcall.com/2026/11/12/democrats-mulling-iran-war-funding-cutoff-strategy/"
+    },
+    {
+      "title": "U.S. X trend search: Van Hollen",
+      "site": "X",
+      "date": "Nov 13, 2026",
+      "href": "https://x.com/search?q=Van%20Hollen"
+    },
+    {
+      "title": "Trump: GOP Senate can no longer be the place 'where things are sent to die' following midterm losses",
+      "site": "OANN",
+      "date": "Nov 12, 2026",
+      "href": "https://www.oann.com/newsroom/trump-gop-senate-can-no-longer-be-the-place-where-things-are-sent-to-die-following-midterm-losses/"
+    },
+    {
+      "title": "Trump Blames Filibuster for GOP Senate Loss",
+      "site": "The Rothman Report",
+      "date": "Nov 12, 2026",
+      "href": "https://therothmanreport.com/politics/trump-thune-minority-save-america-act-filibuster/"
+    },
+    {
+      "title": "John Thune: Senate GOP lacks votes to get rid of filibuster, pass Save America Act amid Trump push",
+      "site": "The Hill",
+      "href": "https://thehill.com/homenews/senate/5927978-senate-thune-save-america-act/"
+    },
+    {
+      "title": "Trump's Thursday Truth Social post on the SAVE America Act and the filibuster",
+      "site": "CGTN",
+      "date": "Nov 12, 2026",
+      "href": "https://news.cgtn.com/news/2026-11-12/news-1S14WiQs6lO/p.html"
+    },
+    {
+      "title": "Trump orders Vance to focus on corruption in Democrat-run areas, not Iran (also notes the SAVE Act post)",
+      "site": "Axios",
+      "date": "Nov 12, 2026",
+      "href": "https://www.axios.com/2026/11/12/trump-vance-focus-democrat-cities-iran"
+    },
+    {
+      "title": "Movement to end electoral college gets boost after Democratic wins",
+      "site": "The Washington Post",
+      "date": "Nov 13, 2026",
+      "href": "https://www.washingtonpost.com/politics/2026/11/13/movement-end-electoral-college-gets-boost-after-democratic-wins/"
+    },
+    {
+      "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+      "site": "Snopes",
+      "date": "Nov 5, 2026",
+      "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/"
+    },
+    {
+      "title": "Democrats have gained control in more states. That could change the way the US elects its president",
+      "site": "AP",
+      "date": "Nov 2026",
+      "href": "https://apnews.com/article/midterms-democrats-electoral-college-popular-vote-ac5d917e582ee02e813615a91c6a1f5c"
+    },
+    {
+      "title": "Farewell to the electoral college? Democrats now control enough states to elevate the popular vote",
+      "site": "PBS NewsHour",
+      "date": "Nov 2026",
+      "href": "https://www.pbs.org/newshour/politics/farewell-to-the-electoral-college-democrats-now-control-enough-states-to-elevate-the-popular-vote"
+    },
+    {
+      "title": "U.S. X trend search: Electoral College",
+      "site": "X",
+      "date": "Nov 13, 2026",
+      "href": "https://x.com/search?q=Electoral%20College"
+    },
+    {
+      "title": "Trump's crusade against noncitizen voting reveals how rare it is",
+      "site": "AP",
+      "date": "2026",
+      "href": "https://apnews.com/article/homeland-security-justice-department-midterms-noncitizen-voting-09b8391612fc87676267a254c55eaee8"
+    },
+    {
+      "title": "Noncitizens don't vote in large numbers in US elections. Here's proof",
+      "site": "Snopes",
+      "date": "2026",
+      "href": "https://www.snopes.com/articles/474177/noncitizen-voting-in-us-elections/"
+    },
+    {
+      "title": "FACT FOCUS: False claims of rigged elections fade in Democratic rout",
+      "site": "AP Fact Focus",
+      "date": "Nov 2026",
+      "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6"
+    },
+    {
+      "title": "Judge blocks Trump administration from pressuring states over noncitizen voting",
+      "site": "Reuters",
+      "date": "Nov 3, 2026",
+      "href": "https://www.reuters.com/3fec1b0a85a0/world/judge-blocks-trump-administration-pressuring-states-over-noncitizen-voting-2026-11-03/"
+    },
+    {
+      "title": "Why Ohio Democrat Don Leonard isn't supporting Hakeem Jeffries",
+      "site": "USA Today",
+      "date": "Nov 11, 2026",
+      "href": "https://www.usatoday.com/story/news/politics/2026/11/11/why-ohio-democrat-don-leonard-isnt-supporting-hakeem-jeffries/92726997007/"
+    },
+    {
+      "title": "Rep-elect Don Leonard says senior Democrats threatened 'living hell' if he doesn't support Jeffries",
+      "site": "WOSU",
+      "date": "Nov 11, 2026",
+      "href": "https://www.wosu.org/politics-government/2026-11-11/rep-elect-don-leonard-says-senior-democrats-threatened-living-hell-if-he-doesnt-support-jeffries"
+    },
+    {
+      "title": "Incoming Congressman says Dems warn of 'living hell' for opposing Jeffries",
+      "site": "Newsweek",
+      "date": "Nov 11, 2026",
+      "href": "https://www.newsweek.com/incoming-congressman-says-dems-warn-of-living-hell-for-opposing-jeffries-12696150"
+    },
+    {
+      "title": "Rep.-elect Don Leonard Says Senior Dems Threatened to Make His Life 'Living Hell' over Jeffries Vote",
+      "site": "Democracy Now!",
+      "date": "Nov 12, 2026",
+      "href": "https://www.democracynow.org/2026/11/12/headlines/rep_elect_don_leonard_says_senior_dems_threatened_to_make_his_life_living_hell_over_jeffries_vote"
+    },
+    {
+      "title": "Congressman-Elect Don Leonard Says House Members Warned of 'Living Hell' If He Doesn't Back Jeffries",
+      "site": "Common Dreams",
+      "date": "Nov 12, 2026",
+      "href": "https://www.commondreams.org/news/jeffries-living-hell-leonard"
+    },
+    {
+      "title": "Democrats' Victory Will Be Wasted Without New Leadership",
+      "site": "Current Affairs",
+      "date": "Nov 8, 2026",
+      "href": "https://www.currentaffairs.org/news/democrats-victory-will-be-wasted-without-new-leadership"
+    },
+    {
+      "title": "Trump bluntly tells JD Vance to shift focus from Iran to targeting 'corruption and crime' at home",
+      "site": "AP",
+      "date": "Nov 12, 2026",
+      "href": "https://apnews.com/article/trump-iran-vance-negotiations-d9671cbf66e3c2e337f4fb3485ad07d0"
+    },
+    {
+      "title": "Trump pulls Vance off Iran",
+      "site": "Politico",
+      "date": "Nov 12, 2026",
+      "href": "https://www.politico.com/news/2026/11/12/jd-vance-trump-iran-01162112"
+    },
+    {
+      "title": "Trump redirects Vance from Iran to focus on combatting fraud in Democratic-led states",
+      "site": "NPR",
+      "date": "Nov 13, 2026, 4:43 AM ET",
+      "href": "https://www.npr.org/2026/11/13/nx-s1-6039160/trump-redirects-vance-from-iran-to-focus-on-combatting-fraud-in-democratic-led-states"
+    },
+    {
+      "title": "Live updates: Trump tells Vance to shift focus from Iran to 'corruption' at home",
+      "site": "AP",
+      "date": "Nov 13, 2026",
+      "href": "https://apnews.com/live/trump-vance-iran-congress-midterms-politics-news-updates-11-13-2026"
+    },
+    {
+      "title": "Trump renews calls for $350B military funding package as GOP faces ticking clock",
+      "site": "Politico",
+      "date": "Nov 12, 2026",
+      "href": "https://www.politico.com/news/2026/11/12/trump-iran-war-funding-reconciliation-01162603"
+    },
+    {
+      "title": "Did Democrats save Pete Hegseth from impeachment?",
+      "site": "Al Jazeera",
+      "date": "Nov 11, 2026",
+      "href": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment"
+    },
+    {
+      "title": "Republican-led House rejects Hegseth impeachment effort",
+      "site": "NBC News",
+      "date": "Nov 10, 2026",
+      "href": "https://www.nbcnews.com/politics/congress/republican-led-house-rejects-hegseth-impeachment-effort-rcna608534"
+    },
+    {
+      "title": "House vote effectively ends impeachment push against Hegseth",
+      "site": "NPR",
+      "date": "Nov 10, 2026",
+      "href": "https://www.npr.org/2026/11/10/nx-s1-6036813/house-votes-to-effectively-end-the-impeachment-effort-against-pete-hegseth"
+    },
+    {
+      "title": "Jeffries Dragged for 'Serious Leadership Problem' as Hegseth Bid Falls",
+      "site": "Common Dreams",
+      "date": "Nov 11, 2026",
+      "href": "https://www.commondreams.org/news/hegseth-impeachment-fails"
+    },
+    {
+      "title": "Headlines for November 12, 2026 (Hegseth vote and Jeffries pressure)",
+      "site": "Democracy Now!",
+      "date": "Nov 12, 2026",
+      "href": "https://www.democracynow.org/2026/11/12/headlines"
+    }
+  ],
+  "narratives": [
+    {
+      "id": "van-hollen-schumer",
+      "title": "Van Hollen challenges Schumer — the left finally has a name on the ballot",
+      "side": "Far Left",
+      "momentum": 100,
+      "volumeIndex": 100,
+      "accelIndex": 100,
+      "coverageIndex": 100,
+      "posts24h": 45183,
+      "posts7d": 87724,
+      "priorDailyAvg": 7090.2,
+      "accel": 6.37,
+      "outlets": 9,
+      "trendingUS": true,
+      "query": "(\"Van Hollen\" OR VanHollen) (Schumer OR \"majority leader\" OR leader OR challenge OR challenging OR bid) lang:en",
+      "sentiment": "Urgent and triumphant, with a smaller sarcastic backlash",
+      "sentimentNote": "In a relevancy sample of recent posts plus quotes in NBC, NPR, AP, and WaPo coverage, the dominant tone after 9:00 PM ET Thursday was excitement that a real challenge finally exists, with calls to pressure undecided senators. A smaller set mocked Van Hollen as a longtime incumbent (for example @markfinkelstein). Manu Raju's afternoon 'actively listening' post (@mkraju, 966 likes) and @PollTracker2024's Semafor item (695 likes) were the biggest named posts we opened from before the official announcement. This is a read of that sample and those outlets, not a poll.",
+      "summary": "On Thursday evening, Sen. Chris Van Hollen of Maryland announced he will challenge Sen. Chuck Schumer for Senate majority leader — Schumer's first formal challenger for the job, and the sharpest leadership fight on the left since the Nov. 3 midterm wave. NBC News posted the news at 9:03 PM ET. Van Hollen said the country had 'called for change' not only from Trump's policies 'but even bigger than that, a change from the status quo that isn't working for working people,' and he told MS NOW that more than 10 senators had pledged to support him. His team says he will run on using every tool to end the Iran war, starting with the Dec. 11 government-funding bill, plus reversing Trump's tax-and-spending law, getting money out of politics, and tackling corruption. Sen. Bernie Sanders and Sen.-elect Abdul El-Sayed endorsed him Thursday night. Schumer said he 'has the votes' and pointed to '55 seats and counting.' Sen. Angus King asked why you would 'fire the manager when you just won the World Series.' Democratic senators vote in a closed-door December ballot. On X, the leadership query was a few hundred posts an hour all afternoon, then exploded: 9,770 matches between 9:00 and 10:00 PM ET and 8,389 between 10:00 and 11:00 PM ET. 'Van Hollen' was on the U.S. trends list at 8:24 AM ET Friday.",
+      "talkingPoints": [
+        "The American people voted for change, not the status quo.",
+        "We need new leadership that will stand up to special interests and end the Iran war.",
+        "Schumer is a corporatist; Van Hollen is the alternative.",
+        "Call your senators. This is a secret-ballot fight in December, and most of the caucus is still uncommitted."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Sen. Chris Van Hollen's Thursday statement and MS NOW interview (he said more than 10 senators had pledged support); Sen. Chuck Schumer on X, saying he 'has the votes'; Sen. Bernie Sanders's Thursday-night X endorsement; Sen.-elect Abdul El-Sayed's Thursday-night endorsement; Sen. Angus King ('Why would you fire the manager when you just won the World Series?'); CNN's Manu Raju (@mkraju, 966 likes on the 'actively listening' post at 3:22 PM ET Thursday, later overtaken by the official bid); @PollTracker2024 (695 likes on the Semafor 'stay tuned' item); The Washington Post's account; and grassroots accounts urging people to call senators. A sarcastic counter-line came from @markfinkelstein, who noted Van Hollen has been in public office for more than 35 years.",
+      "whyItWorks": "After a wave election, 'change' is the simplest demand in politics. Putting a real name — a sitting senator with Sanders and El-Sayed already on camera — turns weeks of vague 'dump Schumer' energy into a countable whip fight. The emotional hook is betrayal-prevention: do not let the old guard pocket a landslide. The target is Democratic voters who wanted the Iran war ended and money taken out of politics, and who now have a deadline (a December caucus vote) instead of a vibe.",
+      "audience": "Progressive Democrats, anti-war voters, and newly elected senators who want a sharper majority. A smaller right-leaning and centrist chorus is mocking Van Hollen as a 35-year incumbent rebranded as fresh air.",
+      "counter": "Do not pretend this is only a personality fight. Publish a December-to-January governing calendar that starts with Iran-war funding restrictions, affordability, and anti-corruption, and let senators choose a leader who will actually whip that calendar. If Schumer keeps the job, he has to say in the first sentence what he will attach to the Dec. 11 funding bill — not that 55 seats are an argument for no change.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 976
+        },
+        {
+          "label": "Nov 7",
+          "value": 946
+        },
+        {
+          "label": "Nov 8",
+          "value": 1916
+        },
+        {
+          "label": "Nov 9",
+          "value": 13028
+        },
+        {
+          "label": "Nov 10",
+          "value": 16850
+        },
+        {
+          "label": "Nov 11",
+          "value": 7705
+        },
+        {
+          "label": "Nov 12",
+          "value": 4387
+        },
+        {
+          "label": "Nov 13*",
+          "value": 41916
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 249
+        },
+        {
+          "label": "7 PM",
+          "value": 237
+        },
+        {
+          "label": "8 PM",
+          "value": 375
+        },
+        {
+          "label": "9 PM",
+          "value": 9770
+        },
+        {
+          "label": "10 PM",
+          "value": 8389
+        },
+        {
+          "label": "11 PM",
+          "value": 5816
+        },
+        {
+          "label": "12 AM",
+          "value": 3501
+        },
+        {
+          "label": "1 AM",
+          "value": 2462
+        },
+        {
+          "label": "2 AM",
+          "value": 1584
+        },
+        {
+          "label": "3 AM",
+          "value": 1475
+        },
+        {
+          "label": "4 AM",
+          "value": 1400
+        },
+        {
+          "label": "5 AM",
+          "value": 1498
+        },
+        {
+          "label": "6 AM",
+          "value": 1783
+        },
+        {
+          "label": "7 AM",
+          "value": 2395
+        },
+        {
+          "label": "8 AM*",
+          "value": 1231
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET). Almost all of the new volume arrived at or after 9:00 PM ET Thursday and continued overnight.",
+      "sources": [
+        {
+          "title": "Sen. Chris Van Hollen says he will challenge Sen. Chuck Schumer for majority leader",
+          "site": "NBC News",
+          "date": "Nov 12, 2026, 9:03 PM ET",
+          "href": "https://www.nbcnews.com/politics/congress/sen-chris-van-hollen-says-will-challenge-sen-chuck-schumer-majority-le-rcna609100"
+        },
+        {
+          "title": "Van Hollen to challenge Schumer for Senate majority leader",
+          "site": "NPR",
+          "date": "Nov 12, 2026",
+          "href": "https://www.npr.org/2026/11/12/nx-s1-6039357/chris-van-hollen-chuck-schumer-senate-majority-leader"
+        },
+        {
+          "title": "Van Hollen to challenge Schumer for Senate Democratic leader",
+          "site": "AP",
+          "date": "Nov 12, 2026",
+          "href": "https://apnews.com/article/van-hollen-schumer-senate-democratic-leader-6d74c189cb6c065c9a810a1cf1a53436"
+        },
+        {
+          "title": "Van Hollen will challenge Schumer to lead Senate Democrats",
+          "site": "The Washington Post",
+          "date": "Nov 12, 2026",
+          "href": "https://www.washingtonpost.com/politics/2026/11/12/van-hollen-announces-challenge-schumer-lead-senate/"
+        },
+        {
+          "title": "Chris Van Hollen says he will run for Senate majority leader",
+          "site": "Politico",
+          "date": "Nov 12, 2026",
+          "href": "https://www.politico.com/live-updates/2026/11/12/congress/chris-van-hollen-senate-majority-leader-01164433"
+        },
+        {
+          "title": "Chris Van Hollen challenges Chuck Schumer for Senate Majority Leader",
+          "site": "The Hill",
+          "date": "Nov 12, 2026",
+          "href": "https://thehill.com/homenews/senate/6217923-van-hollen-challenges-schumer/"
+        },
+        {
+          "title": "Sanders backs Van Hollen's challenge of Schumer for Senate Dem leader post",
+          "site": "Fox News",
+          "date": "Nov 12, 2026",
+          "href": "https://www.foxnews.com/politics/sen-bernie-sanders-supports-chris-van-hollen-bid-challenge-schumer-senate-democratic-leader-post"
+        },
+        {
+          "title": "Manu Raju: Van Hollen is still 'actively listening' about a bid against Schumer",
+          "site": "X",
+          "date": "Nov 12, 2026",
+          "href": "https://x.com/mkraju/status/2120975591079911470"
+        },
+        {
+          "title": "Democrats mulling Iran war funding cutoff strategy",
+          "site": "Roll Call",
+          "date": "Nov 12, 2026, 9:24 PM",
+          "href": "https://rollcall.com/2026/11/12/democrats-mulling-iran-war-funding-cutoff-strategy/"
+        },
+        {
+          "title": "U.S. X trend search: Van Hollen",
+          "site": "X",
+          "date": "Nov 13, 2026",
+          "href": "https://x.com/search?q=Van%20Hollen"
+        }
+      ],
+      "defaultOpen": true
+    },
+    {
+      "id": "save-act-filibuster",
+      "title": "Trump: the Senate killed the SAVE Act, the filibuster, and the midterms",
+      "side": "Right",
+      "momentum": 77,
+      "volumeIndex": 95.4,
+      "accelIndex": 58.6,
+      "coverageIndex": 60,
+      "posts24h": 27475,
+      "posts7d": 121278,
+      "priorDailyAvg": 15633.8,
+      "accel": 1.76,
+      "outlets": 6,
+      "trendingUS": false,
+      "query": "(\"SAVE America Act\" OR \"SAVE Act\") (Trump OR Thune OR Senate OR filibuster) lang:en",
+      "sentiment": "Angry at Republican Senate leaders, especially John Thune",
+      "sentimentNote": "In a relevancy sample of Thursday-Friday posts and in the Trump post as quoted by CGTN, OANN, and The Rothman Report, the dominant tone was anger at Thune and the Senate GOP, not a policy debate about the bill's text. This is a read of that sample, not a poll.",
+      "summary": "On Thursday morning, President Trump posted that 'the Republican Senate can no longer be the place where things are sent to die,' that not passing the SAVE America Act — voter ID and proof of citizenship, which he said the House 'sent up five times' — was 'devastating' in the midterms, and that not ending the filibuster 'will go down as being one of the greatest mistakes in the Political History of America.' He closed with a backhanded congratulations to John Thune 'for another year of leadership, Minority though it may be.' Thune has said Republicans never had the votes to break a filibuster on the bill. Independent write-ups note that 'five times' is Trump's count; the public record shows multiple House passages, including the original SAVE Act and the expanded SAVE America Act, and a Senate that could not clear 60. The query was already busy in the morning and stayed above 1,000 posts an hour from late morning through midnight ET.",
+      "talkingPoints": [
+        "The Republican Senate can no longer be the place 'where things are sent to die.'",
+        "Not passing the SAVE America Act, sent up five times by the House, was devastating in the midterms.",
+        "Not terminating the filibuster will go down as one of the greatest mistakes in American political history.",
+        "Congratulations to John Thune for another year of leadership — minority though it may be."
+      ],
+      "amplifiers": "President Trump's Thursday Truth Social post (quoted in full by CGTN and summarized by OANN, Axios, and The Rothman Report); Senate Leader John Thune, who told Fox's Bret Baier the votes to 'nuke' the filibuster were not there; and right-leaning posters who aimed the blame at Thune by name, including @AnneWallac44166 ('put the blame where it actually belongs… John Thune').",
+      "whyItWorks": "It gives the base a villain inside the family. Trump's Thursday Truth Social post is a ritual humiliation of Thune dressed as a strategy memo: the loss was not Trumpism, it was Senate procedure. 'Five times' and 'greatest mistakes' are sticky, even if the five is Trump's count and the 60-vote math was always the obstacle. The audience is voters who wanted citizenship checks and now want someone other than Trump to blame.",
+      "audience": "MAGA voters, House conservatives who passed the bill, and anyone already calling Thune a RINO after the rout.",
+      "counter": "Do not adopt Trump's rewrite. The House passed versions of the bill; the Senate never had 60 votes, including under a Republican majority, as Thune said on Fox. Remind people the midterm was about prices, the Iran war, and a coalition that showed up — not a bill that died on a 60-vote threshold. If Democrats keep the filibuster, say so clearly; if they change Senate rules, say why, and do not let 'they will definitely nuke it' become the only frame.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 11334
+        },
+        {
+          "label": "Nov 7",
+          "value": 15729
+        },
+        {
+          "label": "Nov 8",
+          "value": 11820
+        },
+        {
+          "label": "Nov 9",
+          "value": 18583
+        },
+        {
+          "label": "Nov 10",
+          "value": 9454
+        },
+        {
+          "label": "Nov 11",
+          "value": 21617
+        },
+        {
+          "label": "Nov 12",
+          "value": 20509
+        },
+        {
+          "label": "Nov 13*",
+          "value": 12232
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 1834
+        },
+        {
+          "label": "7 PM",
+          "value": 1717
+        },
+        {
+          "label": "8 PM",
+          "value": 1778
+        },
+        {
+          "label": "9 PM",
+          "value": 1631
+        },
+        {
+          "label": "10 PM",
+          "value": 1452
+        },
+        {
+          "label": "11 PM",
+          "value": 1117
+        },
+        {
+          "label": "12 AM",
+          "value": 749
+        },
+        {
+          "label": "1 AM",
+          "value": 531
+        },
+        {
+          "label": "2 AM",
+          "value": 370
+        },
+        {
+          "label": "3 AM",
+          "value": 301
+        },
+        {
+          "label": "4 AM",
+          "value": 319
+        },
+        {
+          "label": "5 AM",
+          "value": 413
+        },
+        {
+          "label": "6 AM",
+          "value": 678
+        },
+        {
+          "label": "7 AM",
+          "value": 817
+        },
+        {
+          "label": "8 AM*",
+          "value": 359
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET).",
+      "sources": [
+        {
+          "title": "Trump: GOP Senate can no longer be the place 'where things are sent to die' following midterm losses",
+          "site": "OANN",
+          "date": "Nov 12, 2026",
+          "href": "https://www.oann.com/newsroom/trump-gop-senate-can-no-longer-be-the-place-where-things-are-sent-to-die-following-midterm-losses/"
+        },
+        {
+          "title": "Trump Blames Filibuster for GOP Senate Loss",
+          "site": "The Rothman Report",
+          "date": "Nov 12, 2026",
+          "href": "https://therothmanreport.com/politics/trump-thune-minority-save-america-act-filibuster/"
+        },
+        {
+          "title": "John Thune: Senate GOP lacks votes to get rid of filibuster, pass Save America Act amid Trump push",
+          "site": "The Hill",
+          "href": "https://thehill.com/homenews/senate/5927978-senate-thune-save-america-act/"
+        },
+        {
+          "title": "Trump's Thursday Truth Social post on the SAVE America Act and the filibuster",
+          "site": "CGTN",
+          "date": "Nov 12, 2026",
+          "href": "https://news.cgtn.com/news/2026-11-12/news-1S14WiQs6lO/p.html"
+        },
+        {
+          "title": "Trump orders Vance to focus on corruption in Democrat-run areas, not Iran (also notes the SAVE Act post)",
+          "site": "Axios",
+          "date": "Nov 12, 2026",
+          "href": "https://www.axios.com/2026/11/12/trump-vance-focus-democrat-cities-iran"
+        }
+      ]
+    },
+    {
+      "id": "electoral-college",
+      "title": "The right says Democrats are 'ending' the Electoral College after the midterms",
+      "side": "Right",
+      "momentum": 77,
+      "volumeIndex": 90.5,
+      "accelIndex": 58.4,
+      "coverageIndex": 70,
+      "posts24h": 16392,
+      "posts7d": 72487,
+      "priorDailyAvg": 9349.2,
+      "accel": 1.75,
+      "outlets": 4,
+      "trendingUS": true,
+      "query": "(\"Electoral College\" OR \"popular vote compact\" OR NPVIC OR \"National Popular Vote\") lang:en",
+      "sentiment": "Alarmed and defensive on the right; explanatory and sometimes celebratory on the left",
+      "sentimentNote": "In a relevancy sample of Thursday-night and Friday-morning posts, right-leaning users treated a popular-vote compact as abolition or as an opening to fraud (for example @jakehuneycutt quoting a @MattZeitlin thread, and @EIwatchdogs). Other users and explainers, including replies we opened, stressed that the compact would not formally abolish the College. The Washington Post Friday story was already being used as a peg. This is a read of that sample and those outlets, not a poll.",
+      "summary": "The claim that Democrats are now in a position to 'abolish' or 'end' the Electoral College got a fresh news peg Thursday evening into Friday. The Washington Post reported Nov. 13 that the movement to elevate the national popular vote had been boosted by Democratic statehouse wins; AP and PBS had already explained the mechanism: the National Popular Vote Interstate Compact, now at 222 electoral votes, could theoretically cross 270 if newly Democratic trifectas in Pennsylvania, Michigan, Arizona, Wisconsin, and Nevada join. Snopes, on Nov. 5, stressed that this would not abolish the College and that legal hurdles, including possible congressional approval and likely lawsuits, remain. On X, the query accelerated through Thursday afternoon and exploded in the evening: 1,821 matches between 8:00 and 9:00 PM ET and 1,903 between 9:00 and 10:00 PM ET, with a second bump Friday morning. 'Electoral College' was on the U.S. trends list at 8:24 AM ET Friday.",
+      "talkingPoints": [
+        "Democrats now control enough states to effectively abolish the Electoral College.",
+        "The National Popular Vote Interstate Compact would let big states overpower small ones.",
+        "A national popular vote would let one state's fraud take over the country.",
+        "This is a constitutional end-run that will end up in court."
+      ],
+      "amplifiers": "The Washington Post's Nov. 13 story on the popular-vote compact, which was already being linked in Friday-morning posts; @EIwatchdogs (Election Integrity Network), warning that DSA's program and the compact 'undermine' the College; clustered replies we opened under posts by @MattZeitlin, @SenRandPaul, and @PatrickRuffini; and explainers from Snopes (Nov. 5), AP, and PBS.",
+      "whyItWorks": "'Abolish' is doing more work than the actual mechanism. The compact would not delete the Electoral College from the Constitution; participating states would pledge their electors to the national popular-vote winner once they total 270. That distinction is easy to flatten into a theft-of-the-republic story, especially after Democrats flipped the statehouses that could push the compact over the line. The WaPo story landing Thursday night into Friday morning gave the claim a fresh news peg. The audience is small-state conservatives and anyone who already believes Democrats change rules after they win.",
+      "audience": "Conservative election-integrity accounts, small-state Republicans, and 2028-watchers who think a popular-vote compact would scramble the map.",
+      "counter": "Use the precise words. Democrats are not abolishing a constitutional institution by decree; some newly won trifectas could join an existing compact that still uses electors, still needs 270, and is widely expected to be sued. If the party supports the compact, say why a national popular vote is more democratic — and do not overclaim that it is already done or legally settled. Snopes and AP already wrote the explainer. Use it.",
+      "factChecks": [
+        {
+          "claim": "After the midterms, Democrats can effectively abolish the Electoral College.",
+          "rating": "Overstated — the compact would not abolish the College",
+          "detail": "Snopes (Nov. 5, 2026) found that newly won Democratic trifectas in Arizona, Michigan, Nevada, Pennsylvania, and Wisconsin could, if they joined the National Popular Vote Interstate Compact, push participating states over 270 electoral votes. That would pledge those electors to the national popular-vote winner. It would not delete the Electoral College from the Constitution. Snopes also noted experts who say the Compact Clause may require congressional approval, and that lawsuits are likely.",
+          "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/",
+          "outlet": "Snopes"
+        },
+        {
+          "claim": "Democrats now control enough states to change how the president is elected via the popular-vote compact.",
+          "rating": "Partly true, legally unsettled",
+          "detail": "AP reported that compact states already account for 222 electoral votes and that the five newly Democratic trifectas could theoretically cross 270, but that it is not clear all of the new governors and legislatures will go along, and conservative legal challenges are almost certain.",
+          "href": "https://apnews.com/article/midterms-democrats-electoral-college-popular-vote-ac5d917e582ee02e813615a91c6a1f5c",
+          "outlet": "AP"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 9916
+        },
+        {
+          "label": "Nov 7",
+          "value": 8313
+        },
+        {
+          "label": "Nov 8",
+          "value": 10346
+        },
+        {
+          "label": "Nov 9",
+          "value": 9729
+        },
+        {
+          "label": "Nov 10",
+          "value": 11890
+        },
+        {
+          "label": "Nov 11",
+          "value": 5204
+        },
+        {
+          "label": "Nov 12",
+          "value": 4198
+        },
+        {
+          "label": "Nov 13*",
+          "value": 12891
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 998
+        },
+        {
+          "label": "7 PM",
+          "value": 835
+        },
+        {
+          "label": "8 PM",
+          "value": 1821
+        },
+        {
+          "label": "9 PM",
+          "value": 1903
+        },
+        {
+          "label": "10 PM",
+          "value": 1524
+        },
+        {
+          "label": "11 PM",
+          "value": 1286
+        },
+        {
+          "label": "12 AM",
+          "value": 915
+        },
+        {
+          "label": "1 AM",
+          "value": 597
+        },
+        {
+          "label": "2 AM",
+          "value": 484
+        },
+        {
+          "label": "3 AM",
+          "value": 374
+        },
+        {
+          "label": "4 AM",
+          "value": 384
+        },
+        {
+          "label": "5 AM",
+          "value": 542
+        },
+        {
+          "label": "6 AM",
+          "value": 699
+        },
+        {
+          "label": "7 AM",
+          "value": 935
+        },
+        {
+          "label": "8 AM*",
+          "value": 592
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET). The Thursday-night spike continued into the early morning, with a second rise after 6:00 AM ET. 'Electoral College' was on the U.S. trends list at 8:24 AM ET.",
+      "sources": [
+        {
+          "title": "Movement to end electoral college gets boost after Democratic wins",
+          "site": "The Washington Post",
+          "date": "Nov 13, 2026",
+          "href": "https://www.washingtonpost.com/politics/2026/11/13/movement-end-electoral-college-gets-boost-after-democratic-wins/"
+        },
+        {
+          "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+          "site": "Snopes",
+          "date": "Nov 5, 2026",
+          "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/"
+        },
+        {
+          "title": "Democrats have gained control in more states. That could change the way the US elects its president",
+          "site": "AP",
+          "date": "Nov 2026",
+          "href": "https://apnews.com/article/midterms-democrats-electoral-college-popular-vote-ac5d917e582ee02e813615a91c6a1f5c"
+        },
+        {
+          "title": "Farewell to the electoral college? Democrats now control enough states to elevate the popular vote",
+          "site": "PBS NewsHour",
+          "date": "Nov 2026",
+          "href": "https://www.pbs.org/newshour/politics/farewell-to-the-electoral-college-democrats-now-control-enough-states-to-elevate-the-popular-vote"
+        },
+        {
+          "title": "U.S. X trend search: Electoral College",
+          "site": "X",
+          "date": "Nov 13, 2026",
+          "href": "https://x.com/search?q=Electoral%20College"
+        }
+      ]
+    },
+    {
+      "id": "miller-noncitizen",
+      "title": "Miller's midterm alibi: blue states hid 'astronomical' noncitizen votes",
+      "side": "Right",
+      "momentum": 77,
+      "volumeIndex": 81.6,
+      "accelIndex": 100,
+      "coverageIndex": 30,
+      "posts24h": 6308,
+      "posts7d": 18328,
+      "priorDailyAvg": 2003.3,
+      "accel": 3.15,
+      "outlets": 3,
+      "trendingUS": false,
+      "query": "(Miller) (citizenship OR \"non-citizen\" OR noncitizen OR \"voter rolls\" OR \"illegal votes\" OR \"illegal voters\") lang:en",
+      "sentiment": "Accusatory and conspiratorial, with fact-checkers and officials pushing back",
+      "sentimentNote": "Posts in the Miller query leaned into theft-and-cover-up language ('astronomical,' 'not one Democrat state'). The fact-check layer is from AP and Snopes, which we opened, not from the typical post in the sample. This is a read of that mix, not a poll.",
+      "summary": "As Republicans search for an explanation of the midterm rout, Stephen Miller's claim that Democratic states hid 'astronomical' numbers of noncitizen voters is circulating again alongside Trump's SAVE Act attack. Miller has said that not one Democratic state checked the citizenship of its voter file or shared rolls with DHS, and that illegal and noncitizen voting is large enough to matter in states that flipped. AP, reporting on the administration's own enforcement push, said noncitizen voting is 'incredibly rare, difficult to prove and has not been shown to change the outcome of elections.' Snopes likewise found that noncitizens do not vote in large numbers and that big federal match lists often fail when state officials try to verify them. The Miller query ran several hundred posts an hour through Thursday and remained active overnight into Friday morning.",
+      "talkingPoints": [
+        "Not one Democratic state checked citizenship on its voter file or shared rolls with DHS.",
+        "The number of illegal and noncitizen voters is 'astronomical' and helped flip the midterms.",
+        "You can vote or get welfare in blue states just by checking a box.",
+        "Pass the SAVE America Act — voter ID and proof of citizenship — or the next election is already lost."
+      ],
+      "amplifiers": "Stephen Miller, in posts circulating again after the midterms (including the line that 'not one Democrat state' checked citizenship or shared rolls with DHS, and that the number of illegal and noncitizen voters is 'astronomical'); Trump's parallel SAVE Act argument; and fact-check pushback from AP and Snopes. We did not treat MAGA recaps of Miller's posts as independent confirmation of his numbers.",
+      "whyItWorks": "It converts a brutal defeat into a theft story. 'Astronomical' is doing all the work: it is big enough to feel like an explanation and vague enough to survive the absence of a statewide recount. The hook is unfairness, the frame is that Democrats win by refusing to let the federal government inspect the rolls, and the audience is voters already primed by years of noncitizen-voting claims.",
+      "audience": "MAGA media, Stephen Miller's followers, and voters looking for an explanation other than tariffs, the Iran war, and prices.",
+      "counter": "Do not debate a number Miller has not produced. Repeat the actual evidence: noncitizen voting is illegal, rare, and has not been shown to change federal outcomes, as AP and Snopes documented. Then pivot to the midterm verdict that is on tape — costs, the war, and a campaign that asked people to check their grocery bills.",
+      "factChecks": [
+        {
+          "claim": "Noncitizen voting is widespread and large enough to explain midterm outcomes.",
+          "rating": "Unsupported — voting by noncitizens is rare",
+          "detail": "AP reported that the administration's own campaign to root out noncitizen voting is demonstrating it is 'incredibly rare, difficult to prove and has not been shown to change the outcome of elections.' Documented cases are typically small and often involve misunderstanding the law, not a scalable conspiracy.",
+          "href": "https://apnews.com/article/homeland-security-justice-department-midterms-noncitizen-voting-09b8391612fc87676267a254c55eaee8",
+          "outlet": "AP"
+        },
+        {
+          "claim": "Noncitizens vote in large numbers in U.S. elections.",
+          "rating": "False / not supported by the evidence",
+          "detail": "Snopes's review of noncitizen-voting claims, including 2026 DHS figures, found that noncitizen voting in federal elections is illegal, that protections and penalties are severe, and that supposed large-scale data often collapse when state election officials are asked to verify them. The Cato Institute, a conservative think tank, has reached the same rarity conclusion.",
+          "href": "https://www.snopes.com/articles/474177/noncitizen-voting-in-us-elections/",
+          "outlet": "Snopes"
+        },
+        {
+          "claim": "The 2026 midterms were rigged.",
+          "rating": "No evidence in AP's fact focus",
+          "detail": "AP's post-election fact focus found that false rigged-election claims faded after the Democratic rout and that reported machine problems were technical malfunctions, not partisan fraud.",
+          "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6",
+          "outlet": "AP Fact Focus"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 336
+        },
+        {
+          "label": "Nov 7",
+          "value": 616
+        },
+        {
+          "label": "Nov 8",
+          "value": 704
+        },
+        {
+          "label": "Nov 9",
+          "value": 1195
+        },
+        {
+          "label": "Nov 10",
+          "value": 5504
+        },
+        {
+          "label": "Nov 11",
+          "value": 2713
+        },
+        {
+          "label": "Nov 12",
+          "value": 5210
+        },
+        {
+          "label": "Nov 13*",
+          "value": 2050
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 239
+        },
+        {
+          "label": "7 PM",
+          "value": 242
+        },
+        {
+          "label": "8 PM",
+          "value": 222
+        },
+        {
+          "label": "9 PM",
+          "value": 197
+        },
+        {
+          "label": "10 PM",
+          "value": 182
+        },
+        {
+          "label": "11 PM",
+          "value": 148
+        },
+        {
+          "label": "12 AM",
+          "value": 128
+        },
+        {
+          "label": "1 AM",
+          "value": 124
+        },
+        {
+          "label": "2 AM",
+          "value": 106
+        },
+        {
+          "label": "3 AM",
+          "value": 100
+        },
+        {
+          "label": "4 AM",
+          "value": 100
+        },
+        {
+          "label": "5 AM",
+          "value": 131
+        },
+        {
+          "label": "6 AM",
+          "value": 151
+        },
+        {
+          "label": "7 AM",
+          "value": 133
+        },
+        {
+          "label": "8 AM*",
+          "value": 86
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET).",
+      "sources": [
+        {
+          "title": "Trump's crusade against noncitizen voting reveals how rare it is",
+          "site": "AP",
+          "date": "2026",
+          "href": "https://apnews.com/article/homeland-security-justice-department-midterms-noncitizen-voting-09b8391612fc87676267a254c55eaee8"
+        },
+        {
+          "title": "Noncitizens don't vote in large numbers in US elections. Here's proof",
+          "site": "Snopes",
+          "date": "2026",
+          "href": "https://www.snopes.com/articles/474177/noncitizen-voting-in-us-elections/"
+        },
+        {
+          "title": "FACT FOCUS: False claims of rigged elections fade in Democratic rout",
+          "site": "AP Fact Focus",
+          "date": "Nov 2026",
+          "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6"
+        },
+        {
+          "title": "Judge blocks Trump administration from pressuring states over noncitizen voting",
+          "site": "Reuters",
+          "date": "Nov 3, 2026",
+          "href": "https://www.reuters.com/3fec1b0a85a0/world/judge-blocks-trump-administration-pressuring-states-over-noncitizen-voting-2026-11-03/"
+        }
+      ]
+    },
+    {
+      "id": "jeffries-revolt",
+      "title": "Don Leonard's 'living hell' and the unfinished fight to block Jeffries",
+      "side": "Far Left",
+      "momentum": 76,
+      "volumeIndex": 84.5,
+      "accelIndex": 73.9,
+      "coverageIndex": 60,
+      "posts24h": 8611,
+      "posts7d": 31931,
+      "priorDailyAvg": 3886.7,
+      "accel": 2.22,
+      "outlets": 6,
+      "trendingUS": false,
+      "query": "Jeffries (Hasan OR Piker OR \"Nathan Robinson\" OR Pressley OR \"Don Leonard\" OR \"living hell\") lang:en",
+      "sentiment": "Defiant and betrayed, mixed with loyalty to the incoming speaker",
+      "sentimentNote": "In coverage of Leonard's video and in a relevancy sample of the tighter Jeffries query, the dominant tone was indignation at leadership pressure and a demand that Jeffries earn a speaker vote. Institutional voices, including Hasan Kwame Jeffries on WOSU, treated Leonard as a freshman overreaching. This is a read of that sample and those outlets, not a poll.",
+      "summary": "The progressive campaign to keep Hakeem Jeffries from an uncontested path to speaker stayed loud on Thursday, now with a freshman face. Rep.-elect Don Leonard of Ohio, who flipped a Trump-won Columbus-area seat, said in a video that senior House Democrats told him withholding support for Jeffries would mean 'making my life a living hell for the next two years' and losing in 2028. He wants a meeting on a constitutional amendment to overturn Citizens United and an end to U.S. support for the Iran war and for Israel. Jeffries's office did not respond to WOSU; Leonard did not name the members. Hasan Piker has been arguing since election week that Jeffries and Schumer are out of step with the new coalition, and a Nov. 8 Current Affairs essay said the midterm victory 'will be wasted without new leadership.' The tighter Jeffries query (Piker, Pressley, Leonard, 'living hell') stayed in the mid-hundreds to low-thousands of posts per hour Thursday and had a 7:00-8:00 PM ET bump (916 matches).",
+      "talkingPoints": [
+        "Senior Democrats threatened to make a freshman's life a 'living hell' if he withheld a speaker vote.",
+        "The big-D party needs some little-d democracy.",
+        "Jeffries should have to commit to overturning Citizens United and ending the Iran war (and aid to Israel) before he is crowned.",
+        "Hasan Piker and Current Affairs argue new leadership is the only way the midterm mandate is not wasted."
+      ],
+      "amplifiers": "Rep.-elect Don Leonard of Ohio, in a Nov. 9 social video quoted by USA Today, WOSU, Newsweek, Democracy Now, and Common Dreams; Hasan Piker, who has been arguing for Ayanna Pressley and against Jeffries and Schumer since election week (Democracy Now, Nov. 6); Current Affairs (John Ross and Alex Skopic, Nov. 8, plus earlier Nathan J. Robinson commentary); and Hasan Kwame Jeffries, the leader's brother, who pushed back on Leonard on WOSU.",
+      "whyItWorks": "A flipped red-district freshman describing an intimidation meeting is a better story than a petition. It frames Jeffries's path to speaker as machine politics, not a mandate, and it gives progressives a moral permission structure to hold out. The target is Democrats who already blame Jeffries for the Hegseth no-shows and want a price for their speaker vote.",
+      "audience": "Progressive organizers, the incoming populist freshman class, and online left audiences around Hasan Piker and Current Affairs. Institutional Democrats and Jeffries's allies are pushing back, including the leader's brother on Ohio public radio.",
+      "counter": "Answer the 'living hell' clip in public. Name the process for speaker commitments, put Citizens United and Iran-war votes on a written January calendar, and stop treating a flipped Trump-plus district as a discipline problem. A landslide is a terrible week to look like a closed shop.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 1303
+        },
+        {
+          "label": "Nov 7",
+          "value": 1066
+        },
+        {
+          "label": "Nov 8",
+          "value": 729
+        },
+        {
+          "label": "Nov 9",
+          "value": 302
+        },
+        {
+          "label": "Nov 10",
+          "value": 2657
+        },
+        {
+          "label": "Nov 11",
+          "value": 12031
+        },
+        {
+          "label": "Nov 12",
+          "value": 9229
+        },
+        {
+          "label": "Nov 13*",
+          "value": 4614
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 689
+        },
+        {
+          "label": "7 PM",
+          "value": 916
+        },
+        {
+          "label": "8 PM",
+          "value": 639
+        },
+        {
+          "label": "9 PM",
+          "value": 641
+        },
+        {
+          "label": "10 PM",
+          "value": 435
+        },
+        {
+          "label": "11 PM",
+          "value": 427
+        },
+        {
+          "label": "12 AM",
+          "value": 327
+        },
+        {
+          "label": "1 AM",
+          "value": 258
+        },
+        {
+          "label": "2 AM",
+          "value": 205
+        },
+        {
+          "label": "3 AM",
+          "value": 167
+        },
+        {
+          "label": "4 AM",
+          "value": 119
+        },
+        {
+          "label": "5 AM",
+          "value": 122
+        },
+        {
+          "label": "6 AM",
+          "value": 125
+        },
+        {
+          "label": "7 AM",
+          "value": 150
+        },
+        {
+          "label": "8 AM*",
+          "value": 83
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET).",
+      "sources": [
+        {
+          "title": "Why Ohio Democrat Don Leonard isn't supporting Hakeem Jeffries",
+          "site": "USA Today",
+          "date": "Nov 11, 2026",
+          "href": "https://www.usatoday.com/story/news/politics/2026/11/11/why-ohio-democrat-don-leonard-isnt-supporting-hakeem-jeffries/92726997007/"
+        },
+        {
+          "title": "Rep-elect Don Leonard says senior Democrats threatened 'living hell' if he doesn't support Jeffries",
+          "site": "WOSU",
+          "date": "Nov 11, 2026",
+          "href": "https://www.wosu.org/politics-government/2026-11-11/rep-elect-don-leonard-says-senior-democrats-threatened-living-hell-if-he-doesnt-support-jeffries"
+        },
+        {
+          "title": "Incoming Congressman says Dems warn of 'living hell' for opposing Jeffries",
+          "site": "Newsweek",
+          "date": "Nov 11, 2026",
+          "href": "https://www.newsweek.com/incoming-congressman-says-dems-warn-of-living-hell-for-opposing-jeffries-12696150"
+        },
+        {
+          "title": "Rep.-elect Don Leonard Says Senior Dems Threatened to Make His Life 'Living Hell' over Jeffries Vote",
+          "site": "Democracy Now!",
+          "date": "Nov 12, 2026",
+          "href": "https://www.democracynow.org/2026/11/12/headlines/rep_elect_don_leonard_says_senior_dems_threatened_to_make_his_life_living_hell_over_jeffries_vote"
+        },
+        {
+          "title": "Congressman-Elect Don Leonard Says House Members Warned of 'Living Hell' If He Doesn't Back Jeffries",
+          "site": "Common Dreams",
+          "date": "Nov 12, 2026",
+          "href": "https://www.commondreams.org/news/jeffries-living-hell-leonard"
+        },
+        {
+          "title": "Democrats' Victory Will Be Wasted Without New Leadership",
+          "site": "Current Affairs",
+          "date": "Nov 8, 2026",
+          "href": "https://www.currentaffairs.org/news/democrats-victory-will-be-wasted-without-new-leadership"
+        }
+      ]
+    },
+    {
+      "id": "vance-corruption",
+      "title": "Trump yanks Vance off Iran and points him at 'corrupt' blue states",
+      "side": "Right",
+      "momentum": 76,
+      "volumeIndex": 76.3,
+      "accelIndex": 100,
+      "coverageIndex": 40,
+      "posts24h": 3572,
+      "posts7d": 3896,
+      "priorDailyAvg": 54,
+      "accel": 66.15,
+      "outlets": 4,
+      "trendingUS": false,
+      "query": "Vance (Iran) (corruption OR crime OR fraud OR \"blue states\" OR \"Democrat run\" OR \"don't need a deal\" OR \"do not need a deal\") lang:en",
+      "sentiment": "Loyal and punitive on the right; alarmed and sarcastic on the left",
+      "sentimentNote": "We did not get a large high-engagement post sample on the tight query; sentiment is based primarily on the Trump post as reported by AP, Politico, Axios, and NPR, plus the shape of the hourly spike after 8:00 AM ET Thursday. The card says so because the post sample was thin.",
+      "summary": "President Trump posted Thursday that he had asked Vice President JD Vance to turn his 'complete and total attention' to 'Massive Corruption and Crime' in 'Democrat run Cities and States,' naming Minnesota, California, and Illinois, and that 'we don't need a deal with Iran.' The move lands after Vance, who had been the lead negotiator on a short-lived Iran truce, publicly blamed the war and its economic shock for Republicans' midterm losses. AP, Politico, and Axios reported the directive Thursday; NPR followed at 4:43 AM ET Friday. Axios noted oil prices rose after the 'no deal' line. The tight X query was almost silent until 8:00-9:00 AM ET Thursday, then jumped to 282-355 posts an hour through midday.",
+      "talkingPoints": [
+        "We don't need a deal with Iran. Those days have long since passed.",
+        "Vance should give his 'complete and total attention' to massive corruption and crime in Democrat-run cities and states.",
+        "Minnesota, California, and Illinois are poorly run, corrupt disasters. Billions are being stolen every month.",
+        "The midterms were lost because of the war — so now the vice president will fight Democrats at home instead."
+      ],
+      "amplifiers": "President Trump's Thursday Truth Social post, as reported by AP, Politico, Axios, and NPR on Friday morning; Vice President JD Vance, who last week blamed the Iran war for the midterm losses and had been the lead negotiator on a short-lived truce. Axios noted oil prices jumped after Trump said the U.S. does not need a deal with Iran.",
+      "whyItWorks": "It tries to change the subject from a war Vance himself said cost Republicans the midterms. 'Corruption and crime in blue states' is a familiar Trump frame that turns a foreign-policy failure into a domestic enemy. The hook is retribution; the audience is the base that wants Democrats punished and a 2028 hopeful put back on the culture-war beat. Markets noticed the other implication: Trump also said the United States does not need an Iran deal.",
+      "audience": "MAGA voters, anti-Iran-deal hawks, and voters already primed to see Minneapolis, Chicago, and California as proof of Democratic failure.",
+      "counter": "Play Vance's own words back: he blamed the war and its economic shock for the rout. Then ask why the administration's answer is a vice-presidential tour of blue cities instead of an end to a conflict that raised gas and grocery prices. Keep the focus on costs and the war, not on a generic crime tour.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 82
+        },
+        {
+          "label": "Nov 7",
+          "value": 70
+        },
+        {
+          "label": "Nov 8",
+          "value": 37
+        },
+        {
+          "label": "Nov 9",
+          "value": 41
+        },
+        {
+          "label": "Nov 10",
+          "value": 34
+        },
+        {
+          "label": "Nov 11",
+          "value": 49
+        },
+        {
+          "label": "Nov 12",
+          "value": 2508
+        },
+        {
+          "label": "Nov 13*",
+          "value": 1075
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 90
+        },
+        {
+          "label": "7 PM",
+          "value": 94
+        },
+        {
+          "label": "8 PM",
+          "value": 89
+        },
+        {
+          "label": "9 PM",
+          "value": 80
+        },
+        {
+          "label": "10 PM",
+          "value": 73
+        },
+        {
+          "label": "11 PM",
+          "value": 51
+        },
+        {
+          "label": "12 AM",
+          "value": 43
+        },
+        {
+          "label": "1 AM",
+          "value": 104
+        },
+        {
+          "label": "2 AM",
+          "value": 87
+        },
+        {
+          "label": "3 AM",
+          "value": 68
+        },
+        {
+          "label": "4 AM",
+          "value": 66
+        },
+        {
+          "label": "5 AM",
+          "value": 52
+        },
+        {
+          "label": "6 AM",
+          "value": 77
+        },
+        {
+          "label": "7 AM",
+          "value": 104
+        },
+        {
+          "label": "8 AM*",
+          "value": 87
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET).",
+      "sources": [
+        {
+          "title": "Trump bluntly tells JD Vance to shift focus from Iran to targeting 'corruption and crime' at home",
+          "site": "AP",
+          "date": "Nov 12, 2026",
+          "href": "https://apnews.com/article/trump-iran-vance-negotiations-d9671cbf66e3c2e337f4fb3485ad07d0"
+        },
+        {
+          "title": "Trump pulls Vance off Iran",
+          "site": "Politico",
+          "date": "Nov 12, 2026",
+          "href": "https://www.politico.com/news/2026/11/12/jd-vance-trump-iran-01162112"
+        },
+        {
+          "title": "Trump orders Vance to focus on 'corruption' in Democrat-run areas, not Iran",
+          "site": "Axios",
+          "date": "Nov 12, 2026",
+          "href": "https://www.axios.com/2026/11/12/trump-vance-focus-democrat-cities-iran"
+        },
+        {
+          "title": "Trump redirects Vance from Iran to focus on combatting fraud in Democratic-led states",
+          "site": "NPR",
+          "date": "Nov 13, 2026, 4:43 AM ET",
+          "href": "https://www.npr.org/2026/11/13/nx-s1-6039160/trump-redirects-vance-from-iran-to-focus-on-combatting-fraud-in-democratic-led-states"
+        },
+        {
+          "title": "Live updates: Trump tells Vance to shift focus from Iran to 'corruption' at home",
+          "site": "AP",
+          "date": "Nov 13, 2026",
+          "href": "https://apnews.com/live/trump-vance-iran-congress-midterms-politics-news-updates-11-13-2026"
+        }
+      ]
+    },
+    {
+      "id": "trump-350b",
+      "title": "Trump wants $350 billion for the Pentagon before Democrats take over",
+      "side": "Right",
+      "momentum": 68,
+      "volumeIndex": 72.3,
+      "accelIndex": 100,
+      "coverageIndex": 10,
+      "posts24h": 2326,
+      "posts7d": 2362,
+      "priorDailyAvg": 6,
+      "accel": 387.67,
+      "outlets": 1,
+      "trendingUS": false,
+      "query": "Trump (\"350 billion\" OR \"$350 billion\" OR \"$350B\" OR \"350B\") (defense OR military OR Pentagon OR warriors) lang:en",
+      "sentiment": "Urgent and martial on the right; incredulous on the left",
+      "sentimentNote": "Sentiment is based on the Trump post and Politico's reporting, plus the fact that the query was silent until midday Thursday. We did not code a large independent post sample, and the card should be read that way.",
+      "summary": "On Thursday, Trump called on Senate Republicans to pass $350 billion in defense spending 'IMMEDIATELY,' posting that 'our Military must be strong, powerful, and respected' and that 'Republicans must deliver for our Warriors. The Democrats never will. The time is NOW.' Politico reported the post as an attempt to restart a party-line Pentagon request that has stalled for months, with Democratic control imminent and Democratic leaders signaling they will try to wind down the Iran war. The X query was effectively zero until the 12:00-1:00 PM ET hour (94 matches), then peaked at 343 between 2:00 and 3:00 PM ET.",
+      "talkingPoints": [
+        "Republicans must deliver for our warriors. The Democrats never will. The time is NOW.",
+        "Use the last weeks of GOP control to pass $350 billion in defense spending immediately.",
+        "A party-line package is the only way to fund the military before January."
+      ],
+      "amplifiers": "President Trump's Truth Social post, reported by Politico on Nov. 12 ('Our Military must be strong, powerful, and respected… The time is NOW.'). We opened that Politico report as the primary outlet for this query; volume on X spiked in the 1:00-4:00 PM ET window Thursday after the post.",
+      "whyItWorks": "A ticking clock is a classic lame-duck hook. 'Warriors' versus 'Democrats will never do it' turns a stalled funding request into a loyalty test for Senate Republicans who just lost the majority. The audience is defense hawks and voters who still want the Iran war resourced, not wound down.",
+      "audience": "Republican hawks, defense-industry-adjacent media, and voters who see the midterm as a reason to lock in military spending, not end a war.",
+      "counter": "Connect this ask to the same war voters just punished. A $350 billion party-line package in a lame duck is an attempt to pre-spend a verdict. Democrats should say they will fund the troops and restrict combat operations, and make Republicans own any shutdown threat tied to an unauthorized war.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 9
+        },
+        {
+          "label": "Nov 7",
+          "value": 5
+        },
+        {
+          "label": "Nov 8",
+          "value": 6
+        },
+        {
+          "label": "Nov 9",
+          "value": 12
+        },
+        {
+          "label": "Nov 10",
+          "value": 3
+        },
+        {
+          "label": "Nov 11",
+          "value": 1
+        },
+        {
+          "label": "Nov 12",
+          "value": 1517
+        },
+        {
+          "label": "Nov 13*",
+          "value": 809
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 123
+        },
+        {
+          "label": "7 PM",
+          "value": 139
+        },
+        {
+          "label": "8 PM",
+          "value": 110
+        },
+        {
+          "label": "9 PM",
+          "value": 102
+        },
+        {
+          "label": "10 PM",
+          "value": 83
+        },
+        {
+          "label": "11 PM",
+          "value": 70
+        },
+        {
+          "label": "12 AM",
+          "value": 64
+        },
+        {
+          "label": "1 AM",
+          "value": 47
+        },
+        {
+          "label": "2 AM",
+          "value": 30
+        },
+        {
+          "label": "3 AM",
+          "value": 18
+        },
+        {
+          "label": "4 AM",
+          "value": 30
+        },
+        {
+          "label": "5 AM",
+          "value": 29
+        },
+        {
+          "label": "6 AM",
+          "value": 32
+        },
+        {
+          "label": "7 AM",
+          "value": 39
+        },
+        {
+          "label": "8 AM*",
+          "value": 16
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET).",
+      "sources": [
+        {
+          "title": "Trump renews calls for $350B military funding package as GOP faces ticking clock",
+          "site": "Politico",
+          "date": "Nov 12, 2026",
+          "href": "https://www.politico.com/news/2026/11/12/trump-iran-war-funding-reconciliation-01162603"
+        }
+      ]
+    },
+    {
+      "id": "hegseth-11",
+      "title": "The 11 Democrats story is still burning a day later",
+      "side": "Far Left",
+      "momentum": 64,
+      "volumeIndex": 90.2,
+      "accelIndex": 29.6,
+      "coverageIndex": 50,
+      "posts24h": 15770,
+      "posts7d": 122461,
+      "priorDailyAvg": 17781.8,
+      "accel": 0.89,
+      "outlets": 5,
+      "trendingUS": false,
+      "query": "(\"11 Democrats\" OR \"11 Dems\" OR \"11 democrats\") (Hegseth OR impeachment OR vote OR absent OR no-show) lang:en",
+      "sentiment": "Still angry at Democratic leadership, with residual right-wing mockery",
+      "sentimentNote": "Tone is carried over from the much larger Wednesday sample (anger at Jeffries and the 11 absentees, plus right-wing mockery) and from Thursday headlines that were still using that frame. Hourly volume is lower, so this is not a new classification from a fresh 20-post coding.",
+      "summary": "The Tuesday-night explosion over the 11 House Democrats who missed the Hegseth impeachment-referral vote is no longer at peak, but it is not over. The same query that logged 51,519 posts in 24 hours in Wednesday morning's snapshot still produced 20,793 matches in the 24 hours ending midnight ET Thursday and 15,770 in the window ending 8:26 AM ET Friday. Democracy Now's Thursday headlines kept tying the absences to the Jeffries speaker fight and to Don Leonard's 'living hell' remarks. Hourly volume slid from roughly 1,000 posts an hour early Thursday to the mid-hundreds by Thursday night and the low hundreds Friday morning — a decline, not a disappearance.",
+      "talkingPoints": [
+        "You could have impeached Hegseth, but 11 Democrats did not show up.",
+        "Jeffries did not whip the vote.",
+        "The absences are why the party needs a stronger speaker after a landslide.",
+        "This is not over — the House can try again in January."
+      ],
+      "amplifiers": "The same chorus as the Nov. 11 snapshot, still circulating: Rep. Sydney Kamlager-Dove, Sen.-elect Abdul El-Sayed, Krystal Ball, Laura Bassett, and right-leaning accounts calling Democrats a uniparty. Democracy Now's Nov. 12 headlines kept the absences tied to the Jeffries speaker fight.",
+      "whyItWorks": "The countable failure (11 absences, a seven-vote margin) is still the simplest attack on Jeffries two days later. Volume is down from the Tuesday-night explosion, but it remains one of the loudest queries in this set and keeps feeding the speaker fight and the Van Hollen challenge. The hook is still betrayal.",
+      "audience": "Progressive and anti-war Democrats, plus right-leaning accounts still using the no-shows to call Democrats a uniparty.",
+      "counter": "Same as Wednesday: own it, publish each member's reason, and announce a whipped January floor vote. The longer this is the first governing story after a landslide, the more it licenses every other leadership challenge.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 6*",
+          "value": 1
+        },
+        {
+          "label": "Nov 7",
+          "value": 4
+        },
+        {
+          "label": "Nov 8",
+          "value": 3
+        },
+        {
+          "label": "Nov 9",
+          "value": 3
+        },
+        {
+          "label": "Nov 10",
+          "value": 590
+        },
+        {
+          "label": "Nov 11",
+          "value": 91299
+        },
+        {
+          "label": "Nov 12",
+          "value": 25515
+        },
+        {
+          "label": "Nov 13*",
+          "value": 5046
+        }
+      ],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 700
+        },
+        {
+          "label": "7 PM",
+          "value": 666
+        },
+        {
+          "label": "8 PM",
+          "value": 534
+        },
+        {
+          "label": "9 PM",
+          "value": 517
+        },
+        {
+          "label": "10 PM",
+          "value": 457
+        },
+        {
+          "label": "11 PM",
+          "value": 411
+        },
+        {
+          "label": "12 AM",
+          "value": 372
+        },
+        {
+          "label": "1 AM",
+          "value": 359
+        },
+        {
+          "label": "2 AM",
+          "value": 313
+        },
+        {
+          "label": "3 AM",
+          "value": 292
+        },
+        {
+          "label": "4 AM",
+          "value": 283
+        },
+        {
+          "label": "5 AM",
+          "value": 245
+        },
+        {
+          "label": "6 AM",
+          "value": 245
+        },
+        {
+          "label": "7 AM",
+          "value": 242
+        },
+        {
+          "label": "8 AM*",
+          "value": 110
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 6:00 PM ET Thursday through 8:26 AM ET Friday. The 8 AM* bar is a partial hour (8:00-8:26 AM ET).",
+      "sources": [
+        {
+          "title": "Did Democrats save Pete Hegseth from impeachment?",
+          "site": "Al Jazeera",
+          "date": "Nov 11, 2026",
+          "href": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment"
+        },
+        {
+          "title": "Republican-led House rejects Hegseth impeachment effort",
+          "site": "NBC News",
+          "date": "Nov 10, 2026",
+          "href": "https://www.nbcnews.com/politics/congress/republican-led-house-rejects-hegseth-impeachment-effort-rcna608534"
+        },
+        {
+          "title": "House vote effectively ends impeachment push against Hegseth",
+          "site": "NPR",
+          "date": "Nov 10, 2026",
+          "href": "https://www.npr.org/2026/11/10/nx-s1-6036813/house-votes-to-effectively-end-the-impeachment-effort-against-pete-hegseth"
+        },
+        {
+          "title": "Jeffries Dragged for 'Serious Leadership Problem' as Hegseth Bid Falls",
+          "site": "Common Dreams",
+          "date": "Nov 11, 2026",
+          "href": "https://www.commondreams.org/news/hegseth-impeachment-fails"
+        },
+        {
+          "title": "Headlines for November 12, 2026 (Hegseth vote and Jeffries pressure)",
+          "site": "Democracy Now!",
+          "date": "Nov 12, 2026",
+          "href": "https://www.democracynow.org/2026/11/12/headlines"
+        }
+      ]
+    }
+  ]
+}

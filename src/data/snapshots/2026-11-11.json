@@ -1,0 +1,1043 @@
+{
+  "id": "2026-11-11",
+  "updatedAt": "2026-11-11T05:58:00-05:00",
+  "updatedLabel": "Wednesday, Nov 11, 2026, 5:58 AM ET",
+  "timezone": "America/New_York",
+  "title": "TDDR Rising Narratives Dashboard",
+  "summary": "A snapshot of opposition narratives gaining momentum on Wednesday, Nov 11, 2026: from the Right and from the Far Left. Built for TDDR (Too Dumb Didn't Read). Every count, quote, and fact-check is from sources opened this morning. Nothing here is invented.",
+  "trends": {
+    "pulledAtLabel": "5:53 AM ET",
+    "names": [
+      "11 Democrats",
+      "11 Dems"
+    ],
+    "detail": "“11 Democrats” and “11 Dems” at 5:53 AM ET"
+  },
+  "countsPulledLabel": "between about 5:54 and 5:58 AM ET",
+  "hottestQueryDetail": "11 Democrats / Hegseth vote",
+  "factCheckOutletsDetail": "AFP, AP, Snopes, FactCheck.org, Houston Public Media",
+  "oppositionNote": {
+    "lead": "What ‘opposition’ means here",
+    "body": "Right = narratives the Right is pushing after the Democratic midterm wave. Far Left = pressure on Democratic leadership and the incoming majority from the party’s left. Some stories, especially the 11-Democrat Hegseth vote, are being worked by both sides; the tag is the primary opposition frame."
+  },
+  "methodology": [
+    "Last updated Wednesday, Nov 11, 2026, 5:58 AM ET. This is a research snapshot for TDDR, not a live API. It will go stale as the day moves. X trends were pulled for the United States at 5:53 AM ET. Post counts and samples were pulled between about 5:54 and 5:58 AM ET.",
+    "Momentum score (0–100) is a relative index inside this set, not a universal ranking. For each narrative we ran one English-language X search, counted matches in the last 24 hours (from 5:55 AM ET Nov 10 to 5:56 AM ET Nov 11) and over a seven-day window starting 6:00 AM ET Nov 4, counted named news or fact-check outlets we actually opened or retrieved, and noted whether the phrase appeared on the U.S. trends list.",
+    "Score = 50% volume index + 30% acceleration index + 20% coverage index. Volume index is 100 × log10(1 + last-24h posts) / log10(1 + 51,519), where 51,519 is the highest last-24h count in this set (the Hegseth query). Acceleration index is 100 × min(last-24h / prior daily average, 3) / 3, so a triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6; the first of those six days is a partial 13-hour UTC slice, so those averages are slightly conservative. Coverage index is 70 × min(outlets, 7) / 7, plus 30 if the topic was on the U.S. X trends list this morning. Trend objects did not include tweet_count, so we did not invent trend volumes.",
+    "Counts are query matches, not unique posts or unique users, and queries can overlap. Replies are included unless a sample search excluded them. Sentiment is a qualitative label from relevancy-sorted post samples and from quotes in news coverage, not a scientific poll. If a signal was thin, the card says so. Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows."
+  ],
+  "formula": {
+    "volumeWeight": 0.5,
+    "accelWeight": 0.3,
+    "coverageWeight": 0.2,
+    "volumeCeilingPosts": 51519,
+    "accelCap": 3,
+    "coverageOutletCap": 7,
+    "coverageOutletPoints": 70,
+    "trendBonus": 30,
+    "last24hWindow": "from 5:55 AM ET Nov 10 to 5:56 AM ET Nov 11",
+    "sevenDayWindow": "a seven-day window starting 6:00 AM ET Nov 4"
+  },
+  "chartCaption": "Scores are the composite described above. Hover or compare with the last-24-hour volume chart beneath.",
+  "volumeChartCaption": "Last 24 hours of X query matches (not unique across narratives):",
+  "dailyChartCaption": "Daily X query matches (UTC days; * = partial window).",
+  "noFactCheckNote": "No fact-checker rating of false or misleading was attached to a core claim in this narrative in the sources we opened this morning. That is not a clean bill of health; it means we did not find a matching rating to log.",
+  "feedCaption": "Use the side filter and sort control, then open a card.",
+  "disinfo": {
+    "caption": "Claims in these narratives that fact-checkers have rated false, fabricated, misleading, or unsupported, with links.",
+    "caveatLead": "What we did not treat as fact",
+    "caveatBody": "Viral posts listing alleged donor totals for the 11 absent Democrats circulated this morning. We did not independently verify those figures, so they are not in this table. Trump also made additional 60 Minutes claims (on the stock market, his net worth, D.C. crime, and the Ohio Senate margin) that FactCheck.org rated false or misleading; those are in the FactCheck.org piece linked below even when they sit slightly outside a single narrative card.",
+    "links": [
+      {
+        "title": "FactChecking Trump's Post-Election 60 Minutes Interview",
+        "site": "FactCheck.org",
+        "date": "Nov 10, 2026",
+        "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+      },
+      {
+        "title": "FACT FOCUS: False claims of rigged elections fade in Democratic rout",
+        "site": "AP News",
+        "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6"
+      },
+      {
+        "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+        "site": "Snopes",
+        "date": "Nov 5, 2026",
+        "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/"
+      }
+    ]
+  },
+  "sourceListIntro": "Primary news, fact-checks, and sample posts used for this snapshot. X count tools and U.S. trends were queried directly via X’s public read APIs this morning.",
+  "sourceList": [
+    {
+      "title": "Did Democrats save Pete Hegseth from impeachment?",
+      "site": "Al Jazeera",
+      "date": "Nov 11, 2026",
+      "href": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment"
+    },
+    {
+      "title": "Republican-led House rejects Hegseth impeachment effort",
+      "site": "NBC News",
+      "href": "https://www.nbcnews.com/politics/congress/republican-led-house-rejects-hegseth-impeachment-effort-rcna608534"
+    },
+    {
+      "title": "Bernie Sanders won't support Schumer for Senate Democratic leader",
+      "site": "AP News",
+      "href": "https://apnews.com/article/schumer-bernie-sanders-senate-democrats-leadership-election-c5a182727397e964b19ad0dec5aeca42"
+    },
+    {
+      "title": "The GOP delivers its answer to midterms rout: It’s intensifying the fight",
+      "site": "CNN",
+      "date": "Nov 11, 2026",
+      "href": "https://edition.cnn.com/2026/11/11/politics/republicans-trump-midterms-hegseth"
+    },
+    {
+      "title": "Stephen Miller's post-midterm focus: MAGA and men",
+      "site": "Axios",
+      "date": "Nov 11, 2026",
+      "href": "https://www.axios.com/2026/11/11/stephen-miller-focus-men-maga"
+    },
+    {
+      "title": "Miller’s promotion extinguishes hope for immigration deal",
+      "site": "Semafor",
+      "date": "Nov 11, 2026",
+      "href": "https://www.semafor.com/article/11/10/2026/millers-promotion-extinguishes-hope-for-immigration-deal"
+    },
+    {
+      "title": "FactChecking Trump's Post-Election 60 Minutes Interview",
+      "site": "FactCheck.org",
+      "date": "Nov 10, 2026",
+      "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    },
+    {
+      "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+      "site": "Snopes",
+      "date": "Nov 5, 2026",
+      "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/"
+    },
+    {
+      "title": "Supposed Ken Paxton call to investigate Senate defeat is fabricated",
+      "site": "AFP Fact Check",
+      "href": "https://factcheck.afp.com/doc.afp.com.D6FP263"
+    },
+    {
+      "title": "FACT FOCUS: False claims of rigged elections fade in Democratic rout",
+      "site": "AP News",
+      "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6"
+    }
+  ],
+  "narratives": [
+    {
+      "id": "hegseth-11",
+      "title": "11 Democrats no-showed, and Hegseth slipped the impeachment vote",
+      "side": "Far Left",
+      "momentum": 100,
+      "volumeIndex": 100,
+      "accelIndex": 100,
+      "coverageIndex": 100,
+      "posts24h": 51519,
+      "posts7d": 51488,
+      "priorDailyAvg": 1,
+      "accel": 51.5,
+      "outlets": 8,
+      "trendingUS": true,
+      "query": "(\"11 Democrats\" OR \"11 Dems\" OR \"11 democrats\") (Hegseth OR impeachment OR vote OR absent OR no-show) lang:en",
+      "sentiment": "Angry and incredulous",
+      "sentimentNote": "In a relevancy sample of 20 recent posts, plus quotes in Nov 11 news coverage, the dominant tone was anger at Democratic leadership (especially Hakeem Jeffries) for failing to whip attendance, mixed with right-wing mockery that Democrats ‘rescued’ Hegseth. Several posts demanded named explanations from the 11 absentees. This is a read of that sample, not a poll.",
+      "summary": "On Tuesday, Nov 10, the Republican-led House voted 211–204 to send Rep. Thomas Massie’s impeachment articles against Defense Secretary Pete Hegseth to the Judiciary Committee, a procedural move that shelves the effort for the rest of this Congress. Massie was the only Republican to oppose the referral. Eighteen members were absent, including 11 Democrats. Had those 11 voted with the rest of their caucus, the referral would have failed 211–215 and a floor vote could have followed this week. The conversation exploded on X after 6:00 PM ET and was trending in the U.S. as “11 Democrats” and “11 Dems” at 5:53 AM ET today. Democrats can try again after they take the House in January; removing Hegseth would still require a two-thirds Senate vote.",
+      "talkingPoints": [
+        "You could have impeached Hegseth, but Democrats did not show up.",
+        "Jeffries did not whip the vote and told people to vote their conscience.",
+        "This is why the party needs a stronger leader after a landslide.",
+        "The 11 owe voters individual explanations, not a generic excuse."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Rep. Sydney Kamlager-Dove (“people should have gotten their raggedy selves up these steps to vote”); Sen.-elect Abdul El-Sayed (“You should show up and do your job”); commentator Krystal Ball (“a major Hakeem Jeffries fail” / “You could have impeached the war criminal Pete Hegseth but Dems didn’t show up to vote”); writer Laura Bassett (“Jeffries didn’t even whip the vote”). President Trump posted that the effort had “miserably FAILED!” Right-leaning accounts used the same absences to call Democrats a “uniparty.” Unverified dollar figures and AIPAC-payment lists also circulated; those totals were not independently checked in this snapshot and are not treated as fact here.",
+      "whyItWorks": "The hook is betrayal after a wave election: if you just won the House, you do not lose a procedural vote because people were in traffic or at a groundbreaking. It frames competence, not ideology, as the test of Jeffries’ upcoming speakership. The target is Democratic voters who wanted immediate accountability for the Iran war and now have a simple, countable failure (11 absences, a 7-vote margin).",
+      "audience": "Progressive and anti-war Democrats, plus anyone already trying to block Jeffries. The Right is piggybacking to mock Democratic seriousness.",
+      "counter": "Own it in the first sentence. Publish each member’s reason, apologize where the reason is weak, and announce a whipped January floor vote with a named whip count. Do not let ‘stuck in traffic’ become the first governing story after a midterm landslide. Remind people this was a procedural referral, not a judgment that Hegseth is cleared — and that conviction still needs Republican Senate votes.",
+      "factChecks": [],
+      "daily": [],
+      "hourly": [
+        {
+          "label": "6 PM",
+          "value": 589
+        },
+        {
+          "label": "7 PM",
+          "value": 3897
+        },
+        {
+          "label": "8 PM",
+          "value": 7723
+        },
+        {
+          "label": "9 PM",
+          "value": 7341
+        },
+        {
+          "label": "10 PM",
+          "value": 7827
+        },
+        {
+          "label": "11 PM",
+          "value": 5779
+        },
+        {
+          "label": "12 AM",
+          "value": 4449
+        },
+        {
+          "label": "1 AM",
+          "value": 3749
+        },
+        {
+          "label": "2 AM",
+          "value": 3026
+        },
+        {
+          "label": "3 AM",
+          "value": 2571
+        },
+        {
+          "label": "4 AM",
+          "value": 2364
+        },
+        {
+          "label": "5 AM*",
+          "value": 2167
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, Nov 10–11, labeled in ET. The 5 AM bar is a partial hour (5:00–5:55 AM ET). Almost all 51,519 last-24-hour matches arrived after 6:00 PM ET Tuesday.",
+      "sources": [
+        {
+          "title": "Did Democrats save Pete Hegseth from impeachment?",
+          "site": "Al Jazeera",
+          "date": "Nov 11, 2026",
+          "href": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment"
+        },
+        {
+          "title": "Republican-led House rejects Hegseth impeachment effort",
+          "site": "NBC News",
+          "date": "Nov 10, 2026",
+          "href": "https://www.nbcnews.com/politics/congress/republican-led-house-rejects-hegseth-impeachment-effort-rcna608534"
+        },
+        {
+          "title": "House vote effectively ends impeachment push against Hegseth",
+          "site": "NPR",
+          "date": "Nov 10, 2026",
+          "href": "https://www.npr.org/2026/11/10/nx-s1-6036813/house-votes-to-effectively-end-the-impeachment-effort-against-pete-hegseth"
+        },
+        {
+          "title": "Jeffries Dragged for 'Serious Leadership Problem' as Hegseth Bid Falls",
+          "site": "Common Dreams",
+          "date": "Nov 11, 2026",
+          "href": "https://www.commondreams.org/news/hegseth-impeachment-fails"
+        },
+        {
+          "title": "U.S. X trend search: 11 Democrats",
+          "site": "X",
+          "date": "Nov 11, 2026",
+          "href": "https://x.com/search?q=11%20Democrats"
+        }
+      ],
+      "defaultOpen": true
+    },
+    {
+      "id": "jordan",
+      "title": "The GOP’s answer to a rout: Jim Jordan and a harder fight",
+      "side": "Right",
+      "momentum": 87,
+      "volumeIndex": 94.9,
+      "accelIndex": 100,
+      "coverageIndex": 50,
+      "posts24h": 29680,
+      "posts7d": 55989,
+      "priorDailyAvg": 4385,
+      "accel": 6.77,
+      "outlets": 5,
+      "trendingUS": false,
+      "query": "\"Jim Jordan\" (\"minority leader\" OR Scalise OR leadership) lang:en",
+      "sentiment": "Defiant and combative",
+      "sentimentNote": "Posts celebrating Jordan’s 106–73 win over Steve Scalise were the main relevancy hits in a 15-post sample (for example @AnthonyG0528, 191 likes). News analysis from CNN and Axios framed the pick as doubling down on Trumpism. This is a read of that sample plus those outlets, not a poll.",
+      "summary": "On Tuesday, House Republicans chose Rep. Jim Jordan as minority leader for the next Congress, defeating Majority Leader Steve Scalise 106–73, per multiple reports. CNN’s Nov 11 analysis called the move a choice to ‘intensify the fight’ after voters repudiated Trump over tariffs, the Iran war, and costs. Axios noted Jordan is the kind of fighter members said they want in the minority, while Senate Republicans re-elected John Thune by acclamation. Jordan will be Trump’s first line of defense when Democratic oversight starts in January.",
+      "talkingPoints": [
+        "Voters rejected us, so we need a fighter, not a dealmaker.",
+        "Jordan will take the fight to a Democratic majority and protect Trump.",
+        "Scalise is the old leadership that just lost; Jordan is the Freedom Caucus answer."
+      ],
+      "amplifiers": "House Republicans who voted for Jordan; CNN’s Nov 11 analysis; Axios on the leadership fights; Anadolu Agency and ABC News reporting of the 106–73 tally, widely repeated on X.",
+      "whyItWorks": "After a humiliation, a party often wants a villain-slayer more than a post-mortem. Jordan’s brand is disruption and hearings, which reassures a base that the loss will be avenged rather than accommodated. The audience is MAGA House members and voters who think the midterms were a messaging failure, not a verdict on Trumpism.",
+      "audience": "House GOP members, MAGA media, and voters who want confrontation in the minority.",
+      "counter": "Do not debate Jordan’s vibe. Preview a concrete January oversight calendar — tariffs and prices, the Iran war, Miller’s deportation record, and financial conflicts — and dare the new minority leader to defend the record voters just rejected.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 9560
+        },
+        {
+          "label": "Nov 5",
+          "value": 9979
+        },
+        {
+          "label": "Nov 6",
+          "value": 1442
+        },
+        {
+          "label": "Nov 7",
+          "value": 93
+        },
+        {
+          "label": "Nov 8",
+          "value": 117
+        },
+        {
+          "label": "Nov 9",
+          "value": 4359
+        },
+        {
+          "label": "Nov 10",
+          "value": 21352
+        },
+        {
+          "label": "Nov 11*",
+          "value": 9087
+        }
+      ],
+      "sources": [
+        {
+          "title": "The GOP delivers its answer to midterms rout: It’s intensifying the fight",
+          "site": "CNN",
+          "date": "Nov 11, 2026",
+          "href": "https://edition.cnn.com/2026/11/11/politics/republicans-trump-midterms-hegseth"
+        },
+        {
+          "title": "The Democratic leadership revolt has a glaring problem",
+          "site": "Axios",
+          "date": "Nov 11, 2026",
+          "href": "https://www.axios.com/2026/11/11/democratic-leadership-congress-jeffries-schumer"
+        }
+      ],
+      "defaultOpen": true
+    },
+    {
+      "id": "carville",
+      "title": "Carville said the quiet part: Democrats want to humiliate Trump",
+      "side": "Right",
+      "momentum": 69,
+      "volumeIndex": 70,
+      "accelIndex": 100,
+      "coverageIndex": 20,
+      "posts24h": 1984,
+      "posts7d": 4672,
+      "priorDailyAvg": 448,
+      "accel": 4.43,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "Carville (humiliate OR subpoena OR Trump) lang:en",
+      "sentiment": "Outraged and mocking",
+      "sentimentNote": "A relevancy sample of 15 posts from Nov 9–11 was almost uniformly conservative amplification of Carville’s podcast remarks, often contrasting ‘humiliate Trump’ with grocery and gas prices. Top post in the sample: @ConstitustionX, 224 likes and 197 reposts. An X news cluster on the same quotes was updated Nov 10 (5:59 PM ET). This is a read of that sample, not a poll.",
+      "summary": "After Democrats won Congress, strategist James Carville said on his Politicon podcast that the Democratic base wants to ‘humiliate’ Trump and watch him ‘wither in anguish and misery and pain,’ and he urged aggressive subpoenas. Conservative accounts revived the clip heavily on Nov 10–11, framing it as proof that Democrats campaigned on affordability but intend a revenge agenda. We observed an X news cluster and a burst of posts; we did not independently review the full podcast audio in this snapshot, so the wording below follows what multiple posts and that news cluster attributed to him.",
+      "talkingPoints": [
+        "They do not care about groceries. They want to watch Trump suffer.",
+        "‘If it moves, subpoena it’ is the real first-100-days plan.",
+        "The midterm message was a smokescreen for payback."
+      ],
+      "amplifiers": "James Carville (Politicon podcast, as quoted in an X news cluster and widely repeated posts); amplifying accounts in our sample included @ConstitustionX, @ashleyhayek, and @PolicyWars.",
+      "whyItWorks": "It takes a Democrat’s own words and turns the party’s oversight plan into a motive of cruelty. That lets the Right skip debating whether investigations are justified and instead ask why prices were not mentioned. The audience is swing and conservative voters who just heard Democrats promise affordability.",
+      "audience": "Conservative media audiences and persuadable voters worried that a Democratic Congress will chase Trump instead of costs.",
+      "counter": "Do not defend the vibe of humiliation. Say oversight is about tariffs, the war, deportation excesses, and conflicts of interest — then put an affordability bill on the floor in week one. If the base wants subpoenas, attach them to kitchen-table harm, not to a clip about anguish.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 84
+        },
+        {
+          "label": "Nov 5",
+          "value": 1221
+        },
+        {
+          "label": "Nov 6",
+          "value": 1162
+        },
+        {
+          "label": "Nov 7",
+          "value": 124
+        },
+        {
+          "label": "Nov 8",
+          "value": 33
+        },
+        {
+          "label": "Nov 9",
+          "value": 38
+        },
+        {
+          "label": "Nov 10",
+          "value": 1461
+        },
+        {
+          "label": "Nov 11*",
+          "value": 549
+        }
+      ],
+      "sources": [
+        {
+          "title": "Sample post amplifying the Carville quotes",
+          "site": "X / @ConstitustionX",
+          "date": "Nov 10, 2026",
+          "href": "https://x.com/ConstitustionX/status/2120000410773840059"
+        },
+        {
+          "title": "Ashley Hayek post quoting Carville",
+          "site": "X / @ashleyhayek",
+          "date": "Nov 10, 2026",
+          "href": "https://x.com/ashleyhayek/status/2120176914136736088"
+        }
+      ]
+    },
+    {
+      "id": "schumer",
+      "title": "Sanders: the time is now for change — dump Schumer (and pressure Jeffries)",
+      "side": "Far Left",
+      "momentum": 66,
+      "volumeIndex": 92.5,
+      "accelIndex": 32.6,
+      "coverageIndex": 50,
+      "posts24h": 22950,
+      "posts7d": 163693,
+      "priorDailyAvg": 23457,
+      "accel": 0.98,
+      "outlets": 5,
+      "trendingUS": false,
+      "query": "(Schumer OR Jeffries) (Sanders OR Slotkin OR \"time is now for change\" OR \"No Schumer\" OR \"No Jeffries\" OR \"majority leader\") lang:en",
+      "sentiment": "Impatient and restless",
+      "sentimentNote": "A 20-post relevancy sample from Nov 10–11 clustered around Sanders’s refusal to back Schumer, with some conservative gloating about Democrats ‘eating their own.’ News coverage also documents a Times Square ‘No Schumer, No Jeffries’ protest after the midterms and colleagues asking for a plan, not a coronation. This is a read of that sample plus AP, NBC, Axios, Washington Post, and Roll Call, not a poll.",
+      "summary": "Sen. Bernie Sanders said Tuesday he will not support Sen. Chuck Schumer for Democratic leader: ‘Nobody works harder than Chuck Schumer. But in my view, the time is now for change, and I will not be supporting Chuck to be re-elected as the Democratic leader.’ Sen. Elissa Slotkin appeared with him and demanded a concrete plan for change while saying she is not actively seeking the job. Sen. Chris Van Hollen has been listening to calls to run, and Axios notes neither Schumer nor Jeffries yet faces a clear challenger. Progressive activists have also tried to block Jeffries. Schumer says he is confident he will be elected majority leader. Volume on this query was huge all week (163,693 matches over seven days), with a fresh spike around Sanders’s Tuesday remarks.",
+      "talkingPoints": [
+        "A historic win should not be handed back to the same leaders.",
+        "The time is now for change. No coronation.",
+        "The new majority needs an economy that works for all, not just the people on top."
+      ],
+      "amplifiers": "Bernie Sanders (on-the-record, Capitol news conference); Sen. Elissa Slotkin; Sen. Chris Van Hollen (“We should not have a coronation,” as quoted in a sample post); progressive activists at the March for Our Democracy in Times Square, as reported in an X news cluster; Washington Post reporting on activist campaigns against both Schumer and Jeffries.",
+      "whyItWorks": "It converts a wave victory into a mandate for new management. The emotional hook is impatience: if voters just pulverized Trump, why is the 75-year-old leader of a 51-year career still assuming the gavel? It resonates with progressives and with some mid-caucus members who want a written agenda before they vote.",
+      "audience": "Progressive organizers, younger Democratic staff and voters, and senators who want leverage over the first-100-days plan.",
+      "counter": "Do not pretend the argument is not happening. Make any leadership vote about a public first-100-days affordability and oversight plan. If Schumer stays, he has to answer Slotkin’s demand for a plan in writing. A quiet coronation will keep feeding the revolt.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 9169
+        },
+        {
+          "label": "Nov 5",
+          "value": 43963
+        },
+        {
+          "label": "Nov 6",
+          "value": 41222
+        },
+        {
+          "label": "Nov 7",
+          "value": 19037
+        },
+        {
+          "label": "Nov 8",
+          "value": 13519
+        },
+        {
+          "label": "Nov 9",
+          "value": 8847
+        },
+        {
+          "label": "Nov 10",
+          "value": 21742
+        },
+        {
+          "label": "Nov 11*",
+          "value": 6194
+        }
+      ],
+      "sources": [
+        {
+          "title": "Bernie Sanders won't support Schumer for Senate Democratic leader",
+          "site": "AP News",
+          "date": "Nov 10, 2026",
+          "href": "https://apnews.com/article/schumer-bernie-sanders-senate-democrats-leadership-election-c5a182727397e964b19ad0dec5aeca42"
+        },
+        {
+          "title": "Bernie Sanders says he won’t support Chuck Schumer for majority leader",
+          "site": "NBC News",
+          "date": "Nov 10, 2026",
+          "href": "https://www.nbcnews.com/politics/congress/bernie-sanders-wont-support-chuck-schumer-senate-democrats-leader-rcna608633"
+        },
+        {
+          "title": "Activists, some colleagues aim to block Schumer, Jeffries",
+          "site": "Washington Post",
+          "date": "Nov 10, 2026",
+          "href": "https://www.washingtonpost.com/politics/2026/11/10/progressive-activists-aim-block-jeffries-schumer-leading-democrats/"
+        },
+        {
+          "title": "The Democratic leadership revolt has a glaring problem",
+          "site": "Axios",
+          "date": "Nov 11, 2026",
+          "href": "https://www.axios.com/2026/11/11/democratic-leadership-congress-jeffries-schumer"
+        }
+      ],
+      "defaultOpen": true
+    },
+    {
+      "id": "miller",
+      "title": "Miller takes the West Wing: MAGA consolidation, not a pivot",
+      "side": "Right",
+      "momentum": 60,
+      "volumeIndex": 90.5,
+      "accelIndex": 8.6,
+      "coverageIndex": 60,
+      "posts24h": 18368,
+      "posts7d": 447243,
+      "priorDailyAvg": 71479,
+      "accel": 0.26,
+      "outlets": 6,
+      "trendingUS": false,
+      "query": "\"Stephen Miller\" (\"chief of staff\" OR immigration) lang:en",
+      "sentiment": "Wary and hard-edged, with leftover anger",
+      "sentimentNote": "Volume on this query peaked Nov 6–7 (more than 300,000 matches over those two UTC days) and has cooled, but it is still large and was in this morning’s papers. A 15-post sample from Nov 9–11 mixed conservative defense of Miller, left-leaning alarm, and confusion about Trump’s ‘too tough’ comments. Sentiment below describes the right-facing narrative that the White House is not pivoting. Not a poll.",
+      "summary": "After the midterm rout, Trump named Stephen Miller White House chief of staff, replacing Susie Wiles. Axios reported today that Miller wants to win back young and minority men who swung toward Democrats, with a familiar agenda: rollback of ‘woke’ policies, drug prices, fraud, and permitting reform. CNN grouped the Miller promotion with Jordan’s election as evidence Republicans are intensifying Trumpism. This is the personnel half of the immigration story: even as Trump floated a deal, he put the architect of the crackdown in charge.",
+      "talkingPoints": [
+        "Miller is an American patriot and a wartime consigliere, not a softener.",
+        "The way back is the MAGA agenda, especially with working-class men.",
+        "No amnesty. Keep removing the worst of the worst."
+      ],
+      "amplifiers": "The White House (Taylor Rogers: policy ‘remains unchanged’); Pete Hegseth, who called Miller an ‘incredible American patriot’ in a post circulated Nov 10; Axios sources on Miller’s focus; conservative media frames such as Liberty Nation’s ‘Ice Maiden Out, Pit Bull In.’ On the other side, Hakeem Jeffries called Miller a ‘stone-cold racist’ and said he has ‘zero interest’ in working with him (NBC, Nov 11).",
+      "whyItWorks": "It tells a bruised base the administration is not surrendering after a loss. Elevating Miller is a loyalty signal. It also sets up 2028 intra-GOP politics: anyone urging a moderate turn can be cast as weak. The audience is the MAGA core and donors who feared a post-midterm pivot.",
+      "audience": "Trump’s base, immigration hawks, and Republicans looking for a 2028 lane that still runs through MAGA.",
+      "counter": "Treat Miller’s promotion as the tell. Voters already punished the cruelty, especially among Latino men (Axios cited a swing from +2 Trump in 2024 to +37 Democrats in 2026 among young Latino men, per a Tufts study). Put a real bill on the floor and make Miller own the no.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 1455
+        },
+        {
+          "label": "Nov 5",
+          "value": 5973
+        },
+        {
+          "label": "Nov 6",
+          "value": 111587
+        },
+        {
+          "label": "Nov 7",
+          "value": 192280
+        },
+        {
+          "label": "Nov 8",
+          "value": 53625
+        },
+        {
+          "label": "Nov 9",
+          "value": 53033
+        },
+        {
+          "label": "Nov 10",
+          "value": 24559
+        },
+        {
+          "label": "Nov 11*",
+          "value": 4731
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stephen Miller's post-midterm focus: MAGA and men",
+          "site": "Axios",
+          "date": "Nov 11, 2026",
+          "href": "https://www.axios.com/2026/11/11/stephen-miller-focus-men-maga"
+        },
+        {
+          "title": "Democrats skeptical Trump and Stephen Miller want to work with them",
+          "site": "NBC News",
+          "date": "Nov 11, 2026",
+          "href": "https://www.nbcnews.com/politics/trump-administration/democrats-skeptical-trump-stephen-miller-rcna608407"
+        },
+        {
+          "title": "The GOP delivers its answer to midterms rout",
+          "site": "CNN",
+          "date": "Nov 11, 2026",
+          "href": "https://edition.cnn.com/2026/11/11/politics/republicans-trump-midterms-hegseth"
+        }
+      ]
+    },
+    {
+      "id": "fraud",
+      "title": "The midterms were rigged: Texas, Paxton, and Lindell’s recount push",
+      "side": "Right",
+      "momentum": 52,
+      "volumeIndex": 75.3,
+      "accelIndex": 15.7,
+      "coverageIndex": 50,
+      "posts24h": 3530,
+      "posts7d": 48462,
+      "priorDailyAvg": 7489,
+      "accel": 0.47,
+      "outlets": 5,
+      "trendingUS": false,
+      "query": "(Lindell OR \"election fraud\" OR \"was rigged\" OR \"voting machines\") (midterm OR Texas OR Paxton OR Talarico OR Kansas) lang:en",
+      "sentiment": "Angry and conspiratorial",
+      "sentimentNote": "A 15-post relevancy sample included repeated claims the midterms were ‘100% rigged,’ plus familiar voting-machine arguments. Fact-checks from AFP, AP, and Houston Public Media document a cluster of specific false or misleading claims around Texas. Volume has been persistent (~3,500 matches in the last 24 hours) rather than a new spike. Not a poll.",
+      "summary": "After Democrats flipped Texas statewide, including James Talarico’s Senate win over Ken Paxton and Gina Hinojosa’s win over Greg Abbott, a right-wing stream of fraud claims continued. Mike Lindell has called for recounts and claimed ‘algorithmic patterns’ and ‘impossible’ gaps between Paxton and other Republicans. A fabricated statement circulating on X claimed Paxton had called for an investigation; AFP found Paxton conceded and the supposed NBC graphic was fake. A brief NBC/AP display of a 91.9% Talarico share in Tarrant County was a data-entry typo corrected in three minutes. A viral claim about 2.9 million Texas registrations does not show illegal voting, Houston Public Media reported. AP’s Fact Focus said false rigged-election claims largely faded as most defeated Republicans conceded.",
+      "talkingPoints": [
+        "It is impossible for someone like Talarico to win Texas fairly.",
+        "Down-ballot Republicans outrunning Paxton proves the machines.",
+        "Millions were registered in Texas without proof of citizenship."
+      ],
+      "amplifiers": "Mike Lindell (broadcasts and an X news cluster, Nov 11); assorted accounts repeating ‘rigged’ claims in our sample. Ken Paxton, by contrast, conceded on election night, per AFP. MIT election scientist Charles Stewart III told The Washington Sun Lindell’s pattern reflects a weak candidate and normal ticket-splitting, not interference. The Texas Association of County Election Officials called the election fair, accurate, and secure.",
+      "whyItWorks": "It protects the belief that Trump country cannot have really turned. The hook is humiliation-avoidance: if the result is theft, the coalition is still intact. It resonates with voters already primed by 2020 fraud narratives, especially in Texas and other flipped red states.",
+      "audience": "MAGA voters in Texas and other flipped states, and Lindell’s existing audience.",
+      "counter": "Do not debate made-up ‘algorithms.’ Lead with Paxton’s concession, the typo that was fixed in three minutes, and the simple political fact: Paxton underperformed other Texas Republicans. That is candidate quality. Then move back to why Texas voters actually switched — costs, the war, and the crackdown.",
+      "factChecks": [
+        {
+          "claim": "Ken Paxton called for an investigation and said Talarico could not have won fairly.",
+          "rating": "False / fabricated",
+          "detail": "AFP found the supposed Paxton statement and NBC News NOW graphic were fabricated. Paxton conceded on election night.",
+          "href": "https://factcheck.afp.com/doc.afp.com.D6FP263",
+          "outlet": "AFP Fact Check"
+        },
+        {
+          "claim": "A 91.9% Talarico share on election night proved Texas fraud.",
+          "rating": "False",
+          "detail": "AFP: an AP data-entry typo showed 22,403 votes for Paxton in Tarrant County instead of 202,403. It was corrected within three minutes. Unofficial results had Talarico at 58.72% in the county.",
+          "href": "https://factcheck.afp.com/doc.afp.com.D6PV8KH",
+          "outlet": "AFP Fact Check"
+        },
+        {
+          "claim": "Texas processed 2.9 million new registrations without citizenship proof, proving 2026 fraud.",
+          "rating": "Misleading",
+          "detail": "Houston Public Media: the 2.9 million figure is from a 2024 federal survey of registration transactions, includes movers, and is not evidence of illegal 2026 votes. Net registration growth was about 952,000, and Texas also removed about 1.8 million records.",
+          "href": "https://www.houstonpublicmedia.org/articles/news/politics/elections/2026/11/09/566610/fact-check-why-a-viral-texas-voter-registration-claim-doesnt-prove-fraud-in-the-2026-midterm-elections/",
+          "outlet": "Houston Public Media"
+        },
+        {
+          "claim": "The midterms were broadly rigged.",
+          "rating": "Unsupported",
+          "detail": "AP Fact Focus reported that most defeated Republican candidates conceded, and there was no day-after wave of court challenges.",
+          "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6",
+          "outlet": "AP Fact Focus"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 5675
+        },
+        {
+          "label": "Nov 5",
+          "value": 8430
+        },
+        {
+          "label": "Nov 6",
+          "value": 6896
+        },
+        {
+          "label": "Nov 7",
+          "value": 8336
+        },
+        {
+          "label": "Nov 8",
+          "value": 5430
+        },
+        {
+          "label": "Nov 9",
+          "value": 8018
+        },
+        {
+          "label": "Nov 10",
+          "value": 3616
+        },
+        {
+          "label": "Nov 11*",
+          "value": 2061
+        }
+      ],
+      "sources": [
+        {
+          "title": "Supposed Ken Paxton call to investigate Senate defeat is fabricated",
+          "site": "AFP Fact Check",
+          "date": "Nov 2026",
+          "href": "https://factcheck.afp.com/doc.afp.com.D6FP263"
+        },
+        {
+          "title": "Temporary data-entry error misrepresented as Texas election fraud",
+          "site": "AFP Fact Check",
+          "date": "Nov 2026",
+          "href": "https://factcheck.afp.com/doc.afp.com.D6PV8KH"
+        },
+        {
+          "title": "Why a viral Texas voter registration claim doesn’t prove fraud",
+          "site": "Houston Public Media",
+          "date": "Nov 9, 2026",
+          "href": "https://www.houstonpublicmedia.org/articles/news/politics/elections/2026/11/09/566610/fact-check-why-a-viral-texas-voter-registration-claim-doesnt-prove-fraud-in-the-2026-midterm-elections/"
+        },
+        {
+          "title": "FACT FOCUS: False claims of rigged elections fade in Democratic rout",
+          "site": "AP News",
+          "date": "Nov 2026",
+          "href": "https://apnews.com/article/election-voting-results-rigged-facts-trump-f8e70e3d60186ae969629644e64a2df6"
+        },
+        {
+          "title": "Mike Lindell Calls for a Midterms Recount",
+          "site": "The Washington Sun",
+          "date": "Nov 2026",
+          "href": "https://www.washingtonsun.com/campaigns/mike-lindell-midterms-recount-nonprofit-donations"
+        }
+      ]
+    },
+    {
+      "id": "immigration",
+      "title": "Trump floated a deal, then drew a hard ‘no amnesty’ line",
+      "side": "Right",
+      "momentum": 52,
+      "volumeIndex": 70.4,
+      "accelIndex": 15.4,
+      "coverageIndex": 60,
+      "posts24h": 2070,
+      "posts7d": 28941,
+      "priorDailyAvg": 4479,
+      "accel": 0.46,
+      "outlets": 6,
+      "trendingUS": false,
+      "query": "(amnesty OR \"immigration deal\" OR \"too tough\") (Trump OR Miller) (Democrat OR Democrats OR immigration) lang:en",
+      "sentiment": "Suspicious and betrayed, then reassured",
+      "sentimentNote": "A 15-post sample from Nov 8–11 showed an initial shock (‘this does not even sound like Trump’) followed by posts insisting he never said amnesty and then highlighting the Monday walk-back. Ken Roth and LULAC posted the contradiction with Miller’s promotion. Not a poll.",
+      "summary": "In a 60 Minutes interview conducted Nov 6 and aired Nov 8, Trump said his deportation policy ‘might be too tough’ and that a bipartisan deal could be ‘doable,’ while blaming a ‘pretty far right’ faction that wants everyone removed. He had already named Miller chief of staff. After blowback, he said on Nov 9 there would be ‘no amnesty,’ called the policy ‘very strong,’ and the White House said policy ‘remains unchanged.’ Semafor reported this morning that Miller’s promotion extinguishes hope for a deal. Query volume spiked Nov 9 (22,113 UTC-day matches) and has cooled, but the story is still in today’s coverage.",
+      "talkingPoints": [
+        "He never said amnesty — do not be an idiot.",
+        "No path to citizenship. Fund ICE for the worst of the worst only.",
+        "The 60 Minutes line was overread; the policy is unchanged."
+      ],
+      "amplifiers": "President Trump (60 Minutes, then the Nov 9 walk-back); White House spokeswoman Taylor Rogers; conservative explainers such as @BlackLabelAdvsr (147 likes, 29,288 impressions in our sample). Democrats and rights groups highlighted the contradiction, including Hakeem Jeffries, Ken Roth, and LULAC.",
+      "whyItWorks": "The base heard ‘too tough’ as a betrayal of a core promise. The walk-back and Miller promotion close that wound. Framing any Democratic bill as amnesty lets hawks kill compromise without re-litigating the midterm verdict on the crackdown.",
+      "audience": "Immigration hawks and MAGA voters who were alarmed by the 60 Minutes interview.",
+      "counter": "Play the tape, then the personnel move, then the walk-back. Trump admitted the policy hurt him, then put Miller in charge and ruled out amnesty. Democrats should still put the Dream and Promise Act or a Dignity Act-style bill on the floor and make the White House own the refusal. Fact-checks already show Trump inflated migrant numbers and understated how many ICE arrests have no criminal record.",
+      "factChecks": [
+        {
+          "claim": "A ‘pretty far right’ faction, not Trump, wants everyone in the country illegally deported.",
+          "rating": "Misleading",
+          "detail": "FactCheck.org: deporting all people who entered illegally has been Trump’s stated position for years, including in 2016, 2019, 2024, and 2025.",
+          "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+          "outlet": "FactCheck.org"
+        },
+        {
+          "claim": "25 million people came in under Biden, including 11,888 murderers, and zero people have come through the southern border in 17 months.",
+          "rating": "False or inflated",
+          "detail": "FactCheck.org: 25 million is highly inflated; the 11,888 figure is noncitizens convicted of murder who were not in ICE custody as of Sept 2024, including people with legal status, many already in prison; Border Patrol has still been apprehending thousands a month, and CBP has acknowledged gotaways.",
+          "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+          "outlet": "FactCheck.org"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 718
+        },
+        {
+          "label": "Nov 5",
+          "value": 438
+        },
+        {
+          "label": "Nov 6",
+          "value": 173
+        },
+        {
+          "label": "Nov 7",
+          "value": 186
+        },
+        {
+          "label": "Nov 8",
+          "value": 130
+        },
+        {
+          "label": "Nov 9",
+          "value": 22113
+        },
+        {
+          "label": "Nov 10",
+          "value": 4876
+        },
+        {
+          "label": "Nov 11*",
+          "value": 307
+        }
+      ],
+      "sources": [
+        {
+          "title": "Miller’s promotion extinguishes hope for immigration deal",
+          "site": "Semafor",
+          "date": "Nov 11, 2026",
+          "href": "https://www.semafor.com/article/11/10/2026/millers-promotion-extinguishes-hope-for-immigration-deal"
+        },
+        {
+          "title": "Trump calls for immigration reform deal after midterm losses",
+          "site": "USA Today",
+          "date": "Nov 9, 2026",
+          "href": "https://www.usatoday.com/story/news/politics/2026/11/09/trump-immigration-deportation-miller-60-minutes-midterm-election/92688320007/"
+        },
+        {
+          "title": "FactChecking Trump's Post-Election 60 Minutes Interview",
+          "site": "FactCheck.org",
+          "date": "Nov 10, 2026",
+          "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+        },
+        {
+          "title": "After midterms, Trump said he was ‘too tough’ on immigration",
+          "site": "PolitiFact",
+          "date": "Nov 10, 2026",
+          "href": "https://politifact.com/article/2026/nov/10/trump-stephen-miller-deportation-immigration/"
+        }
+      ]
+    },
+    {
+      "id": "iran-vance",
+      "title": "Vance’s verdict: the Iran war cost Republicans the midterms",
+      "side": "Right",
+      "momentum": 50,
+      "volumeIndex": 81.3,
+      "accelIndex": 5.8,
+      "coverageIndex": 40,
+      "posts24h": 6767,
+      "posts7d": 239081,
+      "priorDailyAvg": 38719,
+      "accel": 0.17,
+      "outlets": 4,
+      "trendingUS": false,
+      "query": "(\"Iran war\" OR Iran) (Vance OR midterm OR midterms) lang:en",
+      "sentiment": "Recriminating, with an I-told-you-so edge",
+      "sentimentNote": "Seven-day volume on this query was very large (239,081) and has been cooling (6,767 in the last 24 hours). An X news cluster on Nov 11 summarized conservatives debating Vance’s claim, with America First voices arguing the GOP must drop foreign wars and talk housing and wages. Sentiment is drawn from that cluster and related news analysis, not a full post-by-post recode of this query.",
+      "summary": "Vice President JD Vance has argued that the Iran war, alongside cost of living and U.S.-Israel ties, helped drive 2024 Trump-Vance voters to Democrats. An X news cluster updated this morning described conservatives treating that as vindication of an America First line, including columnists Steve Cortes and Gabe Guidarini, and commentator Jesse Kelly urging a turn back to domestic concerns. Broader news analyses (AP, Reuters Institute event, NTU) also list the Iran war and resulting fuel-price spike as a central reason for the Democratic wave. Trump has tried to blame prices on the war while claiming pre-war gas was $1.85 in Iowa, a figure FactCheck.org found false.",
+      "talkingPoints": [
+        "The war, not the movement, lost the midterms.",
+        "America First means housing, wages, and no new Middle East wars.",
+        "Reconnect with young men by talking about home, not Tehran."
+      ],
+      "amplifiers": "Vice President JD Vance (his own claim, widely quoted); Steve Cortes; Gabe Guidarini; Jesse Kelly, as named in the Nov 11 X news cluster.",
+      "whyItWorks": "It lets the base keep Trump and still explain a wipeout: the sin was abandoning America First, not the ideology itself. That is a ready-made 2028 primary argument. The audience is younger and non-interventionist conservatives and 2024 switchers.",
+      "audience": "America First conservatives, younger GOP-leaning men, and intra-party rivals to the war policy.",
+      "counter": "Quote Vance. The vice president already said the war cost them the midterms. Democrats should end the conflict to bring down gas prices, not just to win an argument, and contrast that with Trump’s false $1.85-a-gallon claim and his complaint about a $1.5 trillion Pentagon request.",
+      "factChecks": [
+        {
+          "claim": "Trump had gasoline down to $1.85 a gallon in Iowa before the Iran war, still lower than under Biden and Obama.",
+          "rating": "False / misleading",
+          "detail": "FactCheck.org: AAA’s cheapest Iowa average in the second term was $2.32 on Jan 5, and $2.64 on Feb 28, the day airstrikes began. National prices later ran about $3.78–$4.50, cheaper than Biden’s 2022 peak but not his final-year average of $3.30, and Obama’s range included $1.72 in 2016.",
+          "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+          "outlet": "FactCheck.org"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 65071
+        },
+        {
+          "label": "Nov 5",
+          "value": 86842
+        },
+        {
+          "label": "Nov 6",
+          "value": 38380
+        },
+        {
+          "label": "Nov 7",
+          "value": 16965
+        },
+        {
+          "label": "Nov 8",
+          "value": 9401
+        },
+        {
+          "label": "Nov 9",
+          "value": 13235
+        },
+        {
+          "label": "Nov 10",
+          "value": 7517
+        },
+        {
+          "label": "Nov 11*",
+          "value": 1670
+        }
+      ],
+      "sources": [
+        {
+          "title": "Voters repudiate Trump. His era of dominance is waning",
+          "site": "AP News",
+          "date": "Nov 2026",
+          "href": "https://apnews.com/article/trump-midterms-democrats-congress-rejected-voters-1022eb323f63cf9b78ae56d3868601ca"
+        },
+        {
+          "title": "How the Democrats reclaimed populism",
+          "site": "Nottingham Trent University",
+          "date": "Nov 2026",
+          "href": "https://www.ntu.ac.uk/news/articles/2026/11/how-the-democrats-reclaimed-populism"
+        },
+        {
+          "title": "FactChecking Trump's Post-Election 60 Minutes Interview",
+          "site": "FactCheck.org",
+          "date": "Nov 10, 2026",
+          "href": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+        }
+      ]
+    },
+    {
+      "id": "npv",
+      "title": "Democrats are ‘abolishing’ the Electoral College via the popular-vote compact",
+      "side": "Right",
+      "momentum": 48,
+      "volumeIndex": 72,
+      "accelIndex": 13.6,
+      "coverageIndex": 40,
+      "posts24h": 2481,
+      "posts7d": 38834,
+      "priorDailyAvg": 6059,
+      "accel": 0.41,
+      "outlets": 4,
+      "trendingUS": false,
+      "query": "(\"National Popular Vote\" OR NPVIC OR \"popular vote compact\" OR \"abolish the Electoral College\" OR \"abolish Electoral College\") lang:en",
+      "sentiment": "Alarmed and accusatory",
+      "sentimentNote": "Sample posts and an X news cluster described the compact as Democrats ‘moving in for the kill’ or ‘effectively abolishing’ the Electoral College. Snopes opened a Nov 5 explainer because that rumor was spreading. Volume peaked just after the midterms and has cooled (2,481 matches in the last 24 hours). Not a poll.",
+      "summary": "Democrats’ midterm wins in Arizona, Michigan, Nevada, Pennsylvania, and Wisconsin put those states in a position, if they choose, to join the National Popular Vote Interstate Compact. The compact already has 18 states and D.C. (222 electoral votes) and takes effect only at 270. Joining would not abolish the Electoral College; member states would award their electors to the national popular-vote winner. Snopes notes Congress may have to approve it under the Compact Clause, and legal challenges are likely. Right-wing voices still frame it as a constitutional end-run that sidelines smaller states.",
+      "talkingPoints": [
+        "Democrats now have the power to effectively abolish the Electoral College.",
+        "This is a compact end-run around a constitutional amendment.",
+        "Small states will be ignored; California and New York will pick the president."
+      ],
+      "amplifiers": "Jonathan Turley, described in an X news cluster as saying Democrats are ‘moving in for the kill’ on the Electoral College; Benny Johnson, warning it sidelines smaller states; outgoing Speaker Mike Johnson, who called the midterm results a ‘circus’ in a related X news cluster. We did not reopen those individuals’ original posts in this pass; the characterizations come from those news clusters and Snopes’s summary of social posts.",
+      "whyItWorks": "‘They are changing the rules because they cannot win fair’ is a high-voltage frame after a wave election. It collapses a technical interstate compact into a story about stealing 2028. The audience is voters in smaller states and anyone already distrustful of election rules.",
+      "audience": "Red-state and small-state conservatives, and 2028-focused Trump supporters.",
+      "counter": "Do not overclaim. Say clearly: the Electoral College is not abolished, five states have not even joined, and courts or Congress may still block it. If Democrats want a popular-vote system, explain it accurately. Inflated victory laps hand the Right a Constitution-shredding straw man.",
+      "factChecks": [
+        {
+          "claim": "Democrats now have the power to abolish the Electoral College.",
+          "rating": "False / overstated",
+          "detail": "Snopes: the compact would not abolish the Electoral College. It would only take effect at 270 electors, the five states have not yet joined, and some scholars say Congress must consent.",
+          "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/",
+          "outlet": "Snopes"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 11781
+        },
+        {
+          "label": "Nov 5",
+          "value": 8887
+        },
+        {
+          "label": "Nov 6",
+          "value": 4698
+        },
+        {
+          "label": "Nov 7",
+          "value": 2252
+        },
+        {
+          "label": "Nov 8",
+          "value": 5148
+        },
+        {
+          "label": "Nov 9",
+          "value": 2718
+        },
+        {
+          "label": "Nov 10",
+          "value": 2674
+        },
+        {
+          "label": "Nov 11*",
+          "value": 676
+        }
+      ],
+      "sources": [
+        {
+          "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+          "site": "Snopes",
+          "date": "Nov 5, 2026",
+          "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/"
+        }
+      ]
+    },
+    {
+      "id": "defense",
+      "title": "Incoming Democrats should end the Iran war and cap a $1.5 trillion Pentagon bill",
+      "side": "Far Left",
+      "momentum": 40,
+      "volumeIndex": 63.2,
+      "accelIndex": 15.2,
+      "coverageIndex": 20,
+      "posts24h": 946,
+      "posts7d": 13426,
+      "priorDailyAvg": 2080,
+      "accel": 0.45,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "(\"military budget\" OR \"$1.5 trillion\" OR \"defense budget\" OR \"end the war\" OR \"end the Iran\") (Democrat OR Democrats OR Congress) lang:en",
+      "sentiment": "Determined and anti-war, but cooler today",
+      "sentimentNote": "This is the lowest-momentum narrative in the set. An X news cluster from Nov 8–9 described Democrats moving to cap Trump’s proposed jump to a $1.5 trillion defense budget and to wind down the Iran conflict to lower gas prices. Last-24-hour query volume was only 946 matches, so this is included as a live progressive demand, not as today’s loudest fight. Sentiment is based on that news cluster, not a large post sample.",
+      "summary": "After taking both chambers, Democratic leaders including Hakeem Jeffries have tied affordability to ending the Iran conflict and have signaled resistance to a proposed 44% jump in military spending, to about $1.5 trillion, according to an X news cluster. Jeffries has described a first-100-days mix of dropping tariffs, restoring health subsidies, and oversight of Trump-era corruption. Trump, on Truth Social as quoted in that cluster, called the midterms a ‘giant step back in History’ and still holds the veto. This query is much quieter than the Hegseth or Schumer fights right now.",
+      "talkingPoints": [
+        "A $1.5 trillion Pentagon bill is unsustainable during a cost-of-living crisis.",
+        "End the Iran war to bring down gas prices.",
+        "Shift money from overseas conflict to families at home."
+      ],
+      "amplifiers": "Hakeem Jeffries, in interviews described in X news clusters on a first-100-days affordability agenda (MSNBC and ABC were named in one cluster); incoming committee Democrats discussing budget caps. We did not reopen those full interviews in this snapshot.",
+      "whyItWorks": "It links peace to prices, which is how the midterms were actually won. The risk is that a raw ‘cut defense’ frame lets the Right call Democrats weak in wartime. The audience is anti-war progressives and cost-of-living voters.",
+      "audience": "Progressive and anti-war Democrats, and voters who broke over gas prices.",
+      "counter": "Lead with the gas pump, not the topline. ‘End the war because families are paying for it’ is stronger than ‘cut the Pentagon by hundreds of billions,’ which Jordan will campaign on. Keep the veto reality in the shot: Democrats cannot enact a budget Trump will not sign without Republican votes.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 4*",
+          "value": 3994
+        },
+        {
+          "label": "Nov 5",
+          "value": 1994
+        },
+        {
+          "label": "Nov 6",
+          "value": 907
+        },
+        {
+          "label": "Nov 7",
+          "value": 520
+        },
+        {
+          "label": "Nov 8",
+          "value": 3268
+        },
+        {
+          "label": "Nov 9",
+          "value": 1640
+        },
+        {
+          "label": "Nov 10",
+          "value": 852
+        },
+        {
+          "label": "Nov 11*",
+          "value": 251
+        }
+      ],
+      "sources": [
+        {
+          "title": "Voters repudiate Trump. His era of dominance is waning",
+          "site": "AP News",
+          "date": "Nov 2026",
+          "href": "https://apnews.com/article/trump-midterms-democrats-congress-rejected-voters-1022eb323f63cf9b78ae56d3868601ca"
+        }
+      ]
+    }
+  ]
+}

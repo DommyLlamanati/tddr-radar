@@ -1,0 +1,131 @@
+---
+import Base from "../layouts/Base.astro";
+import SourceList from "../components/SourceList.astro";
+import { latestSnapshot } from "../lib/snapshots";
+import { fmt } from "../lib/format";
+
+const snapshot = (await latestSnapshot()).data;
+const formula = snapshot.formula;
+const ranked = [...snapshot.narratives].sort((a, b) => b.momentum - a.momentum);
+const percent = (weight: number) => `${Math.round(weight * 100)}%`;
+const description =
+  "How TDDR Narrative Tracker scores opposition narrative momentum from X post volume, acceleration, outlet coverage, and the U.S. trends list.";
+---
+
+<Base title="Methodology" description={description}>
+  <p class="eyebrow">About</p>
+  <h1>How this was built</h1>
+  <p class="lede">
+    TDDR Narrative Tracker is the first piece of an AI-based Democratic think tank for TDDR
+    (Too Dumb Didn't Read). The dashboard shows the latest research snapshot. These notes
+    explain that snapshot. They are not a live model.
+  </p>
+
+  {
+    snapshot.methodology.map((paragraph) => (
+      <p class="summary">{paragraph}</p>
+    ))
+  }
+
+  <div class="section-head">
+    <p class="eyebrow">Formula</p>
+    <h2>Momentum score</h2>
+  </div>
+  <p class="equation">
+    Score = {percent(formula.volumeWeight)} volume index + {percent(formula.accelWeight)} acceleration
+    index + {percent(formula.coverageWeight)} coverage index
+  </p>
+  <div class="formula-grid">
+    <article class="formula-card">
+      <strong>{percent(formula.volumeWeight)}</strong>
+      <h3>Volume index</h3>
+      <p>
+        100 × log10(1 + last-24h posts) / log10(1 + {fmt(formula.volumeCeilingPosts)}). The ceiling
+        is the highest last-24h count in this set. Window: {formula.last24hWindow}.
+      </p>
+    </article>
+    <article class="formula-card">
+      <strong>{percent(formula.accelWeight)}</strong>
+      <h3>Acceleration index</h3>
+      <p>
+        100 × min(last-24h / prior daily average, {formula.accelCap}) / {formula.accelCap}. A
+        triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6.
+        Window: {formula.sevenDayWindow}.
+      </p>
+    </article>
+    <article class="formula-card">
+      <strong>{percent(formula.coverageWeight)}</strong>
+      <h3>Coverage index</h3>
+      <p>
+        {formula.coverageOutletPoints} × min(outlets, {formula.coverageOutletCap}) / {formula.coverageOutletCap},
+        plus {formula.trendBonus} if the topic was on the U.S. X trends list. Trend objects did not
+        include tweet_count, so trend volumes are not invented.
+      </p>
+    </article>
+  </div>
+  <p class="note">
+    Cards label acceleration as Accelerating hard at 3× or more, Rising from 1.2×, Holding from
+    0.8×, and Cooling below that. The published momentum number is the snapshot’s rounded
+    composite. This page does not recompute it.
+  </p>
+
+  <div class="section-head">
+    <h2>Indices in this snapshot</h2>
+  </div>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Narrative</th>
+          <th>Side</th>
+          <th>Volume</th>
+          <th>Accel</th>
+          <th>Coverage</th>
+          <th>Momentum</th>
+          <th>Posts, 24h</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          ranked.map((narrative) => (
+            <tr>
+              <td>
+                <a href={`/snapshots/${snapshot.id}/narratives/${narrative.id}`}>{narrative.title}</a>
+              </td>
+              <td>{narrative.side}</td>
+              <td>{narrative.volumeIndex}</td>
+              <td>{narrative.accelIndex}</td>
+              <td>{narrative.coverageIndex}</td>
+              <td>{narrative.momentum}</td>
+              <td>{fmt(narrative.posts24h)}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-head">
+    <h2>{snapshot.oppositionNote.lead}</h2>
+  </div>
+  <p>{snapshot.oppositionNote.body}</p>
+  <p class="note">
+    Counts were pulled {snapshot.countsPulledLabel}. U.S. trends were pulled at {snapshot.trends.pulledAtLabel}: {snapshot.trends.detail}.
+  </p>
+
+  <div class="section-head">
+    <h2>Adding the next snapshot</h2>
+  </div>
+  <p>
+    Drop a new JSON file in <code>src/data/snapshots/</code> named for its date. The file’s
+    <code>id</code> must match that date, and <code>updatedAt</code> plus <code>updatedLabel</code>
+    must carry the snapshot’s own Eastern Time timestamp. The site renders whichever snapshot has
+    the latest <code>updatedAt</code>. See the README for the schema and the ingestion hook.
+  </p>
+
+  <div class="section-head">
+    <h2>Source list</h2>
+    <p class="section-dek">{snapshot.sourceListIntro}</p>
+  </div>
+  <SourceList links={snapshot.sourceList} numbered />
+</Base>

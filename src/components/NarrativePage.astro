@@ -1,0 +1,57 @@
+---
+import type { Narrative, Snapshot } from "../data/schema";
+import { NarrativeBrief } from "./NarrativeBrief";
+import { accelMeta, sideClass } from "../lib/format";
+import { narrativePath } from "../lib/dates";
+
+interface Props {
+  snapshot: Snapshot;
+  narrative: Narrative;
+  rank: number;
+  total: number;
+  higher: Narrative | null;
+  lower: Narrative | null;
+}
+
+const { snapshot, narrative, rank, total, higher, lower } = Astro.props;
+const accel = accelMeta(narrative.accel);
+const desk = `/snapshots/${snapshot.id}`;
+---
+
+<a class="back-link" href={`${desk}#feed`}>All narratives · {snapshot.id}</a>
+<div class="kicker-row">
+  <span class={`badge side-${sideClass(narrative.side)}`}>{narrative.side}</span>
+  <span class="badge tone-neutral">Score {narrative.momentum}</span>
+  <span class={`badge tone-${accel.tone}`}>{accel.label}</span>
+  <span class="rank">#{rank} of {total} by momentum</span>
+</div>
+<h1>{narrative.title}</h1>
+<p class="note">{snapshot.updatedLabel}</p>
+<NarrativeBrief
+  narrative={narrative}
+  trendsPulledAtLabel={snapshot.trends.pulledAtLabel}
+  dailyChartCaption={snapshot.dailyChartCaption}
+  noFactCheckNote={snapshot.noFactCheckNote}
+  headingLevel={2}
+  summaryClass="lede"
+/>
+<nav class="pager" aria-label="More narratives">
+  {
+    higher ? (
+      <a href={narrativePath(snapshot.id, higher.id)}>
+        <small>Higher momentum · {higher.momentum}</small>
+        {higher.title}
+      </a>
+    ) : (
+      <span />
+    )
+  }
+  {
+    lower ? (
+      <a href={narrativePath(snapshot.id, lower.id)}>
+        <small>Lower momentum · {lower.momentum}</small>
+        {lower.title}
+      </a>
+    ) : null
+  }
+</nav>

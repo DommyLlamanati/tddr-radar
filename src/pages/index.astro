@@ -1,0 +1,11 @@
+---
+import Base from "../layouts/Base.astro";
+import Dashboard from "../components/Dashboard.astro";
+import { latestSnapshot } from "../lib/snapshots";
+
+const snapshot = (await latestSnapshot()).data;
+---
+
+<Base title="Rising narratives" description={snapshot.summary} snapshotId={snapshot.id}>
+  <Dashboard snapshot={snapshot} />
+</Base>

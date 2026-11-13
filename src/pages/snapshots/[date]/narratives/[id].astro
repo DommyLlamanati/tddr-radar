@@ -1,0 +1,36 @@
+---
+import Base from "../../../../layouts/Base.astro";
+import NarrativePage from "../../../../components/NarrativePage.astro";
+import { allSnapshots } from "../../../../lib/snapshots";
+
+export async function getStaticPaths() {
+  const snapshots = await allSnapshots();
+  return snapshots.flatMap((entry) => {
+    const ranked = [...entry.data.narratives].sort((a, b) => b.momentum - a.momentum);
+    return ranked.map((narrative, index) => ({
+      params: { date: entry.data.id, id: narrative.id },
+      props: {
+        snapshot: entry.data,
+        narrative,
+        rank: index + 1,
+        total: ranked.length,
+        higher: index > 0 ? ranked[index - 1] : null,
+        lower: index < ranked.length - 1 ? ranked[index + 1] : null,
+      },
+    }));
+  });
+}
+
+const { snapshot, narrative, rank, total, higher, lower } = Astro.props;
+---
+
+<Base title={narrative.title} description={narrative.summary} snapshotId={snapshot.id}>
+  <NarrativePage
+    snapshot={snapshot}
+    narrative={narrative}
+    rank={rank}
+    total={total}
+    higher={higher}
+    lower={lower}
+  />
+</Base>

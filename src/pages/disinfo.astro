@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import DisinfoView from "../components/DisinfoView.astro";
+import { latestSnapshot } from "../lib/snapshots";
+
+const snapshot = (await latestSnapshot()).data;
+const description = `${snapshot.disinfo.caption} Snapshot from ${snapshot.updatedLabel}.`;
+---
+
+<Base title="Disinformation tracker" description={description} snapshotId={snapshot.id}>
+  <DisinfoView snapshot={snapshot} />
+</Base>

@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import Dashboard from "../../components/Dashboard.astro";
+import { allSnapshots } from "../../lib/snapshots";
+
+export async function getStaticPaths() {
+  const snapshots = await allSnapshots();
+  return snapshots.map((entry) => ({
+    params: { date: entry.data.id },
+    props: { snapshot: entry.data },
+  }));
+}
+
+const { snapshot } = Astro.props;
+---
+
+<Base title={snapshot.title} description={snapshot.summary} snapshotId={snapshot.id}>
+  <Dashboard snapshot={snapshot} />
+</Base>

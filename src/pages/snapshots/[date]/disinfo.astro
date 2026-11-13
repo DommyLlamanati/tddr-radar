@@ -1,0 +1,20 @@
+---
+import Base from "../../../layouts/Base.astro";
+import DisinfoView from "../../../components/DisinfoView.astro";
+import { allSnapshots } from "../../../lib/snapshots";
+
+export async function getStaticPaths() {
+  const snapshots = await allSnapshots();
+  return snapshots.map((entry) => ({
+    params: { date: entry.data.id },
+    props: { snapshot: entry.data },
+  }));
+}
+
+const { snapshot } = Astro.props;
+const description = `${snapshot.disinfo.caption} Snapshot from ${snapshot.updatedLabel}.`;
+---
+
+<Base title={`Disinformation · ${snapshot.id}`} description={description} snapshotId={snapshot.id}>
+  <DisinfoView snapshot={snapshot} />
+</Base>

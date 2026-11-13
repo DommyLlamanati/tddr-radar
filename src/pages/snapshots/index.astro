@@ -1,0 +1,40 @@
+---
+import Base from "../../layouts/Base.astro";
+import { allSnapshots } from "../../lib/snapshots";
+import { countSides, factCheckCount } from "../../lib/format";
+import { disinfoPath } from "../../lib/dates";
+
+const snapshots = await allSnapshots();
+const description = "Every TDDR narrative snapshot, newest first.";
+---
+
+<Base title="Snapshot archive" description={description}>
+  <p class="eyebrow">Archive</p>
+  <h1>Snapshots</h1>
+  <p class="lede">
+    The desk keeps one file per close. The homepage is always the latest
+    <code>updatedAt</code>. Open a day to see that morning’s or night’s narratives and fact-checks.
+  </p>
+  <ol class="source-list">
+    {
+      snapshots.map((entry, index) => {
+        const data = entry.data;
+        const sides = countSides(data.narratives);
+        const facts = factCheckCount(data.narratives);
+        const href = index === 0 ? "/" : `/snapshots/${data.id}`;
+        return (
+          <li>
+            <a href={href}>{data.title}</a>
+            <p class="source-meta">
+              {data.updatedLabel} · {data.narratives.length} narratives ({sides.right} Right, {sides.left} Far Left) · {facts} fact-checks
+            </p>
+            <p class="hero-links">
+              <a href={href}>Narratives</a>
+              <a href={disinfoPath(data.id)}>Disinformation</a>
+            </p>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Base>

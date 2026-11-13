@@ -1,0 +1,97 @@
+---
+import type { Snapshot } from "../data/schema";
+import SourceList from "./SourceList.astro";
+import SnapshotSwitch from "./SnapshotSwitch.astro";
+import { MomentumChart, VolumeChart } from "./Charts";
+import NarrativeFeed from "./NarrativeFeed";
+import { countSides, factCheckCount, fmt } from "../lib/format";
+import { disinfoPath, narrativePath } from "../lib/dates";
+
+interface Props {
+  snapshot: Snapshot;
+}
+
+const { snapshot } = Astro.props;
+const sides = countSides(snapshot.narratives);
+const facts = factCheckCount(snapshot.narratives);
+const hottest = snapshot.narratives.reduce((best, narrative) =>
+  narrative.posts24h > best.posts24h ? narrative : best,
+);
+const narrativeBase = `/snapshots/${snapshot.id}/narratives`;
+const disinfoHref = disinfoPath(snapshot.id);
+---
+
+<section class="hero" aria-labelledby="page-title">
+  <p class="eyebrow">{snapshot.updatedLabel}</p>
+  <h1 id="page-title">Rising narratives</h1>
+  <p class="lede">{snapshot.summary}</p>
+  <SnapshotSwitch activeId={snapshot.id} />
+  <p class="hero-links">
+    <a href="#chart">Momentum chart</a>
+    <a href="#feed">Narrative feed</a>
+    <a href={disinfoHref}>Disinformation tracker</a>
+    <a href="/about">Methodology</a>
+  </p>
+</section>
+
+<section id="snapshot" aria-label="Snapshot">
+  <div class="metrics">
+    <div class="metric">
+      <strong>{snapshot.narratives.length}</strong>
+      <span>Narratives in this snapshot</span>
+      <small>{sides.right} Right, {sides.left} Far Left</small>
+    </div>
+    <a class="metric" href={narrativePath(snapshot.id, hottest.id)}>
+      <strong>{fmt(hottest.posts24h)}</strong>
+      <span>Hottest 24h query</span>
+      <small>{snapshot.hottestQueryDetail}</small>
+    </a>
+    <div class="metric">
+      <strong>{snapshot.trends.names.length}</strong>
+      <span>U.S. X trends used</span>
+      <small>{snapshot.trends.detail}</small>
+    </div>
+    <a class="metric" href={disinfoHref}>
+      <strong>{facts}</strong>
+      <span>Fact-checks logged</span>
+      <small>{snapshot.factCheckOutletsDetail}</small>
+    </a>
+  </div>
+  <aside class="callout info">
+    <p class="callout-lead">{snapshot.oppositionNote.lead}</p>
+    <p>{snapshot.oppositionNote.body}</p>
+  </aside>
+</section>
+
+<section id="chart" aria-labelledby="chart-heading">
+  <div class="section-head">
+    <p class="eyebrow">Chart</p>
+    <h2 id="chart-heading">Momentum</h2>
+    <p class="section-dek">{snapshot.chartCaption}</p>
+  </div>
+  <MomentumChart narratives={snapshot.narratives} narrativeBase={narrativeBase} />
+  <div class="section-head">
+    <h2>Last 24 hours</h2>
+    <p class="section-dek">{snapshot.volumeChartCaption}</p>
+  </div>
+  <VolumeChart narratives={snapshot.narratives} narrativeBase={narrativeBase} />
+</section>
+
+<NarrativeFeed
+  client:load
+  narratives={snapshot.narratives}
+  feedCaption={snapshot.feedCaption}
+  trendsPulledAtLabel={snapshot.trends.pulledAtLabel}
+  dailyChartCaption={snapshot.dailyChartCaption}
+  noFactCheckNote={snapshot.noFactCheckNote}
+  narrativeBase={narrativeBase}
+/>
+
+<section id="sources" aria-labelledby="sources-heading">
+  <div class="section-head">
+    <p class="eyebrow">Sources</p>
+    <h2 id="sources-heading">Source list</h2>
+    <p class="section-dek">{snapshot.sourceListIntro}</p>
+  </div>
+  <SourceList links={snapshot.sourceList} numbered />
+</section>
