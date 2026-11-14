@@ -4,7 +4,8 @@ import { z } from "astro/zod";
  * Snapshot schema for TDDR Narrative Tracker.
  *
  * A daily job should write one JSON file per snapshot into `src/data/snapshots/`.
- * The filename (without extension) must match `id` (`YYYY-MM-DD`).
+ * The filename (without extension) must match `id` (`YYYY-MM-DD`, or
+ * `YYYY-MM-DD-pm` for a second, evening snapshot on the same day).
  * The app renders the snapshot with the latest `updatedAt`. Adding a file
  * does not require a code change as long as it validates against this schema.
  */
@@ -62,7 +63,7 @@ export const narrativeSchema = z.object({
 
 export const snapshotSchema = z
   .object({
-    id: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    id: z.string().regex(/^\d{4}-\d{2}-\d{2}(?:-pm)?$/),
     updatedAt: z.string().datetime({ offset: true }),
     updatedLabel: z.string().min(1),
     timezone: z.literal("America/New_York"),

@@ -117,8 +117,8 @@ const description =
     <h2>Adding the next snapshot</h2>
   </div>
   <p>
-    Drop a new JSON file in <code>src/data/snapshots/</code> named for its date. The file’s
-    <code>id</code> must match that date, and <code>updatedAt</code> plus <code>updatedLabel</code>
+    Drop a new JSON file in <code>src/data/snapshots/</code> named for its date (add <code>-pm</code> for a second,
+    evening snapshot that day). The file’s <code>id</code> must match that name, and <code>updatedAt</code> plus <code>updatedLabel</code>
     must carry the snapshot’s own Eastern Time timestamp. The site renders whichever snapshot has
     the latest <code>updatedAt</code>. See the README for the schema and the ingestion hook.
   </p>

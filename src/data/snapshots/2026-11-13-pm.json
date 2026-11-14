@@ -1,0 +1,1720 @@
+{
+  "id": "2026-11-13-pm",
+  "updatedAt": "2026-11-13T20:30:00-05:00",
+  "updatedLabel": "Friday, Nov 13, 2026, 8:30 PM ET",
+  "timezone": "America/New_York",
+  "title": "TDDR Rising Narratives — Friday night, Nov 13",
+  "summary": "A snapshot of opposition narratives as of 8:30 PM ET Friday, Nov 13, 2026: from the Right and from the Far Left. Built for TDDR (Too Dumb Didn't Read). This afternoon's nationwide FAA ground stop set off a wave of cyberattack speculation and 'Mayor Pete did it first' defenses, while the Van Hollen–Schumer fight turned into a public whip count and a strategist's 'height of hubris' clip put Medicare for All at the center of the left's leadership revolt. Every count, quote, and fact-check is from sources and X queries opened tonight. Nothing here is invented.",
+  "trends": {
+    "pulledAtLabel": "Friday, Nov 13, 2026, 8:24 PM ET",
+    "names": [
+      "The FAA",
+      "#FAAoutage",
+      "#Groundstop",
+      "Duffy",
+      "Mullin",
+      "Pete Buttigieg",
+      "Mayor Pete",
+      "Air Traffic Control"
+    ],
+    "detail": "U.S. trends were pulled at 8:24 PM ET with x.get_trends_by_woeid (WOEID 23424977, max 50). The political and news terms on that list were dominated by the FAA ground stop: 'The FAA,' '#FAAoutage,' '#Groundstop,' 'Duffy,' 'Mullin,' 'Pete Buttigieg,' 'Mayor Pete,' 'Air Traffic Control,' and 'Transportation Secretary.' 'John Brennan' was also trending, over an arrest involving his son, which we did not score. Trend objects did not include tweet_count, so we did not invent trend volumes. 'Van Hollen' and 'Electoral College,' both trending this morning, were not on the 8:24 PM ET list."
+  },
+  "countsPulledLabel": "Post counts and samples pulled between about 8:24 and 8:30 PM ET Friday",
+  "hottestQueryDetail": "Van Hollen vs. Schumer — the whip count goes public (86,014 posts in the last 24 hours)",
+  "factCheckOutletsDetail": "NBC News, GeekWire, Snopes, Semafor",
+  "oppositionNote": {
+    "lead": "What 'opposition' means here",
+    "body": "Right = narratives the Right is pushing after the Democratic midterm wave. Far Left = pressure on Democratic leadership and the incoming majority from the party's left. Some stories are being worked by both sides — tonight's FAA ground stop especially; the tag is the primary opposition frame."
+  },
+  "methodology": [
+    "Last updated Friday, Nov 13, 2026, 8:30 PM ET. This is a research snapshot for TDDR, not a live API. It will go stale as the night moves. X trends were pulled for the United States at 8:24 PM ET. This is the second snapshot of the day; this morning's 8:26 AM ET snapshot is kept in the archive.",
+    "For each narrative we ran one English-language X search with x.get_posts_counts_recent, counted matches in a window from 8:00 PM ET Thursday, Nov 12, through 8:23 PM ET Friday, Nov 13 — 23 minutes longer than 24 hours; the 8 PM Friday bar is a 23-minute partial — and over a seven-day window whose first UTC slice starts about 8:40 PM ET Nov 6 (the earliest the recent-count API would return). We counted named news or fact-check outlets we actually opened or retrieved tonight, and noted whether the topic appeared on the U.S. trends list at 8:24 PM ET.",
+    "Score = 50% volume index + 30% acceleration index + 20% coverage index. Volume index is 100 × log10(1 + last-24h posts) / log10(1 + the highest last-24h count in this set). Acceleration index is 100 × min(last-24h / prior daily average, 3) / 3, so a triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6. Coverage index is 70 × min(outlets, 7) / 7, plus 30 if the topic was on the U.S. X trends list tonight.",
+    "Counts are query matches, not unique posts or unique users, and queries can overlap. Replies are included — including automated @grok replies, which make up a visible share of the FAA query. Sentiment is a qualitative label from relevancy-sorted post samples and from quotes in news coverage, not a scientific poll. If a signal was thin, the card says so. Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows. Hourly charts are labeled in ET."
+  ],
+  "formula": {
+    "volumeWeight": 0.5,
+    "accelWeight": 0.3,
+    "coverageWeight": 0.2,
+    "accelCap": 3,
+    "coverageOutletCap": 7,
+    "coverageOutletPoints": 70,
+    "trendBonus": 30,
+    "sevenDayWindow": "a seven-day window whose first UTC slice starts about 8:40 PM ET Nov 6",
+    "volumeCeilingPosts": 86014,
+    "last24hWindow": "8:00 PM ET Nov 12, 2026 through 8:23 PM ET Nov 13, 2026 (23 minutes longer than 24 hours; last hour is a partial bar)"
+  },
+  "chartCaption": "Scores are the composite described in the methodology. Compare with the last-24-hour volume chart.",
+  "volumeChartCaption": "X query matches from 8:00 PM ET Nov 12 through 8:23 PM ET Nov 13 (not unique across narratives). The window is 23 minutes longer than 24 hours.",
+  "dailyChartCaption": "Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows. Nov 7* starts about 8:40 PM ET Nov 6; Nov 14* is 7:00 PM through 8:23 PM ET Friday, Nov 13.",
+  "noFactCheckNote": "If a card has no fact-check row, we did not find a rated fact-check for the core claim in this snapshot — not that the claim is true.",
+  "feedCaption": "Eight narratives, scored inside this Friday-night set. Open a card for talking points, amplifiers, and sources.",
+  "disinfo": {
+    "caption": "Claims in this snapshot that have a fact-check or reporting we opened.",
+    "caveatLead": "A fact-check is not a volume score.",
+    "caveatBody": "Tonight's fastest-spreading false or unsupported claim is that the FAA ground stop was a cyberattack, often tied to Thursday's Microsoft outage. Officials say they have seen no sign of an attack and no Microsoft link, but the investigation is early, so 'unsupported so far' is the honest rating. On the left, posts claiming Ayanna Pressley has launched a speaker bid are false as of tonight. Ratings below are from pages we opened.",
+    "links": [
+      {
+        "title": "Nationwide ground stop at U.S. airports: Here's what we know",
+        "site": "NBC Chicago",
+        "href": "https://www.nbcchicago.com/news/local/heres-what-we-know-after-nationwide-ground-stop-at-us-airports/4016633/",
+        "date": "Nov 13, 2026"
+      },
+      {
+        "title": "DHS chief sees no link between Microsoft outage and FAA ground stop, doesn't rule out AI",
+        "site": "GeekWire",
+        "href": "https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated/",
+        "date": "Nov 13, 2026"
+      },
+      {
+        "title": "'No indication as of yet' that nationwide ground stop is caused by cyber attack, says Markwayne Mullin",
+        "site": "People",
+        "href": "https://people.com/no-indication-yet-nationwide-ground-stop-is-caused-by-cyber-attack-says-homeland-security-secretary-markwayne-mullin-12253686",
+        "date": "Nov 13, 2026"
+      },
+      {
+        "title": "Activists call for Pressley to launch House speaker bid against Jeffries",
+        "site": "Semafor",
+        "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries",
+        "date": "Nov 13, 2026"
+      },
+      {
+        "title": "Unraveling claim Hakeem Jeffries took $300K from healthcare PACs before opposing Medicare for All",
+        "site": "Snopes",
+        "href": "https://www.snopes.com/fact-check/hakeem-jeffries-medicare-for-all/",
+        "date": "Aug 19, 2026"
+      },
+      {
+        "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+        "site": "Snopes",
+        "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/",
+        "date": "Nov 5, 2026"
+      }
+    ]
+  },
+  "sourceListIntro": "Every outlet and post linked from a narrative card, plus the fact-checks, in one list.",
+  "sourceList": [
+    {
+      "title": "Flights halted at airports across US due to air traffic control communications problems",
+      "site": "AP",
+      "href": "https://apnews.com/article/flights-halted-airports-faa-f81b0904331dafad6133f291e5f531a8",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Nationwide ground stop at U.S. airports: Here's what we know",
+      "site": "NBC Chicago",
+      "href": "https://www.nbcchicago.com/news/local/heres-what-we-know-after-nationwide-ground-stop-at-us-airports/4016633/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "DHS chief sees no link between Microsoft outage and FAA ground stop, doesn't rule out AI",
+      "site": "GeekWire",
+      "href": "https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Markwayne Mullin: Telecom outage grounds flights, travelers are safe",
+      "site": "The Hill",
+      "href": "https://thehill.com/policy/transportation/6219936-mullin-faa-telecommunication-outage-ground-stop/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "FAA grounds flights at U.S. airports, citing 'telecommunications outage'",
+      "site": "The Washington Post",
+      "href": "https://www.washingtonpost.com/transportation/2026/11/13/faa-grounds-flights-all-us-airports-citing-communications-issue/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "FAA orders third nationwide ground stop in its history",
+      "site": "Ars Technica",
+      "href": "https://arstechnica.com/tech-policy/2026/11/faa-orders-third-nationwide-ground-stop-in-its-history/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "'No indication as of yet' that nationwide ground stop is caused by cyber attack, says Markwayne Mullin",
+      "site": "People",
+      "href": "https://people.com/no-indication-yet-nationwide-ground-stop-is-caused-by-cyber-attack-says-homeland-security-secretary-markwayne-mullin-12253686",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Are the FAA ground stop and Microsoft outage related?",
+      "site": "Northeastern Global News",
+      "href": "https://news.northeastern.edu/2026/11/13/faa-ground-stop-telecommunications-issue/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Microsoft says 'no indication' US nationwide flight ground stop linked to its services",
+      "site": "Anadolu Agency",
+      "href": "https://www.aa.com.tr/en/americas/microsoft-says-no-indication-us-nationwide-flight-ground-stop-linked-to-its-services/4124825",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "FAA statement on nationwide ground stop",
+      "site": "Federal Aviation Administration",
+      "href": "https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "@zerohedge: 'FAA ground stop does not appear to be cyber attack: CNN' (1,484 likes)",
+      "site": "X",
+      "href": "https://x.com/zerohedge/status/2121362493893452187",
+      "date": "Nov 13, 2026, 5:00 PM ET"
+    },
+    {
+      "title": "@WallStreetApes: officials do not believe the ground stop is sabotage or foreign interference (434 likes)",
+      "site": "X",
+      "href": "https://x.com/WallStreetApes/status/2121364404696694891",
+      "date": "Nov 13, 2026, 5:07 PM ET"
+    },
+    {
+      "title": "@BenDempsey18: 'When Pete Buttigieg had a ground stop…' (62 likes)",
+      "site": "X",
+      "href": "https://x.com/BenDempsey18/status/2121384183670989136",
+      "date": "Nov 13, 2026, 6:26 PM ET"
+    },
+    {
+      "title": "The senators who could join Van Hollen's insurgency against Schumer",
+      "site": "Axios",
+      "href": "https://www.axios.com/2026/11/13/democrats-schumer-van-hollen-senate-leader",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Which Democratic senators are supporting Schumer and Van Hollen for leader?",
+      "site": "USA Today",
+      "href": "https://www.usatoday.com/story/news/politics/2026/11/13/schumer-van-hollen-supporters-leader-senate/92760595007/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Schumer leads Van Hollen in early majority leader endorsements",
+      "site": "Washington Examiner",
+      "href": "https://www.washingtonexaminer.com/news/senate/4802873/chuck-schumer-chris-van-hollen-majority-leader-whip-count-versus-noncommittal-members-thus-far/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Schumer vs. Van Hollen & Jeffries whip count",
+      "site": "Drop Site News",
+      "href": "https://whipcount.dropsitenews.com/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Working Families Party joins call for Schumer to step aside in Senate leader race",
+      "site": "Common Dreams",
+      "href": "https://www.commondreams.org/news/working-families-party-schumer",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "@axios: who supports Van Hollen, Schumer, and who's undecided (163 likes)",
+      "site": "X",
+      "href": "https://x.com/axios/status/2121335645259846075",
+      "date": "Nov 13, 2026, 3:13 PM ET"
+    },
+    {
+      "title": "Newsom slams DeSantis over Electoral College fight, 'MAGA math'",
+      "site": "2paragraphs",
+      "href": "https://2paragraphs.com/2026/11/newsom-slams-desantis-over-electoral-college-fight-maga-math/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Movement to end electoral college gets boost after Democratic wins",
+      "site": "The Washington Post",
+      "href": "https://www.washingtonpost.com/politics/2026/11/13/movement-end-electoral-college-gets-boost-after-democratic-wins/",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+      "site": "Snopes",
+      "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/",
+      "date": "Nov 5, 2026"
+    },
+    {
+      "title": "X News: DeSantis warns Electoral College scrap would delay results by weeks",
+      "site": "X News",
+      "href": "https://x.com/i/trending/2121000916211945672",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "@doorswinwars: DeSantis 'No thanks' quote, one of many near-identical copies (30 likes)",
+      "site": "X",
+      "href": "https://x.com/doorswinwars/status/2121296585384485138",
+      "date": "Nov 13, 2026, 12:38 PM ET"
+    },
+    {
+      "title": "@ClippingMods: Lis Smith says M4A or stopping ICE would be the 'height of hubris' (482,056 views, 296 quotes)",
+      "site": "X",
+      "href": "https://x.com/ClippingMods/status/2121251760098705573",
+      "date": "Nov 13, 2026, 9:40 AM ET"
+    },
+    {
+      "title": "@ClippingWings: 'Lis Smith is saying Abolish ICE and Medicare for All are Far Left policies' (698 likes)",
+      "site": "X",
+      "href": "https://x.com/ClippingWings/status/2121284463527424243",
+      "date": "Nov 13, 2026, 11:50 AM ET"
+    },
+    {
+      "title": "@Popstonox: 'We should not read into these election results as a mandate' (560 likes)",
+      "site": "X",
+      "href": "https://x.com/Popstonox/status/2121283243752247525",
+      "date": "Nov 13, 2026, 11:45 AM ET"
+    },
+    {
+      "title": "X News: Democrats question Schumer and Jeffries over policy disconnects",
+      "site": "X News",
+      "href": "https://x.com/i/trending/2121283328162881789",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Current and historical public opinion on Medicare-for-All and other national health plan proposals",
+      "site": "KFF",
+      "href": "https://www.kff.org/public-opinion/current-and-historical-public-opinion-on-medicare-for-all-and-other-national-health-plan-proposals/"
+    },
+    {
+      "title": "Hakeem Jeffries rejects Medicare for All, says he doesn't support DSA agenda",
+      "site": "Newsweek",
+      "href": "https://www.newsweek.com/hakeem-jeffries-rejects-medicare-for-all-dsa-agenda-12328842"
+    },
+    {
+      "title": "Unraveling claim Hakeem Jeffries took $300K from healthcare PACs before opposing Medicare for All",
+      "site": "Snopes",
+      "href": "https://www.snopes.com/fact-check/hakeem-jeffries-medicare-for-all/",
+      "date": "Aug 19, 2026"
+    },
+    {
+      "title": "@toddstarnes: Thune's adjournment is a 'flat-out f-you' to GOP voters (15,925 likes, 1,015,841 views)",
+      "site": "X",
+      "href": "https://x.com/toddstarnes/status/2121251514035437614",
+      "date": "Nov 13, 2026, 9:39 AM ET"
+    },
+    {
+      "title": "X News: Senate GOP faces voter backlash over Thune's adjournment decision",
+      "site": "X News",
+      "href": "https://x.com/i/trending/2121410065525580071",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Gone till Monday: the Senate clocks out early, and Trump's base wants to know why Thune isn't working the weekend",
+      "site": "Shadow Dossier",
+      "href": "https://shadowdossier.com/senate-adjourns-until-monday-thune-lame-duck-nominees-backlash/"
+    },
+    {
+      "title": "John Thune vows Senate GOP will maximize lame duck legislative push",
+      "site": "Fox News",
+      "href": "https://www.foxnews.com/politics/senate-republicans-plan-54-day-blitz-push-trumps-agenda-before-democrats-seize-power"
+    },
+    {
+      "title": "Thune reelected Senate GOP leader after push for lame-duck commitments",
+      "site": "The Well News",
+      "href": "https://www.thewellnews.com/us-senate/thune-reelected-senate-gop-leader-after-push-for-lame-duck-commitments/",
+      "date": "Nov 10, 2026"
+    },
+    {
+      "title": "@LadyRedWave: 'Aaand AGAIN Thune screws Us ALL!' (17 likes)",
+      "site": "X",
+      "href": "https://x.com/LadyRedWave/status/2121282001961713705",
+      "date": "Nov 13, 2026, 11:40 AM ET"
+    },
+    {
+      "title": "AOC suggests Dems could target justices for impeachment",
+      "site": "Yahoo News (Newsmax Wires)",
+      "href": "https://www.yahoo.com/news/politics/articles/aoc-suggests-dems-could-target-221530000.html",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "AOC vows to take aggressive action against Trump when Democrats take power… including impeaching his Supreme Court justices",
+      "site": "Daily Mail",
+      "href": "https://www.dailymail.com/news/us-politics/article-16290421/aoc-impeachment-trump-supreme-court.html"
+    },
+    {
+      "title": "X News: AOC says impeaching Supreme Court justices remains an option for Democrats",
+      "site": "X News",
+      "href": "https://x.com/i/trending/2121251466128269816",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "X News: Rep. Al Green announces new impeachment push against Trump",
+      "site": "X News",
+      "href": "https://x.com/i/trending/2120961566325559797",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "@MichaelARothman: 'AOC to CNN: all options are on the table' (4 likes)",
+      "site": "X",
+      "href": "https://x.com/MichaelARothman/status/2121078447955157466",
+      "date": "Nov 12, 2026, 10:11 PM ET"
+    },
+    {
+      "title": "Activists call for Pressley to launch House speaker bid against Jeffries",
+      "site": "Semafor",
+      "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Nobody wants to run against Hakeem Jeffries for speaker",
+      "site": "Axios",
+      "href": "https://www.axios.com/2026/11/13/jeffries-speaker-house-democrats-pressley-raskin",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Chuck Schumer and Hakeem Jeffries face Democratic leadership revolt after midterms",
+      "site": "Vanity Fair",
+      "href": "https://www.vanityfair.com/story/chuck-schumer-hakeem-jeffries-leadership-fight"
+    },
+    {
+      "title": "Petition aimed at drafting Ayanna Pressley to challenge Hakeem Jeffries for speaker picks up steam",
+      "site": "Common Dreams",
+      "href": "https://www.commondreams.org/news/ayanna-pressley-for-speaker"
+    },
+    {
+      "title": "Progressives want Ayanna Pressley, not Hakeem Jeffries, as the next House speaker",
+      "site": "TheGrio",
+      "href": "https://thegrio.com/2026/11/12/progressives-want-ayanna-pressley-not-hakeem-jeffries-as-next-house-speaker/",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "@DropSiteNews: Pressley has not announced a challenge to Jeffries (179 likes)",
+      "site": "X",
+      "href": "https://x.com/DropSiteNews/status/2121368099437895763",
+      "date": "Nov 13, 2026, 5:22 PM ET"
+    },
+    {
+      "title": "Did the SAVE Act pass? Latest Senate status as GOP renews voter ID push",
+      "site": "Delaware Online",
+      "href": "https://www.delawareonline.com/story/news/2026/11/11/did-save-act-pass-senate-latest-status-voter-id-requirements-2026-what-is-the-save-america-act/92725532007/",
+      "date": "Nov 11, 2026"
+    },
+    {
+      "title": "Trump: GOP Senate can no longer be the place 'where things are sent to die' following midterm losses",
+      "site": "OAN",
+      "href": "https://www.oann.com/newsroom/trump-gop-senate-can-no-longer-be-the-place-where-things-are-sent-to-die-following-midterm-losses/"
+    },
+    {
+      "title": "Trump blames filibuster for GOP Senate loss",
+      "site": "The Rothman Report",
+      "href": "https://therothmanreport.com/politics/trump-thune-minority-save-america-act-filibuster/"
+    },
+    {
+      "title": "@ChristinaNewstv: Thune 'repeatedly blocked efforts to nuke the filibuster so the SAVE America Act…' (7 likes)",
+      "site": "X",
+      "href": "https://x.com/ChristinaNewstv/status/2121392673974005771",
+      "date": "Nov 13, 2026, 7:00 PM ET"
+    }
+  ],
+  "narratives": [
+    {
+      "id": "faa-ground-stop",
+      "title": "FAA ground stop: 'It was a cyberattack' and 'Mayor Pete did it first'",
+      "side": "Right",
+      "momentum": 91,
+      "volumeIndex": 82.5,
+      "accelIndex": 100.0,
+      "coverageIndex": 100.0,
+      "posts24h": 11832,
+      "posts7d": 11853,
+      "priorDailyAvg": 3.5,
+      "accel": 3380.57,
+      "outlets": 9,
+      "trendingUS": true,
+      "query": "(FAA OR \"ground stop\" OR \"air traffic\" OR groundstop) (Buttigieg OR \"Mayor Pete\" OR cyberattack OR \"cyber attack\" OR hacked OR sabotage) lang:en",
+      "sentiment": "Alarmed and suspicious, then defensive",
+      "sentimentNote": "In a relevancy sample of posts after 3:30 PM ET, the loudest strand was speculation that the outage was a cyberattack by Iran, China, or Russia, often bundled with Thursday's Microsoft 365 outage and a National Weather Service website problem ('THIS DOESNT HAPPEN COINCIDENTALLY'). A second, smaller strand defended Transportation Secretary Sean Duffy by pointing to the January 2023 ground stop under Pete Buttigieg. A large share of the matches were replies, including many automated @grok replies telling users there was no evidence of an attack. Inside this query's 24-hour total, 10,416 matches came from the cyberattack terms and 1,417 from the Buttigieg terms (the subsets can overlap). This is a read of that sample, not a poll.",
+      "summary": "Shortly before 4:00 PM ET Friday, the FAA halted departures from every U.S. airport after what officials called a telecommunications outage affecting the Air Route Traffic Control Centers. AP called it only the second nationwide grounding since 9/11; Ars Technica counted it as the third in FAA history. Homeland Security Secretary Markwayne Mullin said there was 'no indication as of yet that this was a nefarious attack' and 'This isn't another 9/11,' but would not rule out a cyberattack. Multiple officials told NBC News they had not seen activity typical of a cyberattack and saw nothing connecting it to Thursday's Microsoft outage; Microsoft said the same. Mullin also said DHS was looking at whether the FAA's newly expanded SMART traffic-planning tool played a role, which its maker denied. On X, this query went from single digits all week to 1,490 matches between 4:00 and 5:00 PM ET and 4,105 between 5:00 and 6:00 PM ET. 'The FAA,' '#FAAoutage,' '#Groundstop,' 'Duffy,' 'Mullin,' 'Pete Buttigieg,' and 'Mayor Pete' were all on the U.S. trends list at 8:24 PM ET.",
+      "talkingPoints": [
+        "Microsoft goes down, then the FAA, then the weather service — this doesn't happen by coincidence.",
+        "Officials say 'not a cyberattack' every time. Don't buy it.",
+        "Mayor Pete had a nationwide ground stop in 2023 and didn't say a word for hours. Duffy is out front.",
+        "Iran, China, or Russia is testing us."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Transportation Secretary Sean Duffy, who announced the ground stop on X; DHS Secretary Markwayne Mullin at the White House; @zerohedge relaying CNN's 'does not appear to be cyber attack' (1,484 likes); @WallStreetApes relaying officials' 'not sabotage or foreign interference' (434 likes); and @BenDempsey18, whose 'When Pete Buttigieg had a ground stop' reply drew 62 likes. Replies to @LauraLoomer and @ASavageNation asked about Iran, China, or Russia hacking systems; we did not open those accounts' own posts, so we do not quote them.",
+      "whyItWorks": "A nationwide grounding is a visceral, shared experience — thousands of people stuck at gates at the same moment — and it landed the day after a global Microsoft outage. That timing makes 'coordinated attack' feel like pattern recognition rather than speculation. The 'Mayor Pete did it first' strand works differently: it pre-empts blame for the current administration by reaching for a real precedent (January 2023's NOTAM failure) that the audience already remembers as a Democratic failure.",
+      "audience": "Stranded travelers, aviation-curious accounts, conspiracy-leaning feeds already primed by the Iran war, and pro-administration posters defending Duffy. A smaller left-leaning strand used #TrumpIncompetence to blame the administration.",
+      "counter": "Stick to what officials have actually said, with the time stamp: no indication of an attack so far, no link to Microsoft, investigation ongoing, SMART tool under review. Don't call it 'definitely not a cyberattack' either; that outruns the evidence. On 'Mayor Pete did it first': yes, there was a January 2023 ground stop — the honest point is that both ground stops trace back to aging FAA systems, and the White House asked Congress for $30.1 billion more for aviation infrastructure hours before this one, according to GeekWire's report.",
+      "factChecks": [
+        {
+          "claim": "A cyberattack by Iran, China, or another adversary caused Friday's nationwide FAA ground stop.",
+          "rating": "Unsupported so far — officials see no sign of an attack",
+          "detail": "Multiple officials from several agencies told NBC News there was no indication the incident was caused by malicious activity and that they had not seen activity typically associated with a cyberattack, while cautioning the investigation was early. DHS Secretary Mullin said there was 'no indication as of yet' of a nefarious attack but did not rule one out.",
+          "href": "https://www.nbcchicago.com/news/local/heres-what-we-know-after-nationwide-ground-stop-at-us-airports/4016633/",
+          "outlet": "NBC Chicago / NBC News"
+        },
+        {
+          "claim": "The FAA ground stop is connected to Thursday's Microsoft 365 outage.",
+          "rating": "No evidence — DHS and Microsoft say they are separate",
+          "detail": "GeekWire reported Mullin said, 'I don't see any reason to connect those two at all. Those are separate issues,' and Microsoft said it had no indication the ground stop was related to its service disruption. Microsoft attributed its own outage to a network change, not an attack.",
+          "href": "https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated/",
+          "outlet": "GeekWire"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 9
+        },
+        {
+          "label": "Nov 8",
+          "value": 2
+        },
+        {
+          "label": "Nov 9",
+          "value": 2
+        },
+        {
+          "label": "Nov 10",
+          "value": 3
+        },
+        {
+          "label": "Nov 11",
+          "value": 2
+        },
+        {
+          "label": "Nov 12",
+          "value": 3
+        },
+        {
+          "label": "Nov 13",
+          "value": 8040
+        },
+        {
+          "label": "Nov 14*",
+          "value": 3792
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 1
+        },
+        {
+          "label": "9 AM",
+          "value": 0
+        },
+        {
+          "label": "10 AM",
+          "value": 2
+        },
+        {
+          "label": "11 AM",
+          "value": 0
+        },
+        {
+          "label": "12 PM",
+          "value": 0
+        },
+        {
+          "label": "1 PM",
+          "value": 0
+        },
+        {
+          "label": "2 PM",
+          "value": 0
+        },
+        {
+          "label": "3 PM",
+          "value": 9
+        },
+        {
+          "label": "4 PM",
+          "value": 1490
+        },
+        {
+          "label": "5 PM",
+          "value": 4105
+        },
+        {
+          "label": "6 PM",
+          "value": 2431
+        },
+        {
+          "label": "7 PM",
+          "value": 2530
+        },
+        {
+          "label": "8 PM*",
+          "value": 1262
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). Nearly every match came after the ground stop began just before 4:00 PM ET.",
+      "sources": [
+        {
+          "title": "Flights halted at airports across US due to air traffic control communications problems",
+          "site": "AP",
+          "href": "https://apnews.com/article/flights-halted-airports-faa-f81b0904331dafad6133f291e5f531a8",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Nationwide ground stop at U.S. airports: Here's what we know",
+          "site": "NBC Chicago",
+          "href": "https://www.nbcchicago.com/news/local/heres-what-we-know-after-nationwide-ground-stop-at-us-airports/4016633/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "DHS chief sees no link between Microsoft outage and FAA ground stop, doesn't rule out AI",
+          "site": "GeekWire",
+          "href": "https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Markwayne Mullin: Telecom outage grounds flights, travelers are safe",
+          "site": "The Hill",
+          "href": "https://thehill.com/policy/transportation/6219936-mullin-faa-telecommunication-outage-ground-stop/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "FAA grounds flights at U.S. airports, citing 'telecommunications outage'",
+          "site": "The Washington Post",
+          "href": "https://www.washingtonpost.com/transportation/2026/11/13/faa-grounds-flights-all-us-airports-citing-communications-issue/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "FAA orders third nationwide ground stop in its history",
+          "site": "Ars Technica",
+          "href": "https://arstechnica.com/tech-policy/2026/11/faa-orders-third-nationwide-ground-stop-in-its-history/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "'No indication as of yet' that nationwide ground stop is caused by cyber attack, says Markwayne Mullin",
+          "site": "People",
+          "href": "https://people.com/no-indication-yet-nationwide-ground-stop-is-caused-by-cyber-attack-says-homeland-security-secretary-markwayne-mullin-12253686",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Are the FAA ground stop and Microsoft outage related?",
+          "site": "Northeastern Global News",
+          "href": "https://news.northeastern.edu/2026/11/13/faa-ground-stop-telecommunications-issue/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Microsoft says 'no indication' US nationwide flight ground stop linked to its services",
+          "site": "Anadolu Agency",
+          "href": "https://www.aa.com.tr/en/americas/microsoft-says-no-indication-us-nationwide-flight-ground-stop-linked-to-its-services/4124825",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "FAA statement on nationwide ground stop",
+          "site": "Federal Aviation Administration",
+          "href": "https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "@zerohedge: 'FAA ground stop does not appear to be cyber attack: CNN' (1,484 likes)",
+          "site": "X",
+          "href": "https://x.com/zerohedge/status/2121362493893452187",
+          "date": "Nov 13, 2026, 5:00 PM ET"
+        },
+        {
+          "title": "@WallStreetApes: officials do not believe the ground stop is sabotage or foreign interference (434 likes)",
+          "site": "X",
+          "href": "https://x.com/WallStreetApes/status/2121364404696694891",
+          "date": "Nov 13, 2026, 5:07 PM ET"
+        },
+        {
+          "title": "@BenDempsey18: 'When Pete Buttigieg had a ground stop…' (62 likes)",
+          "site": "X",
+          "href": "https://x.com/BenDempsey18/status/2121384183670989136",
+          "date": "Nov 13, 2026, 6:26 PM ET"
+        }
+      ],
+      "defaultOpen": true
+    },
+    {
+      "id": "van-hollen-schumer",
+      "title": "Van Hollen vs. Schumer — the whip count goes public",
+      "side": "Far Left",
+      "momentum": 90,
+      "volumeIndex": 100.0,
+      "accelIndex": 100.0,
+      "coverageIndex": 50.0,
+      "posts24h": 86014,
+      "posts7d": 131003,
+      "priorDailyAvg": 7498.2,
+      "accel": 11.47,
+      "outlets": 5,
+      "trendingUS": false,
+      "query": "(\"Van Hollen\" OR VanHollen) (Schumer OR \"majority leader\" OR leader OR challenge OR challenging OR bid) lang:en",
+      "sentiment": "Energized, with a growing 'count the votes' realism",
+      "sentimentNote": "In a relevancy sample of Friday posts plus Axios, USA Today, Washington Examiner, and Common Dreams coverage, the dominant tone was organizing energy: lists of which senators to call, and celebration of new endorsements. A visible minority, from both left and right, mocked Van Hollen as an old-guard insider ('Van Hollen is as old as Schumer'). This is a read of that sample, not a poll.",
+      "summary": "A day after Sen. Chris Van Hollen announced his challenge to Chuck Schumer for Senate Democratic leader, the fight became a public whip count. Axios counted 14 senators publicly backing Schumer (including Schumer himself) and Van Hollen's public endorsers as Sen. Bernie Sanders, Sen.-elect Abdul El-Sayed, Sen. Jeff Merkley (Friday afternoon), and incoming Sen. Peggy Flanagan (Friday morning); Van Hollen has said 'more than 10' senators are with him. A candidate needs 28 or 29 votes, per Axios. Sen. Elissa Slotkin said Friday she will not support Schumer, according to Common Dreams, and the Working Families Party endorsed Van Hollen. Senators including Jon Ossoff, Chris Murphy, Elizabeth Warren, and Mark Warner have not committed, and Sen.-elect James Talarico wants to hear Schumer's vision first. On X, this query held between about 3,000 and 5,400 matches an hour all day Friday, after the 9,763-match spike between 9:00 and 10:00 PM ET Thursday, early in this 24-hour window. 'Van Hollen' was not on the U.S. trends list at 8:24 PM ET; it was this morning.",
+      "talkingPoints": [
+        "Every endorsement is a crack — call the undecided senators by name.",
+        "Schumer's '55 seats' is a reason to change, not a reason to stay.",
+        "Merkley and Flanagan are in. Who's next?",
+        "A secret ballot means senators need to hear from you before they vote, not after."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Sen. Chris Van Hollen (MS NOW interview, 'more than 10' senators); Sen. Bernie Sanders; Sen.-elect Abdul El-Sayed; Sen. Jeff Merkley and incoming Sen. Peggy Flanagan, who endorsed Friday; Sen. Elissa Slotkin, who said she won't back Schumer; the Working Families Party; Drop Site News's public whip count; and @axios's 'who supports whom' post (163 likes). Schumer's defenders include Sens. Ruben Gallego ('When the manager takes a World Series, you give them another contract') and Kirsten Gillibrand.",
+      "whyItWorks": "A whip count turns a mood into a scoreboard. Every new name is a news event the left can share, and every undecided senator is a phone number. The emotional hook is momentum — the sense that something considered impossible a week ago is moving.",
+      "audience": "Progressive Democrats, anti-war voters, and activists who were already calling offices about Schumer and Jeffries. A centrist and right-leaning chorus is mocking the challenge as one insider replacing another.",
+      "counter": "Stop treating it as a personality fight and ask both candidates the same three questions on the record: what they will attach to the Dec. 11 funding bill on the Iran war, what they will do with the filibuster, and what the first anti-corruption vote will be. Then let the whip count follow the answers.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 870
+        },
+        {
+          "label": "Nov 8",
+          "value": 1916
+        },
+        {
+          "label": "Nov 9",
+          "value": 13028
+        },
+        {
+          "label": "Nov 10",
+          "value": 16850
+        },
+        {
+          "label": "Nov 11",
+          "value": 7705
+        },
+        {
+          "label": "Nov 12",
+          "value": 4383
+        },
+        {
+          "label": "Nov 13",
+          "value": 81677
+        },
+        {
+          "label": "Nov 14*",
+          "value": 4574
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 3041
+        },
+        {
+          "label": "9 AM",
+          "value": 3145
+        },
+        {
+          "label": "10 AM",
+          "value": 3173
+        },
+        {
+          "label": "11 AM",
+          "value": 3515
+        },
+        {
+          "label": "12 PM",
+          "value": 3292
+        },
+        {
+          "label": "1 PM",
+          "value": 4162
+        },
+        {
+          "label": "2 PM",
+          "value": 3984
+        },
+        {
+          "label": "3 PM",
+          "value": 5423
+        },
+        {
+          "label": "4 PM",
+          "value": 4211
+        },
+        {
+          "label": "5 PM",
+          "value": 3514
+        },
+        {
+          "label": "6 PM",
+          "value": 3601
+        },
+        {
+          "label": "7 PM",
+          "value": 3407
+        },
+        {
+          "label": "8 PM*",
+          "value": 1167
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). The query never dropped below about 3,000 matches an hour during the day Friday.",
+      "sources": [
+        {
+          "title": "The senators who could join Van Hollen's insurgency against Schumer",
+          "site": "Axios",
+          "href": "https://www.axios.com/2026/11/13/democrats-schumer-van-hollen-senate-leader",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Which Democratic senators are supporting Schumer and Van Hollen for leader?",
+          "site": "USA Today",
+          "href": "https://www.usatoday.com/story/news/politics/2026/11/13/schumer-van-hollen-supporters-leader-senate/92760595007/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Schumer leads Van Hollen in early majority leader endorsements",
+          "site": "Washington Examiner",
+          "href": "https://www.washingtonexaminer.com/news/senate/4802873/chuck-schumer-chris-van-hollen-majority-leader-whip-count-versus-noncommittal-members-thus-far/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Schumer vs. Van Hollen & Jeffries whip count",
+          "site": "Drop Site News",
+          "href": "https://whipcount.dropsitenews.com/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Working Families Party joins call for Schumer to step aside in Senate leader race",
+          "site": "Common Dreams",
+          "href": "https://www.commondreams.org/news/working-families-party-schumer",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "@axios: who supports Van Hollen, Schumer, and who's undecided (163 likes)",
+          "site": "X",
+          "href": "https://x.com/axios/status/2121335645259846075",
+          "date": "Nov 13, 2026, 3:13 PM ET"
+        }
+      ]
+    },
+    {
+      "id": "electoral-college",
+      "title": "DeSantis: abolish the Electoral College and you'll wait four weeks for California",
+      "side": "Right",
+      "momentum": 81,
+      "volumeIndex": 90.9,
+      "accelIndex": 100.0,
+      "coverageIndex": 30.0,
+      "posts24h": 30414,
+      "posts7d": 79707,
+      "priorDailyAvg": 8215.5,
+      "accel": 3.7,
+      "outlets": 3,
+      "trendingUS": false,
+      "query": "(\"Electoral College\" OR \"popular vote compact\" OR NPVIC OR \"National Popular Vote\") lang:en",
+      "sentiment": "Mocking and confident, with a copy-paste chorus",
+      "sentimentNote": "In a relevancy sample of Friday posts, the dominant right-leaning frame was DeSantis's 'No thanks' line, reposted nearly word for word — often under a '🚨BREAKING' header and 'says it PERFECTLY' — by many low-follower accounts, several with almost no history. That pattern looks templated; we did not determine who started it. Left-leaning replies quoted Newsom's 'MAGA math' response. A post claiming Elon Musk 'fired back' at Buttigieg circulated; we did not verify it. This is a read of that sample, not a poll.",
+      "summary": "Former Transportation Secretary Pete Buttigieg's call to end the Electoral College — he called it a remnant of 'some very arcane, parochial politics in the 1770s' — drew a reply from Florida Gov. Ron DeSantis: 'Abolishing the electoral college would mean not knowing who won the presidency for 4 weeks while California keeps counting. No thanks.' California Gov. Gavin Newsom answered, 'MAGA math: Finish second and become president. The Electoral College doesn't make counting votes any faster — it just means millions don't count.' The Washington Post reported Friday that the movement to end the electoral college got a boost after Democratic wins. On X, this query logged 30,414 matches in the 24-hour window — 3.7 times its prior daily average — with peaks near 1,900 an hour at 9:00 PM ET Thursday and again around 10:00 AM and noon ET Friday. It was not on the U.S. trends list at 8:24 PM ET.",
+      "talkingPoints": [
+        "Abolish the Electoral College and you'll wait weeks for California to finish counting.",
+        "Democrats want to change the rules because they won one election.",
+        "Without the Electoral College, small states don't matter.",
+        "The popular-vote compact is abolition through the back door."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Gov. Ron DeSantis on X; Pete Buttigieg; Gov. Gavin Newsom's 'MAGA math' reply; Sens. Rand Paul and Mike Lee, named by X News as defenders of the system; and a run of near-identical 'DeSantis says it PERFECTLY' posts, including @doorswinwars (30 likes) and @Trumpusa1A1 (16 likes).",
+      "whyItWorks": "It swaps a fairness argument for a convenience argument. Everyone remembers waiting for California's count, so 'four weeks' feels true even though it mixes up two things: how fast states count and how electors are allocated. The 2028 subtext — DeSantis, Newsom, and Buttigieg are all possible candidates — keeps it alive.",
+      "audience": "Conservative voters, small-state partisans, and 2028-watchers. Progressive and pro-reform accounts are pushing back with Newsom's line.",
+      "counter": "Say plainly that the Electoral College does not make counting faster; California counts the same ballots either way. If you favor the popular-vote compact, say it's a state agreement that pledges electors, not abolition, and that it faces likely court and Compact Clause challenges. Don't promise 'abolition' you can't deliver.",
+      "factChecks": [
+        {
+          "claim": "After the midterms, Democrats can effectively abolish the Electoral College.",
+          "rating": "Overstated — the compact would not abolish the College",
+          "detail": "Snopes (Nov. 5, 2026) found the five new Democratic trifectas (Arizona, Michigan, Nevada, Pennsylvania, Wisconsin) could, by joining the National Popular Vote Interstate Compact, push it past 270 electoral votes. The compact would pledge electors to the national popular-vote winner; it would not remove the Electoral College from the Constitution, and some experts say it may need congressional approval.",
+          "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/",
+          "outlet": "Snopes"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 7098
+        },
+        {
+          "label": "Nov 8",
+          "value": 10346
+        },
+        {
+          "label": "Nov 9",
+          "value": 9729
+        },
+        {
+          "label": "Nov 10",
+          "value": 11890
+        },
+        {
+          "label": "Nov 11",
+          "value": 5204
+        },
+        {
+          "label": "Nov 12",
+          "value": 4191
+        },
+        {
+          "label": "Nov 13",
+          "value": 29698
+        },
+        {
+          "label": "Nov 14*",
+          "value": 1551
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 1469
+        },
+        {
+          "label": "9 AM",
+          "value": 1778
+        },
+        {
+          "label": "10 AM",
+          "value": 1895
+        },
+        {
+          "label": "11 AM",
+          "value": 1753
+        },
+        {
+          "label": "12 PM",
+          "value": 1912
+        },
+        {
+          "label": "1 PM",
+          "value": 1723
+        },
+        {
+          "label": "2 PM",
+          "value": 1501
+        },
+        {
+          "label": "3 PM",
+          "value": 1654
+        },
+        {
+          "label": "4 PM",
+          "value": 1388
+        },
+        {
+          "label": "5 PM",
+          "value": 1319
+        },
+        {
+          "label": "6 PM",
+          "value": 1158
+        },
+        {
+          "label": "7 PM",
+          "value": 1092
+        },
+        {
+          "label": "8 PM*",
+          "value": 459
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). ",
+      "sources": [
+        {
+          "title": "Newsom slams DeSantis over Electoral College fight, 'MAGA math'",
+          "site": "2paragraphs",
+          "href": "https://2paragraphs.com/2026/11/newsom-slams-desantis-over-electoral-college-fight-maga-math/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Movement to end electoral college gets boost after Democratic wins",
+          "site": "The Washington Post",
+          "href": "https://www.washingtonpost.com/politics/2026/11/13/movement-end-electoral-college-gets-boost-after-democratic-wins/",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Can Democrats effectively abolish Electoral College after midterm wins?",
+          "site": "Snopes",
+          "href": "https://www.snopes.com/news/2026/11/05/democrats-abolish-electoral-college/",
+          "date": "Nov 5, 2026"
+        },
+        {
+          "title": "X News: DeSantis warns Electoral College scrap would delay results by weeks",
+          "site": "X News",
+          "href": "https://x.com/i/trending/2121000916211945672",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "@doorswinwars: DeSantis 'No thanks' quote, one of many near-identical copies (30 likes)",
+          "site": "X",
+          "href": "https://x.com/doorswinwars/status/2121296585384485138",
+          "date": "Nov 13, 2026, 12:38 PM ET"
+        }
+      ]
+    },
+    {
+      "id": "medicare-for-all",
+      "title": "'Height of hubris': the left turns a strategist's Medicare for All warning into a leadership test",
+      "side": "Far Left",
+      "momentum": 76,
+      "volumeIndex": 79.2,
+      "accelIndex": 100.0,
+      "coverageIndex": 30.0,
+      "posts24h": 8087,
+      "posts7d": 22985,
+      "priorDailyAvg": 2483.0,
+      "accel": 3.26,
+      "outlets": 3,
+      "trendingUS": false,
+      "query": "(\"Medicare for All\" OR M4A) (Schumer OR Jeffries OR \"Lis Smith\" OR hubris OR leadership OR \"El-Sayed\" OR TrumpCare) lang:en",
+      "sentiment": "Furious at consultants and leadership",
+      "sentimentNote": "In a relevancy sample of Friday posts, the dominant tone was anger at Democratic strategist Lis Smith and, by extension, at Schumer and Jeffries. Replies tied the issue straight to the leadership races ('Medicare for All is my litmus test and Schumer fails that'). A smaller set agreed with Smith that the midterm was not a mandate. This is a read of that sample, not a poll.",
+      "summary": "A clip of Democratic strategist Lis Smith saying it would be 'the height of hubris' for Democrats to push Medicare for All or abolishing ICE — 'We should not read into these election results as a mandate' — spread across the left on Friday. The most-viewed copy we opened, from @ClippingMods, had 482,056 views and 296 quote posts. Critics cited KFF polling, summarized by X News, showing 66% of Americans and 84% of Democrats backing a national health plan. The clip landed on top of Michigan Sen.-elect Abdul El-Sayed's pitch to brand Medicare for All as 'TrumpCare,' and progressives used it to press Schumer and Jeffries, neither of whom backs current Medicare for All bills; Jeffries said in August that it is 'not legislation that I currently am co-sponsoring or that I support.' On X, this query hit 8,087 matches in the 24-hour window, 3.26 times its prior daily average, with most of the volume between 9:00 AM and 4:00 PM ET Friday.",
+      "talkingPoints": [
+        "Medicare for All and abolishing ICE are popular — ignoring that is the real hubris.",
+        "Consultants like Lis Smith exist to stop progress that gets in the way of donor checks.",
+        "Medicare for All is the litmus test: Van Hollen cosponsors it, Schumer doesn't.",
+        "The base voted for change. Leadership that won't fight for health care should step aside."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Lis Smith of Majority Democrats, in the circulated clip; @ClippingMods (482,056 views); @ClippingWings ('Lis Smith is saying Abolish ICE and Medicare for All are Far Left policies,' 698 likes); @Popstonox (560 likes); @themeasuredtake (195 likes); and Sen.-elect Abdul El-Sayed, whose 'TrumpCare' pitch X News summarized.",
+      "whyItWorks": "A consultant saying 'don't get ahead of yourselves' after a wave election is the perfect foil: it confirms the base's suspicion that the party establishment will waste the win. Tying it to polling makes the anger feel like majority opinion, and tying it to the leadership votes gives people something to do with it.",
+      "audience": "Progressive Democrats, health-care activists, and the same audience organizing against Schumer and Jeffries. Moderates and swing-district Democrats are the implicit target of Smith's warning.",
+      "counter": "Make the debate about sequencing, not purity: what health-care bill passes the House in the first 100 days, what the Senate can actually move, and what the party does with a Trump veto. Ask leaders for a named first step — say, lowering out-of-pocket costs — instead of letting 'hubris' versus 'betrayal' be the only two options.",
+      "factChecks": [
+        {
+          "claim": "Hakeem Jeffries took more than $300,000 from healthcare PACs before coming out against Medicare for All.",
+          "rating": "Mixture",
+          "detail": "Snopes (Aug. 19, 2026) found Jeffries did receive about $321,000 from PACs OpenSecrets labels 'Health' and did say in August he does not support current Medicare for All legislation. But many of those PACs support universal coverage or have no stated position, only about $89,000 came from private health insurers, and there is no evidence the money changed his position; he stopped cosponsoring Medicare for All after becoming leader in 2022.",
+          "href": "https://www.snopes.com/fact-check/hakeem-jeffries-medicare-for-all/",
+          "outlet": "Snopes"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 1381
+        },
+        {
+          "label": "Nov 8",
+          "value": 2398
+        },
+        {
+          "label": "Nov 9",
+          "value": 3671
+        },
+        {
+          "label": "Nov 10",
+          "value": 3203
+        },
+        {
+          "label": "Nov 11",
+          "value": 2203
+        },
+        {
+          "label": "Nov 12",
+          "value": 1899
+        },
+        {
+          "label": "Nov 13",
+          "value": 7749
+        },
+        {
+          "label": "Nov 14*",
+          "value": 481
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 448
+        },
+        {
+          "label": "9 AM",
+          "value": 482
+        },
+        {
+          "label": "10 AM",
+          "value": 563
+        },
+        {
+          "label": "11 AM",
+          "value": 642
+        },
+        {
+          "label": "12 PM",
+          "value": 679
+        },
+        {
+          "label": "1 PM",
+          "value": 627
+        },
+        {
+          "label": "2 PM",
+          "value": 561
+        },
+        {
+          "label": "3 PM",
+          "value": 582
+        },
+        {
+          "label": "4 PM",
+          "value": 495
+        },
+        {
+          "label": "5 PM",
+          "value": 397
+        },
+        {
+          "label": "6 PM",
+          "value": 382
+        },
+        {
+          "label": "7 PM",
+          "value": 336
+        },
+        {
+          "label": "8 PM*",
+          "value": 145
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). ",
+      "sources": [
+        {
+          "title": "@ClippingMods: Lis Smith says M4A or stopping ICE would be the 'height of hubris' (482,056 views, 296 quotes)",
+          "site": "X",
+          "href": "https://x.com/ClippingMods/status/2121251760098705573",
+          "date": "Nov 13, 2026, 9:40 AM ET"
+        },
+        {
+          "title": "@ClippingWings: 'Lis Smith is saying Abolish ICE and Medicare for All are Far Left policies' (698 likes)",
+          "site": "X",
+          "href": "https://x.com/ClippingWings/status/2121284463527424243",
+          "date": "Nov 13, 2026, 11:50 AM ET"
+        },
+        {
+          "title": "@Popstonox: 'We should not read into these election results as a mandate' (560 likes)",
+          "site": "X",
+          "href": "https://x.com/Popstonox/status/2121283243752247525",
+          "date": "Nov 13, 2026, 11:45 AM ET"
+        },
+        {
+          "title": "X News: Democrats question Schumer and Jeffries over policy disconnects",
+          "site": "X News",
+          "href": "https://x.com/i/trending/2121283328162881789",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Current and historical public opinion on Medicare-for-All and other national health plan proposals",
+          "site": "KFF",
+          "href": "https://www.kff.org/public-opinion/current-and-historical-public-opinion-on-medicare-for-all-and-other-national-health-plan-proposals/"
+        },
+        {
+          "title": "Hakeem Jeffries rejects Medicare for All, says he doesn't support DSA agenda",
+          "site": "Newsweek",
+          "href": "https://www.newsweek.com/hakeem-jeffries-rejects-medicare-for-all-dsa-agenda-12328842"
+        },
+        {
+          "title": "Unraveling claim Hakeem Jeffries took $300K from healthcare PACs before opposing Medicare for All",
+          "site": "Snopes",
+          "href": "https://www.snopes.com/fact-check/hakeem-jeffries-medicare-for-all/",
+          "date": "Aug 19, 2026"
+        }
+      ]
+    },
+    {
+      "id": "thune-adjourn",
+      "title": "Thune went home for the weekend — and MAGA says he blocked Trump's recess appointments",
+      "side": "Right",
+      "momentum": 72,
+      "volumeIndex": 76.0,
+      "accelIndex": 92.2,
+      "coverageIndex": 30.0,
+      "posts24h": 5601,
+      "posts7d": 17756,
+      "priorDailyAvg": 2025.8,
+      "accel": 2.76,
+      "outlets": 3,
+      "trendingUS": false,
+      "query": "Thune (adjourn OR adjourned OR adjournment OR recess OR \"recess appointments\" OR \"recess appointment\" OR weekend) lang:en",
+      "sentiment": "Betrayed and enraged at Senate GOP leadership",
+      "sentimentNote": "In a relevancy sample of Friday posts, the tone was near-uniform anger at Thune — 'RINO,' 'rat,' 'snake,' and 'stabs us in the back' — much of it reposting Todd Starnes's language. A few replies noted that recess appointments made now would expire in January. This is a read of that sample, not a poll.",
+      "summary": "The Senate adjourned at 4:50 PM ET Thursday and won't return until 3:00 PM Monday, Shadow Dossier reported, days after Republicans re-elected John Thune as leader and adopted a resolution, reported by Fox News, to 'maximize the 54 days' left in their majority. Conservative commentator Todd Starnes called the adjournment 'a flat-out \"f-you\" to Republican voters' and the decision not to recess 'a giant \"f-you\" to President Trump,' adding that Trump is the only modern Republican president unable to make recess appointments; that post had 15,925 likes and more than 1 million views. Senate aides told The New York Times up to 25 judicial nominees remain in the pipeline, per Shadow Dossier. On X, this query logged 5,601 matches in the 24-hour window, 2.76 times its prior daily average. It overlaps with the SAVE Act anger on this list.",
+      "talkingPoints": [
+        "Thune's weekend off is a middle finger to Republican voters.",
+        "Thune won't go into recess, so Trump can't make recess appointments.",
+        "Every day off is a judge or nominee Democrats will never confirm.",
+        "Senators who re-elected Thune own this."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: @toddstarnes (15,925 likes, 4,443 reposts, 1,015,841 views); @LadyRedWave ('Aaand AGAIN Thune screws Us ALL!'); a long tail of reply-guys tagging @SenJohnKennedy, @Jim_Banks, and @SenateGOP with copy-paste 'GET OFF YOUR ASSES' replies; and Senate Leader John Thune, who says Republicans will 'make the most of the time that we've got.'",
+      "whyItWorks": "It is the cleanest possible symbol of a do-nothing Senate: senators leaving town with nominees waiting and a deadline in January. 'Recess appointments' adds a sense of a secret lever being withheld, and it gives the base a target that isn't Trump.",
+      "audience": "MAGA voters, conservative media personalities, and House conservatives who wanted the Senate in session through January.",
+      "counter": "The weekend didn't block anything. Under the Supreme Court's 2014 Noel Canning decision, a recess shorter than 10 days is presumptively too short for recess appointments, so a four-day break could never have allowed them, as Shadow Dossier and other write-ups noted. The real question for Republicans is why they didn't confirm nominees on the days they were in session.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 950
+        },
+        {
+          "label": "Nov 8",
+          "value": 1230
+        },
+        {
+          "label": "Nov 9",
+          "value": 862
+        },
+        {
+          "label": "Nov 10",
+          "value": 3431
+        },
+        {
+          "label": "Nov 11",
+          "value": 1111
+        },
+        {
+          "label": "Nov 12",
+          "value": 3825
+        },
+        {
+          "label": "Nov 13",
+          "value": 6174
+        },
+        {
+          "label": "Nov 14*",
+          "value": 173
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 199
+        },
+        {
+          "label": "9 AM",
+          "value": 242
+        },
+        {
+          "label": "10 AM",
+          "value": 191
+        },
+        {
+          "label": "11 AM",
+          "value": 272
+        },
+        {
+          "label": "12 PM",
+          "value": 278
+        },
+        {
+          "label": "1 PM",
+          "value": 216
+        },
+        {
+          "label": "2 PM",
+          "value": 200
+        },
+        {
+          "label": "3 PM",
+          "value": 162
+        },
+        {
+          "label": "4 PM",
+          "value": 158
+        },
+        {
+          "label": "5 PM",
+          "value": 176
+        },
+        {
+          "label": "6 PM",
+          "value": 118
+        },
+        {
+          "label": "7 PM",
+          "value": 131
+        },
+        {
+          "label": "8 PM*",
+          "value": 42
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). The query was busiest Thursday evening, right after the adjournment, then picked up again Friday morning after the Starnes post.",
+      "sources": [
+        {
+          "title": "@toddstarnes: Thune's adjournment is a 'flat-out f-you' to GOP voters (15,925 likes, 1,015,841 views)",
+          "site": "X",
+          "href": "https://x.com/toddstarnes/status/2121251514035437614",
+          "date": "Nov 13, 2026, 9:39 AM ET"
+        },
+        {
+          "title": "X News: Senate GOP faces voter backlash over Thune's adjournment decision",
+          "site": "X News",
+          "href": "https://x.com/i/trending/2121410065525580071",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Gone till Monday: the Senate clocks out early, and Trump's base wants to know why Thune isn't working the weekend",
+          "site": "Shadow Dossier",
+          "href": "https://shadowdossier.com/senate-adjourns-until-monday-thune-lame-duck-nominees-backlash/"
+        },
+        {
+          "title": "John Thune vows Senate GOP will maximize lame duck legislative push",
+          "site": "Fox News",
+          "href": "https://www.foxnews.com/politics/senate-republicans-plan-54-day-blitz-push-trumps-agenda-before-democrats-seize-power"
+        },
+        {
+          "title": "Thune reelected Senate GOP leader after push for lame-duck commitments",
+          "site": "The Well News",
+          "href": "https://www.thewellnews.com/us-senate/thune-reelected-senate-gop-leader-after-push-for-lame-duck-commitments/",
+          "date": "Nov 10, 2026"
+        },
+        {
+          "title": "@LadyRedWave: 'Aaand AGAIN Thune screws Us ALL!' (17 likes)",
+          "site": "X",
+          "href": "https://x.com/LadyRedWave/status/2121282001961713705",
+          "date": "Nov 13, 2026, 11:40 AM ET"
+        }
+      ]
+    },
+    {
+      "id": "impeachment-push",
+      "title": "AOC: 'all options are on the table,' including impeaching Supreme Court justices",
+      "side": "Far Left",
+      "momentum": 69,
+      "volumeIndex": 70.3,
+      "accelIndex": 100.0,
+      "coverageIndex": 20.0,
+      "posts24h": 2939,
+      "posts7d": 8533,
+      "priorDailyAvg": 932.3,
+      "accel": 3.15,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "(AOC OR \"Ocasio-Cortez\" OR \"Al Green\") (impeach OR impeachment OR impeaching OR justices) lang:en",
+      "sentiment": "Emboldened on the left; the Right is amplifying it as overreach",
+      "sentimentNote": "In a relevancy sample of posts in the 24-hour window, most high-reach matches were right-leaning accounts sharing headlines ('AOC hints Democrats may IMPEACH Supreme Court justices') as evidence of Democratic overreach. Left-leaning posts were fewer and focused on accountability. This is a read of that sample, not a poll.",
+      "summary": "Rep. Alexandria Ocasio-Cortez told CNN's Manu Raju that Democrats should leave 'all options on the table' on impeaching President Trump and suggested impeachment could be among the avenues for challenging Supreme Court justices she accused of having 'legalized a lot of his criminality,' according to Newsmax Wires on Yahoo News. She did not name a justice or a plan. Separately, retiring Rep. Al Green said he would force another impeachment vote on Trump as soon as next week, per an X News summary. Removing a justice would take a two-thirds Senate vote, which Democrats won't have, and no justice has ever been removed by impeachment. On X, this query logged 2,939 matches in the 24-hour window, 3.15 times its prior daily average, with a bump to 394 between 9:00 and 10:00 AM ET Friday.",
+      "talkingPoints": [
+        "There are so many criminals in this administration, it's hard to pick the order.",
+        "The Court legalized Trump's criminality — impeachment has to be on the table.",
+        "Investigations, subpoenas, and impeachment are what voters elected Democrats to do.",
+        "Al Green is forcing the vote; every Democrat should be on the record."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Rep. Alexandria Ocasio-Cortez in the CNN interview; Rep. Al Green; incoming House Minority Leader Jim Jordan ('There'll be a third impeachment. They can't help themselves'), quoted by Newsmax Wires; @MichaelARothman; and Daily Mail and Blaze Media headlines that right-leaning accounts reposted.",
+      "whyItWorks": "For the left, 'all options' is a promise that a new majority won't go soft. For the Right, it's a gift: it lets them recast a wave election as an impeachment spree before Democrats have taken their seats.",
+      "audience": "Progressive activists who want maximum accountability, and conservative audiences being warned that Democrats will overreach.",
+      "counter": "Separate oversight from impeachment. Lead with the investigations and subpoenas that can actually produce facts, and be honest that removing a justice needs 67 Senate votes. If impeachment comes, it should follow evidence, not a calendar.",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 23
+        },
+        {
+          "label": "Nov 8",
+          "value": 30
+        },
+        {
+          "label": "Nov 9",
+          "value": 54
+        },
+        {
+          "label": "Nov 10",
+          "value": 110
+        },
+        {
+          "label": "Nov 11",
+          "value": 2416
+        },
+        {
+          "label": "Nov 12",
+          "value": 2770
+        },
+        {
+          "label": "Nov 13",
+          "value": 3019
+        },
+        {
+          "label": "Nov 14*",
+          "value": 111
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 150
+        },
+        {
+          "label": "9 AM",
+          "value": 394
+        },
+        {
+          "label": "10 AM",
+          "value": 268
+        },
+        {
+          "label": "11 AM",
+          "value": 203
+        },
+        {
+          "label": "12 PM",
+          "value": 178
+        },
+        {
+          "label": "1 PM",
+          "value": 156
+        },
+        {
+          "label": "2 PM",
+          "value": 131
+        },
+        {
+          "label": "3 PM",
+          "value": 154
+        },
+        {
+          "label": "4 PM",
+          "value": 138
+        },
+        {
+          "label": "5 PM",
+          "value": 100
+        },
+        {
+          "label": "6 PM",
+          "value": 98
+        },
+        {
+          "label": "7 PM",
+          "value": 79
+        },
+        {
+          "label": "8 PM*",
+          "value": 32
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). Volume was modest all day; the biggest hour was 9:00-10:00 AM ET Friday.",
+      "sources": [
+        {
+          "title": "AOC suggests Dems could target justices for impeachment",
+          "site": "Yahoo News (Newsmax Wires)",
+          "href": "https://www.yahoo.com/news/politics/articles/aoc-suggests-dems-could-target-221530000.html",
+          "date": "Nov 12, 2026"
+        },
+        {
+          "title": "AOC vows to take aggressive action against Trump when Democrats take power… including impeaching his Supreme Court justices",
+          "site": "Daily Mail",
+          "href": "https://www.dailymail.com/news/us-politics/article-16290421/aoc-impeachment-trump-supreme-court.html"
+        },
+        {
+          "title": "X News: AOC says impeaching Supreme Court justices remains an option for Democrats",
+          "site": "X News",
+          "href": "https://x.com/i/trending/2121251466128269816",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "X News: Rep. Al Green announces new impeachment push against Trump",
+          "site": "X News",
+          "href": "https://x.com/i/trending/2120961566325559797",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "@MichaelARothman: 'AOC to CNN: all options are on the table' (4 likes)",
+          "site": "X",
+          "href": "https://x.com/MichaelARothman/status/2121078447955157466",
+          "date": "Nov 12, 2026, 10:11 PM ET"
+        }
+      ]
+    },
+    {
+      "id": "pressley-speaker",
+      "title": "Draft Pressley for Speaker — a movement without a candidate",
+      "side": "Far Left",
+      "momentum": 67,
+      "volumeIndex": 81.1,
+      "accelIndex": 53.4,
+      "coverageIndex": 50.0,
+      "posts24h": 10092,
+      "posts7d": 47889,
+      "priorDailyAvg": 6299.5,
+      "accel": 1.6,
+      "outlets": 5,
+      "trendingUS": false,
+      "query": "Pressley (Jeffries OR Speaker OR speakership OR challenge) lang:en",
+      "sentiment": "Hopeful but fading",
+      "sentimentNote": "In a relevancy sample of posts in the 24-hour window, the tone was a mix of petition-sharing and pleas to members ('Please do NOT vote Hakeem Jeffries for Speaker. Vote Ayanna Pressley'), plus skeptics calling it unrealistic. Drop Site's post that Pressley has not announced a challenge circulated widely Friday evening. This is a read of that sample, not a poll.",
+      "summary": "Progressive activists kept pushing Rep. Ayanna Pressley to challenge Hakeem Jeffries for speaker, but on Friday Semafor and Axios reported that she has privately told colleagues she doesn't want the job. Her spokesperson, Ricardo Sanchez, said she is in 'active conversations with Leader Jeffries about how to leverage this majority' and 'appreciates the groundswell of support.' Axios reported that incoming members are still getting 'hundreds' of calls a day urging them to oppose Jeffries, who is expected to win the caucus nomination easily on Nov. 18. Vanity Fair reported the million-signature petition against Jeffries was started by a paid Change.org 'Change Ambassador.' On X, this query is cooling: 19,504 matches on Nov. 11 UTC, 15,041 on Nov. 12, and 10,092 in this 24-hour window.",
+      "talkingPoints": [
+        "Speaker Pressley: she already wrote down the fight.",
+        "Nobody wants Hakeem Jeffries for Speaker.",
+        "Call your representative before the Nov. 18 caucus vote.",
+        "It's not enough to be the adults in the room — we have to be the fighters."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Rep. Ayanna Pressley's own 'FIGHTERS in the room' post quoted by TheGrio; spokesperson Ricardo Sanchez; Justice Democrats founder Saikat Chakrabarti; podcaster Jennifer Welch; @DropSiteNews (179 likes); and grassroots accounts like @KAllardMiranda tagging members directly.",
+      "whyItWorks": "It gives the anti-Jeffries energy a face. A named alternative feels more serious than 'anyone but,' and Pressley's record is a ready-made platform. The weakness is that the candidate hasn't said yes.",
+      "audience": "Progressive grassroots, Justice Democrats-aligned activists, and voters who want a combative House leader.",
+      "counter": "Don't sell a race that doesn't exist. If the goal is leverage, name it: rules changes, committee seats, a stock-trading ban, or a health-care vote in exchange for votes on Jan. 3. That is a real ask; 'draft Pressley' without Pressley isn't.",
+      "factChecks": [
+        {
+          "claim": "Ayanna Pressley has launched a challenge to Hakeem Jeffries for House speaker.",
+          "rating": "False as of Nov 13 — no bid announced",
+          "detail": "Semafor and Axios reported Friday that Pressley has not launched a bid and has privately told colleagues she does not want the role. Her spokesperson said she is in 'active conversations' with Jeffries. Posts and videos titled 'Ayanna Pressley CHALLENGES Hakeem Jeffries' are misleading.",
+          "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries",
+          "outlet": "Semafor"
+        }
+      ],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 223
+        },
+        {
+          "label": "Nov 8",
+          "value": 358
+        },
+        {
+          "label": "Nov 9",
+          "value": 389
+        },
+        {
+          "label": "Nov 10",
+          "value": 1087
+        },
+        {
+          "label": "Nov 11",
+          "value": 19504
+        },
+        {
+          "label": "Nov 12",
+          "value": 15041
+        },
+        {
+          "label": "Nov 13",
+          "value": 10814
+        },
+        {
+          "label": "Nov 14*",
+          "value": 473
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 348
+        },
+        {
+          "label": "9 AM",
+          "value": 366
+        },
+        {
+          "label": "10 AM",
+          "value": 420
+        },
+        {
+          "label": "11 AM",
+          "value": 459
+        },
+        {
+          "label": "12 PM",
+          "value": 373
+        },
+        {
+          "label": "1 PM",
+          "value": 369
+        },
+        {
+          "label": "2 PM",
+          "value": 367
+        },
+        {
+          "label": "3 PM",
+          "value": 347
+        },
+        {
+          "label": "4 PM",
+          "value": 474
+        },
+        {
+          "label": "5 PM",
+          "value": 346
+        },
+        {
+          "label": "6 PM",
+          "value": 319
+        },
+        {
+          "label": "7 PM",
+          "value": 326
+        },
+        {
+          "label": "8 PM*",
+          "value": 147
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). ",
+      "sources": [
+        {
+          "title": "Activists call for Pressley to launch House speaker bid against Jeffries",
+          "site": "Semafor",
+          "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Nobody wants to run against Hakeem Jeffries for speaker",
+          "site": "Axios",
+          "href": "https://www.axios.com/2026/11/13/jeffries-speaker-house-democrats-pressley-raskin",
+          "date": "Nov 13, 2026"
+        },
+        {
+          "title": "Chuck Schumer and Hakeem Jeffries face Democratic leadership revolt after midterms",
+          "site": "Vanity Fair",
+          "href": "https://www.vanityfair.com/story/chuck-schumer-hakeem-jeffries-leadership-fight"
+        },
+        {
+          "title": "Petition aimed at drafting Ayanna Pressley to challenge Hakeem Jeffries for speaker picks up steam",
+          "site": "Common Dreams",
+          "href": "https://www.commondreams.org/news/ayanna-pressley-for-speaker"
+        },
+        {
+          "title": "Progressives want Ayanna Pressley, not Hakeem Jeffries, as the next House speaker",
+          "site": "TheGrio",
+          "href": "https://thegrio.com/2026/11/12/progressives-want-ayanna-pressley-not-hakeem-jeffries-as-next-house-speaker/",
+          "date": "Nov 12, 2026"
+        },
+        {
+          "title": "@DropSiteNews: Pressley has not announced a challenge to Jeffries (179 likes)",
+          "site": "X",
+          "href": "https://x.com/DropSiteNews/status/2121368099437895763",
+          "date": "Nov 13, 2026, 5:22 PM ET"
+        }
+      ]
+    },
+    {
+      "id": "save-act-filibuster",
+      "title": "SAVE Act still the Right's measuring stick for Thune",
+      "side": "Right",
+      "momentum": 64,
+      "volumeIndex": 87.3,
+      "accelIndex": 41.6,
+      "coverageIndex": 40.0,
+      "posts24h": 20303,
+      "posts7d": 117998,
+      "priorDailyAvg": 16282.5,
+      "accel": 1.25,
+      "outlets": 4,
+      "trendingUS": false,
+      "query": "(\"SAVE America Act\" OR \"SAVE Act\") (Trump OR Thune OR Senate OR filibuster) lang:en",
+      "sentiment": "Angry at Republican Senate leaders, steady rather than spiking",
+      "sentimentNote": "In a relevancy sample of Friday posts, the SAVE Act was mostly invoked as proof of Thune's failure, alongside recess appointments and the weekend adjournment. This is a read of that sample, not a poll.",
+      "summary": "The SAVE America Act — proof of citizenship to register and photo ID to vote — still hasn't passed the Senate, and Republicans don't have 60 votes or the votes to end the filibuster, Delaware Online reported. President Trump's Thursday post that the Senate can no longer be the place 'where things are sent to die' kept the bill in the anti-Thune feed, and conservatives have demanded Thune use a budget reconciliation bill to pass it in the lame duck, The Well News reported. On X, this query is still large but no longer accelerating: 20,303 matches in the 24-hour window against a prior daily average of 16,283, and a flat 800 to 900 matches an hour through Friday.",
+      "talkingPoints": [
+        "Thune refused to nuke the filibuster to pass the SAVE America Act.",
+        "Eight states just voted for voter ID — Washington won't.",
+        "Use reconciliation to pass it before January.",
+        "90% of Americans want voter ID; the Senate GOP won't deliver."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: President Trump's Thursday post, as reported by OAN and The Rothman Report; Senate Leader John Thune; conservative senators who pushed a reconciliation route, per The Well News; and @ChristinaNewstv's Thune post.",
+      "whyItWorks": "It's a single, concrete, popular-sounding bill that the base can hold up as proof the Senate GOP didn't fight. It also merges neatly with the weekend-adjournment anger, which keeps it in circulation.",
+      "audience": "MAGA voters and House conservatives; increasingly the same audience driving the Thune adjournment narrative.",
+      "counter": "The filibuster math hasn't changed: the bill couldn't clear 60 under a Republican majority, and Democrats take the Senate in January. Don't let 'they won't pass voter ID' become 'elections aren't secure.'",
+      "factChecks": [],
+      "daily": [
+        {
+          "label": "Nov 7*",
+          "value": 14004
+        },
+        {
+          "label": "Nov 8",
+          "value": 11820
+        },
+        {
+          "label": "Nov 9",
+          "value": 18583
+        },
+        {
+          "label": "Nov 10",
+          "value": 9454
+        },
+        {
+          "label": "Nov 11",
+          "value": 21617
+        },
+        {
+          "label": "Nov 12",
+          "value": 20502
+        },
+        {
+          "label": "Nov 13",
+          "value": 21110
+        },
+        {
+          "label": "Nov 14*",
+          "value": 908
+        }
+      ],
+      "hourly": [
+        {
+          "label": "8 AM",
+          "value": 797
+        },
+        {
+          "label": "9 AM",
+          "value": 822
+        },
+        {
+          "label": "10 AM",
+          "value": 844
+        },
+        {
+          "label": "11 AM",
+          "value": 834
+        },
+        {
+          "label": "12 PM",
+          "value": 912
+        },
+        {
+          "label": "1 PM",
+          "value": 850
+        },
+        {
+          "label": "2 PM",
+          "value": 852
+        },
+        {
+          "label": "3 PM",
+          "value": 802
+        },
+        {
+          "label": "4 PM",
+          "value": 837
+        },
+        {
+          "label": "5 PM",
+          "value": 856
+        },
+        {
+          "label": "6 PM",
+          "value": 836
+        },
+        {
+          "label": "7 PM",
+          "value": 681
+        },
+        {
+          "label": "8 PM*",
+          "value": 227
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window shown is 8:00 AM through 8:23 PM ET Friday. The 8 PM* bar is a partial hour (8:00-8:23 PM ET). Hourly volume was flat, roughly 800-900 matches an hour all day Friday.",
+      "sources": [
+        {
+          "title": "Did the SAVE Act pass? Latest Senate status as GOP renews voter ID push",
+          "site": "Delaware Online",
+          "href": "https://www.delawareonline.com/story/news/2026/11/11/did-save-act-pass-senate-latest-status-voter-id-requirements-2026-what-is-the-save-america-act/92725532007/",
+          "date": "Nov 11, 2026"
+        },
+        {
+          "title": "Trump: GOP Senate can no longer be the place 'where things are sent to die' following midterm losses",
+          "site": "OAN",
+          "href": "https://www.oann.com/newsroom/trump-gop-senate-can-no-longer-be-the-place-where-things-are-sent-to-die-following-midterm-losses/"
+        },
+        {
+          "title": "Trump blames filibuster for GOP Senate loss",
+          "site": "The Rothman Report",
+          "href": "https://therothmanreport.com/politics/trump-thune-minority-save-america-act-filibuster/"
+        },
+        {
+          "title": "Thune reelected Senate GOP leader after push for lame-duck commitments",
+          "site": "The Well News",
+          "href": "https://www.thewellnews.com/us-senate/thune-reelected-senate-gop-leader-after-push-for-lame-duck-commitments/",
+          "date": "Nov 10, 2026"
+        },
+        {
+          "title": "@ChristinaNewstv: Thune 'repeatedly blocked efforts to nuke the filibuster so the SAVE America Act…' (7 likes)",
+          "site": "X",
+          "href": "https://x.com/ChristinaNewstv/status/2121392673974005771",
+          "date": "Nov 13, 2026, 7:00 PM ET"
+        }
+      ]
+    }
+  ]
+}

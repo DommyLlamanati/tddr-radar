@@ -38,7 +38,7 @@ Filters and sorting are a React island. Side and sort are also written to the qu
 
 ## Data schema
 
-Snapshots live in `src/data/snapshots/`. One JSON file per day. The filename (without `.json`) must equal the `id` field, which is `YYYY-MM-DD`. The homepage, `/disinfo`, and `/narratives/[id]` render the snapshot with the latest `updatedAt`. Every file also gets `/snapshots/[date]`, a disinformation page, and narrative pages. Adding a file does not require a page change. The header switches among Today, the previous night when that file is the prior calendar day, and older dates.
+Snapshots live in `src/data/snapshots/`. One JSON file per snapshot. The filename (without `.json`) must equal the `id` field, which is `YYYY-MM-DD`, or `YYYY-MM-DD-pm` for a second, evening snapshot on the same day. The homepage, `/disinfo`, and `/narratives/[id]` render the snapshot with the latest `updatedAt`. Every file also gets `/snapshots/[date]`, a disinformation page, and narrative pages. Adding a file does not require a page change. The header switches among Today (Tonight for an evening file), This morning when an earlier file shares the day, the previous night when that file is the prior calendar day, and older dates.
 
 `updatedAt` is an ISO timestamp with a numeric offset (`2026-11-11T05:58:00-05:00`). `updatedLabel` is the Eastern Time string the UI prints (`Wednesday, Nov 11, 2026, 5:58 AM ET`). `timezone` is always `America/New_York`. The site displays `updatedLabel` rather than reformatting the instant, so the label stays the one the researcher wrote.
 
@@ -46,7 +46,7 @@ The schema is `src/data/schema.ts` (Zod). A snapshot object:
 
 | Field | Meaning |
 | --- | --- |
-| `id` | `YYYY-MM-DD`, matches the filename |
+| `id` | `YYYY-MM-DD` (or `YYYY-MM-DD-pm` for an evening snapshot), matches the filename |
 | `updatedAt`, `updatedLabel`, `timezone` | When this snapshot was closed, in ET |
 | `title`, `summary` | Desk title and the lede |
 | `trends` | U.S. X trend names, when they were pulled, and the label shown on the metric |
