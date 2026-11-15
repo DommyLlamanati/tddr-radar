@@ -1,6 +1,6 @@
 ---
 import Base from "../../../../layouts/Base.astro";
-import { narrativeShare, ogImagePath } from "../../../../lib/share";
+import { narrativeShare, ogNarrativeImagePath } from "../../../../lib/share";
 import NarrativePage from "../../../../components/NarrativePage.astro";
 import { allSnapshots } from "../../../../lib/snapshots";
 
@@ -30,8 +30,8 @@ const share = narrativeShare(snapshot, narrative);
   title={narrative.title}
   description={share.description}
   shareTitle={share.title}
-  image={ogImagePath(snapshot.id)}
-  imageAlt={`TDDR Radar: ${narrative.side} narrative, momentum ${narrative.momentum}.`}
+  image={ogNarrativeImagePath(snapshot.id, narrative.id)}
+  imageAlt={share.imageAlt}
   ogType="article"
   snapshotId={snapshot.id}
 >

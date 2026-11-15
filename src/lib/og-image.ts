@@ -63,8 +63,10 @@ export type Side = "Right" | "Far Left";
 export interface OgCard {
   /** Small label in the header, e.g. "Saturday, Nov 14 · Evening". */
   edition: string;
-  /** Kicker above the headline, e.g. "Top rising narrative". */
-  kicker: string;
+  /** Kicker above the headline, e.g. "Top rising narrative". Omit to give the headline more room. */
+  kicker?: string;
+  /** Show a NEW chip before the side chip. */
+  isNew?: boolean;
   headline: string;
   side?: Side;
   momentum?: number;
@@ -86,14 +88,13 @@ function clipChars(text: string, max: number): string {
  * Largest headline size that fits the space between the chips and the footer
  * (about 160px tall, 1088px wide). Big Shoulders Display caps average ~0.41em.
  */
-function headlineSize(text: string): number {
-  const room = 160;
+function headlineSize(text: string, room: number): number {
   for (const size of [92, 80, 70, 62, 56, 50]) {
     const perLine = Math.floor(1088 / (size * 0.41 * 1.08));
     const lines = Math.ceil(text.length / perLine);
     if (lines * size * 1.02 <= room) return size;
   }
-  return 46;
+  return 44;
 }
 
 function chip(label: string, background: string, color = C.black): Node {
@@ -121,8 +122,10 @@ function chip(label: string, background: string, color = C.black): Node {
 }
 
 function card(card: OgCard, mascot: string): Node {
-  const headline = clipChars(card.headline, 120);
-  const size = headlineSize(headline);
+  const headline = clipChars(card.headline, card.kicker ? 120 : 150);
+  // Without a kicker the headline starts ~47px higher. Either way it must end above the
+  // mascot (top edge at y=458) and the footer.
+  const size = headlineSize(headline, card.kicker ? 160 : 215);
   const toneFill = { danger: C.danger, warn: C.warn, accent: C.accent };
   return h(
     "div",
@@ -192,6 +195,7 @@ function card(card: OgCard, mascot: string): Node {
       ),
     ),
     // kicker
+    card.kicker &&
     h(
       "div",
       {
@@ -207,10 +211,11 @@ function card(card: OgCard, mascot: string): Node {
       card.kicker,
     ),
     // chips: side, momentum, rating
-    card.side || typeof card.momentum === "number" || card.badge
+    card.isNew || card.side || typeof card.momentum === "number" || card.badge
       ? h(
           "div",
-          { display: "flex", alignItems: "center", marginTop: 16 },
+          { display: "flex", alignItems: "center", marginTop: card.kicker ? 16 : 40 },
+          card.isNew ? chip("New", "#ff4d8d") : null,
           card.side ? chip(card.side, card.side === "Right" ? C.right : C.left) : null,
           typeof card.momentum === "number" ? chip(`Momentum ${card.momentum}`, C.ink) : null,
           card.badge ? chip(clipChars(card.badge.label, 40), toneFill[card.badge.tone]) : null,

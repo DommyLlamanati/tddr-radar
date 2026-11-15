@@ -112,9 +112,24 @@ export function disinfoShare(snapshot: Snapshot) {
   };
 }
 
+/** Snapshot titles flag fresh narratives with a leading "NEW:". */
+export function isNewNarrative(narrative: Narrative): boolean {
+  return /^new\s*[:—–-]\s*/i.test(narrative.title);
+}
+
+export function stripNewPrefix(title: string): string {
+  return title.replace(/^new\s*[:—–-]\s*/i, "");
+}
+
+export function ogNarrativeImagePath(snapshotId: string, narrativeId: string): string {
+  return `/og/${snapshotId}/narratives/${narrativeId}.png`;
+}
+
+/** A narrative page shares that narrative's own headline and summary. */
 export function narrativeShare(snapshot: Snapshot, narrative: Narrative) {
   return {
-    title: `${shortTitle(narrative.title)} (${narrative.side}, momentum ${narrative.momentum}) · ${SITE_NAME}`,
+    title: narrative.title,
     description: clip(narrative.summary),
+    imageAlt: clip(`${narrative.title} (${narrative.side}, momentum ${narrative.momentum}). ${SITE_NAME}, ${editionLabel(snapshot.id)}.`),
   };
 }
