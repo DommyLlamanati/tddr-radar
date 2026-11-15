@@ -3,12 +3,16 @@ import Base from "../../layouts/Base.astro";
 import { allSnapshots } from "../../lib/snapshots";
 import { countSides, factCheckCount } from "../../lib/format";
 import { disinfoPath } from "../../lib/dates";
+import { clip, editionLabel, SITE_NAME } from "../../lib/share";
 
 const snapshots = await allSnapshots();
-const description = "Every TDDR narrative snapshot, newest first.";
+const latest = snapshots[0].data;
+const description = clip(
+  `Every TDDR Radar snapshot, newest first: ${snapshots.length} morning and evening reads on rising Right and Far Left narratives. Latest: ${editionLabel(latest.id)}.`,
+);
 ---
 
-<Base title="Snapshot archive" description={description}>
+<Base title="Snapshot archive" description={description} shareTitle={`Snapshot archive · ${SITE_NAME}`}>
   <p class="eyebrow">Archive</p>
   <h1>Snapshots</h1>
   <p class="lede">

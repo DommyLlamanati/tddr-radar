@@ -2,10 +2,21 @@
 import Base from "../layouts/Base.astro";
 import Dashboard from "../components/Dashboard.astro";
 import { latestSnapshot } from "../lib/snapshots";
+import { homeShare, ogImagePath, rankedNarratives, shortTitle } from "../lib/share";
 
 const snapshot = (await latestSnapshot()).data;
+const share = homeShare(snapshot);
+const top = rankedNarratives(snapshot)[0];
+const imageAlt = `TDDR Radar: top rising narrative, ${shortTitle(top.title)} (${top.side}, momentum ${top.momentum}).`;
 ---
 
-<Base title="Rising narratives" description={snapshot.summary} snapshotId={snapshot.id}>
+<Base
+  title="Rising narratives"
+  description={share.description}
+  shareTitle={share.title}
+  image={ogImagePath(snapshot.id)}
+  imageAlt={imageAlt}
+  snapshotId={snapshot.id}
+>
   <Dashboard snapshot={snapshot} />
 </Base>

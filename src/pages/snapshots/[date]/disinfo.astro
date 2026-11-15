@@ -1,5 +1,6 @@
 ---
 import Base from "../../../layouts/Base.astro";
+import { disinfoShare, editionLabel, factCheckTotal, ogDisinfoImagePath } from "../../../lib/share";
 import DisinfoView from "../../../components/DisinfoView.astro";
 import { allSnapshots } from "../../../lib/snapshots";
 
@@ -12,9 +13,17 @@ export async function getStaticPaths() {
 }
 
 const { snapshot } = Astro.props;
-const description = `${snapshot.disinfo.caption} Snapshot from ${snapshot.updatedLabel}.`;
+const share = disinfoShare(snapshot);
+const imageAlt = `TDDR Radar disinformation tracker, ${editionLabel(snapshot.id)}: ${factCheckTotal(snapshot)} fact-checks.`;
 ---
 
-<Base title={`Disinformation · ${snapshot.id}`} description={description} snapshotId={snapshot.id}>
+<Base
+  title={`Disinformation · ${snapshot.id}`}
+  description={share.description}
+  shareTitle={share.title}
+  image={ogDisinfoImagePath(snapshot.id)}
+  imageAlt={imageAlt}
+  snapshotId={snapshot.id}
+>
   <DisinfoView snapshot={snapshot} />
 </Base>

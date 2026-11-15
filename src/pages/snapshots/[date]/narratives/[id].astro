@@ -1,5 +1,6 @@
 ---
 import Base from "../../../../layouts/Base.astro";
+import { narrativeShare, ogImagePath } from "../../../../lib/share";
 import NarrativePage from "../../../../components/NarrativePage.astro";
 import { allSnapshots } from "../../../../lib/snapshots";
 
@@ -22,9 +23,18 @@ export async function getStaticPaths() {
 }
 
 const { snapshot, narrative, rank, total, higher, lower } = Astro.props;
+const share = narrativeShare(snapshot, narrative);
 ---
 
-<Base title={narrative.title} description={narrative.summary} snapshotId={snapshot.id}>
+<Base
+  title={narrative.title}
+  description={share.description}
+  shareTitle={share.title}
+  image={ogImagePath(snapshot.id)}
+  imageAlt={`TDDR Radar: ${narrative.side} narrative, momentum ${narrative.momentum}.`}
+  ogType="article"
+  snapshotId={snapshot.id}
+>
   <NarrativePage
     snapshot={snapshot}
     narrative={narrative}

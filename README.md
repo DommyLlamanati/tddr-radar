@@ -146,3 +146,15 @@ The site is static (`output: "static"` in `astro.config.mjs`). Vercel’s Astro 
 ## Stack
 
 Astro 7, TypeScript, React islands for filtering and sorting, Tailwind 4. Narrative pages and charts are server-rendered HTML. Fonts are self-hosted.
+
+## Link previews
+
+Every page ships Open Graph and Twitter card tags (`src/layouts/Base.astro`, text in `src/lib/share.ts`).
+Preview images (1200x630 PNG) are rendered at build time with satori and resvg:
+
+- `/og/<snapshot-id>.png` for each snapshot page and the homepage
+- `/og/<snapshot-id>/disinfo.png` for each disinformation page
+- `/og/default.png` for the archive, methodology, and other pages
+
+Fonts and the mascot watermark live in `src/assets/og/`, so the build makes no network calls.
+New snapshot JSON files get their own images and meta automatically.

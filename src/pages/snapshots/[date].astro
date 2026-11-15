@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Dashboard from "../../components/Dashboard.astro";
 import { allSnapshots } from "../../lib/snapshots";
+import { editionLabel, ogImagePath, rankedNarratives, shortTitle, snapshotShare } from "../../lib/share";
 
 export async function getStaticPaths() {
   const snapshots = await allSnapshots();
@@ -12,8 +13,19 @@ export async function getStaticPaths() {
 }
 
 const { snapshot } = Astro.props;
+const share = snapshotShare(snapshot);
+const top = rankedNarratives(snapshot)[0];
+const imageAlt = `TDDR Radar, ${editionLabel(snapshot.id)}: top rising narrative, ${shortTitle(top.title)} (${top.side}, momentum ${top.momentum}).`;
 ---
 
-<Base title={snapshot.title} description={snapshot.summary} snapshotId={snapshot.id}>
+<Base
+  title={snapshot.title}
+  description={share.description}
+  shareTitle={share.title}
+  image={ogImagePath(snapshot.id)}
+  imageAlt={imageAlt}
+  ogType="article"
+  snapshotId={snapshot.id}
+>
   <Dashboard snapshot={snapshot} />
 </Base>

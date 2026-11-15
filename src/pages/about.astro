@@ -9,10 +9,10 @@ const formula = snapshot.formula;
 const ranked = [...snapshot.narratives].sort((a, b) => b.momentum - a.momentum);
 const percent = (weight: number) => `${Math.round(weight * 100)}%`;
 const description =
-  "How TDDR Narrative Tracker scores opposition narrative momentum from X post volume, acceleration, outlet coverage, and the U.S. trends list.";
+  "How TDDR Radar scores opposition narrative momentum from X post volume, acceleration, outlet coverage, and the U.S. trends list.";
 ---
 
-<Base title="Methodology" description={description}>
+<Base title="Methodology" description={description} shareTitle="How the momentum score works · TDDR Radar">
   <p class="eyebrow">About</p>
   <h1>How this was built</h1>
   <p class="lede">

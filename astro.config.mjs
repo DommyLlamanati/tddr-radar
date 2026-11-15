@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://tddr-radar.vercel.app",
   output: "static",
   integrations: [react()],
   vite: {
