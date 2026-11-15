@@ -1,0 +1,1990 @@
+{
+  "id": "2026-11-14-pm",
+  "updatedAt": "2026-11-14T23:51:00-05:00",
+  "updatedLabel": "Saturday, Nov 14, 2026, 11:51 PM ET",
+  "timezone": "America/New_York",
+  "title": "TDDR Rising Narratives — Saturday night, Nov 14",
+  "summary": "A snapshot of opposition narratives as of 11:51 PM ET Saturday, Nov 14, 2026: from the Right and from the Far Left. Built for TDDR (Too Dumb Didn't Read). Since this morning, the FAA story moved from lingering cyber/AI theories to an official contractor explanation — Duffy named L3Harris, described a router flooding the network, and, with FAA Administrator Bryan Bedford, more firmly dismissed a cyberattack or an AI cause — while nearly 6,500 Saturday flights were still canceled as of 9:00 PM ET and Gov. Kathy Hochul called for Duffy to resign. On the left, the Van Hollen–Schumer race is still the biggest conversation by volume, but it has cooled, and Saturday's new fuel was a circulating Fetterman interview and Van Hollen's Sunday-show bookings. The popular-vote compact remains the third-largest tracked conversation, cooling from Friday's spike. Every count, quote, and fact-check is from sources and X queries opened tonight. Nothing here is invented.",
+  "trends": {
+    "pulledAtLabel": "Saturday, Nov 14, 2026, 11:44 PM ET",
+    "names": [
+      "#UFC334",
+      "Arch Manning",
+      "#AEWFullGear",
+      "Lane Kiffin",
+      "Texas",
+      "#HookEm",
+      "Kayla Harrison",
+      "Bowen Yang"
+    ],
+    "detail": "U.S. trends were pulled at about 11:44 PM ET with x.get_trends_by_woeid (WOEID 23424977, max 50; 50 returned). The list was dominated by sports and entertainment: UFC 334, college football (Arch Manning, Lane Kiffin, Texas, #HookEm), wrestling, and Bowen Yang. None of the nine narratives we scored appeared on the U.S. trends list tonight — a change from this morning, when '#faagroundstop,' 'Duffy,' 'Pete Buttigieg,' 'Mayor Pete,' and 'Air Traffic Control' were still trending. Trend objects did not include tweet_count, so we did not invent trend volumes. Ambiguous names such as 'Nunes,' 'Stein,' and 'Medic' were left off this political list because we could not confirm they referred to political figures rather than the sports events that surrounded them."
+  },
+  "countsPulledLabel": "Post counts and samples pulled between about 11:43 and 11:47 PM ET Saturday",
+  "hottestQueryDetail": "Van Hollen vs. Schumer (31,000 posts in the last 24 hours)",
+  "factCheckOutletsDetail": "SecurityWeek, CNBC, Semafor, What the Fact",
+  "oppositionNote": {
+    "lead": "What 'opposition' means here",
+    "body": "Right = narratives the Right is pushing after the Democratic midterm wave. Far Left = pressure on Democratic leadership and the incoming majority from the party's left. Some stories are being worked by both sides — the FAA ground stop especially; the tag is the primary opposition frame."
+  },
+  "methodology": [
+    "Last updated Saturday, Nov 14, 2026, 11:51 PM ET. This is a research snapshot for TDDR, not a live API. It will go stale as the night and Sunday move. X trends were pulled for the United States at about 11:44 PM ET. The Saturday-morning snapshot (Nov 14, 7:12 AM ET) is kept in the archive and was not overwritten; all nine narratives were re-counted with the same queries so momentum compares like with like.",
+    "For each narrative we ran one English-language X search with x.get_posts_counts_recent, counted matches in a window from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14 (about 45 minutes longer than 24 hours; the last hourly bar is partial), and over a seven-day window from 12:00 AM ET Sunday, Nov 8 (the earliest even-hour start the recent-count API would accept at pull time), to the same end point. We counted named news or fact-check outlets we actually opened or retrieved tonight (official government pages and company statements are cited as sources but are not counted as outlets, and fact-checks carried over from earlier snapshots without being re-opened are not counted). We noted whether the topic appeared on the U.S. trends list at about 11:44 PM ET.",
+    "Score = 50% volume index + 30% acceleration index + 20% coverage index. Volume index is 100 × log10(1 + last-24h posts) / log10(1 + the highest last-24h count in this set). Acceleration index is 100 × min(last-24h / prior daily average, 3) / 3, so a triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6. Coverage index is 70 × min(outlets, 7) / 7, plus 30 if the topic was on the U.S. X trends list tonight.",
+    "Counts are query matches, not unique posts or unique users, and queries can overlap. Replies are included — including automated @grok replies, which made up a visible share of the FAA query's Saturday matches. Sentiment is a qualitative label from relevancy-sorted post samples and from quotes in news coverage, not a scientific poll. If a signal was thin, the card says so. Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows. Hourly charts are labeled in ET."
+  ],
+  "formula": {
+    "volumeWeight": 0.5,
+    "accelWeight": 0.3,
+    "coverageWeight": 0.2,
+    "volumeCeilingPosts": 31000,
+    "accelCap": 3,
+    "coverageOutletCap": 7,
+    "coverageOutletPoints": 70,
+    "trendBonus": 30,
+    "last24hWindow": "11:00 PM ET Nov 13, 2026 through 11:45 PM ET Nov 14, 2026 (about 45 minutes longer than 24 hours; last hour is a partial bar)",
+    "sevenDayWindow": "a seven-day window from 12:00 AM ET Nov 8, 2026, through 11:45 PM ET Nov 14, 2026"
+  },
+  "chartCaption": "Scores are the composite described in the methodology. Compare with the last-24-hour volume chart.",
+  "volumeChartCaption": "X query matches from 11:00 PM ET Nov 13 through 11:45 PM ET Nov 14 (not unique across narratives; last hour is a partial bar).",
+  "dailyChartCaption": "Daily bar charts use UTC days (a UTC day starts at 7:00 PM ET the previous evening). Bars marked * are partial windows. Nov 8* starts at 12:00 AM ET Nov 8; Nov 15* is 7:00 PM ET Saturday, Nov 14, through 11:45 PM ET Saturday, Nov 14.",
+  "noFactCheckNote": "If a card has no fact-check row, we did not find a rated fact-check for the core claim in this snapshot — not that the claim is true.",
+  "feedCaption": "Nine narratives, scored inside this Saturday-night set. Open a card for talking points, amplifiers, and sources.",
+  "disinfo": {
+    "caption": "Claims in this snapshot that have a fact-check or reporting we opened.",
+    "caveatLead": "A fact-check is not a volume score.",
+    "caveatBody": "The most widely shared false or unsupported claims tonight are still about Friday's FAA ground stop: that it was a cyberattack, or that the FAA's new AI-assisted SMART tool caused it. Saturday's official account is more specific than this morning's — Duffy named an L3Harris copper-to-fiber upgrade and a flooded router, and Bedford said there was 'zero evidence' of anything nefarious or AI-related — but no finished root-cause report has been published, so official denial plus an unfinished investigation is the honest rating. A thin strand of posts also circulated more exotic theories, including an Alex Jones claim of a Chinese cyberattack; we did not find a rated fact-check of that specific claim, and we are not treating a low-engagement post as proof it is widely believed. On the Right, 'Jeffries wants to pay deported DACA recipients' remains misleading. On the left, posts claiming Ayanna Pressley has launched a speaker bid are still false. Ratings below are from pages we opened tonight.",
+    "links": [
+      {
+        "title": "No signs of hacking in FAA ground stop as FBI reportedly probes software update",
+        "site": "SecurityWeek",
+        "href": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/",
+        "date": "Nov 14, 2026"
+      },
+      {
+        "title": "Nationwide ground stop followed contractor upgrade to L3Harris telecommunication system: DOT’s Duffy",
+        "site": "CNBC",
+        "href": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
+        "date": "Nov 14, 2026"
+      },
+      {
+        "title": "‘We don’t believe so’: Duffy dismisses cyberattack as cause for air traffic shutdown",
+        "site": "MS NOW",
+        "href": "https://www.ms.now/news/faa-sean-duffy-nationwide-ground-stop-flights-canceled",
+        "date": "Nov 14, 2026"
+      },
+      {
+        "title": "Fact check: Did Hakeem Jeffries say he wants to re-import deported DACA recipients and pay them?",
+        "site": "What the Fact",
+        "href": "https://whatthefact.app/fact-checks/2026-11-13-jeffries-bring-back-deported-daca-recipients-and-pay-them",
+        "date": "Nov 13, 2026"
+      },
+      {
+        "title": "Activists call for Pressley to launch House speaker bid against Jeffries",
+        "site": "Semafor",
+        "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries",
+        "date": "Nov 13, 2026"
+      }
+    ]
+  },
+  "sourceListIntro": "Every outlet and post linked from a narrative card, plus the fact-checks, in one list.",
+  "sourceList": [
+    {
+      "title": "Nationwide ground stop followed contractor upgrade to L3Harris telecommunication system: DOT’s Duffy",
+      "site": "CNBC",
+      "date": "Nov 14, 2026",
+      "href": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html"
+    },
+    {
+      "title": "Democrats in Congress vow accountability for aviation ground stop",
+      "site": "USA Today",
+      "date": "Nov 14, 2026",
+      "href": "https://www.usatoday.com/story/news/politics/2026/11/14/democrats-oversight-congress-investigation-nationwide-ground-stop-trump/92781114007/"
+    },
+    {
+      "title": "‘We don’t believe so’: Duffy dismisses cyberattack as cause for air traffic shutdown",
+      "site": "MS NOW",
+      "date": "Nov 14, 2026",
+      "href": "https://www.ms.now/news/faa-sean-duffy-nationwide-ground-stop-flights-canceled"
+    },
+    {
+      "title": "Duffy criticizes FAA provider L3Harris for mishap that led to ground stop",
+      "site": "Washington Examiner",
+      "date": "Nov 14, 2026",
+      "href": "https://www.washingtonexaminer.com/policy/infrastructure/4803968/duffy-criticize-faa-l3harris-ground-stop/"
+    },
+    {
+      "title": "Gov. Hochul calls on Duffy to resign after FAA meltdown grounds nation's flights",
+      "site": "Gothamist",
+      "date": "Nov 14, 2026",
+      "href": "https://gothamist.com/news/gov-hochul-calls-on-duffy-to-resign-after-faa-meltdown-grounds-nations-flights"
+    },
+    {
+      "title": "Statement From Governor Kathy Hochul",
+      "site": "New York Governor's Office",
+      "date": "Nov 14, 2026",
+      "href": "https://www.governor.ny.gov/news/statement-governor-kathy-hochul-183"
+    },
+    {
+      "title": "ICYMI: Duffy provides update on restoration of airspace following nationwide ground stop",
+      "site": "U.S. Department of Transportation",
+      "date": "Nov 14, 2026",
+      "href": "https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace"
+    },
+    {
+      "title": "L3Harris Statement on the Nov. 13 Ground Stop",
+      "site": "L3Harris",
+      "date": "Nov 14, 2026",
+      "href": "https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop"
+    },
+    {
+      "title": "No signs of hacking in FAA ground stop as FBI reportedly probes software update",
+      "site": "SecurityWeek",
+      "date": "Nov 14, 2026",
+      "href": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/"
+    },
+    {
+      "title": "X News: FAA Ground Stop Grounds 3,500 Flights After Telecom Glitch",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121410066234413555"
+    },
+    {
+      "title": "X News: FAA Ground Stop Strands Thousands, Sparks Buttigieg Criticism",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121818353522401418"
+    },
+    {
+      "title": "Schumer leads Van Hollen in early majority leader endorsements",
+      "site": "Washington Examiner",
+      "date": "Nov 14, 2026",
+      "href": "https://www.washingtonexaminer.com/news/senate/4802873/chuck-schumer-chris-van-hollen-majority-leader-whip-count-versus-noncommittal-members-thus-far/"
+    },
+    {
+      "title": "Why US Democrats are expected to keep Schumer and Jeffries in power",
+      "site": "Al Jazeera",
+      "date": "Nov 14, 2026",
+      "href": "https://www.aljazeera.com/news-analysis/2026/11/14/why-us-democrats-are-expected-to-keep-schumer-and-jeffries-in-power"
+    },
+    {
+      "title": "Transportation Secretary Sean Duffy & Sen. Chris Van Hollen, Sunday on “This Week”",
+      "site": "ABC News",
+      "date": "Nov 13, 2026",
+      "href": "https://abcnews.go.com/Politics/sen-chris-van-hollen-rep-mike-turner-sunday/story?id=138126575"
+    },
+    {
+      "title": "X News: Van Hollen Challenges Schumer for Senate Democratic Leadership",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121336533076586981"
+    },
+    {
+      "title": "X News: Democrats Debate Ending Senate Filibuster After Majority Win",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121735156897927352"
+    },
+    {
+      "title": "@BelannF circulates Fetterman Fox News clip on Van Hollen (138 likes, 97 reposts)",
+      "site": "X",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/BelannF/status/2121683981099749387"
+    },
+    {
+      "title": "Blue Tsunami May Have Outsized 2028 Impact as Left Eyes Electoral College",
+      "site": "Newsweek",
+      "date": "Nov 6, 2026",
+      "href": "https://www.newsweek.com/blue-tsunami-2028-impact-left-eyes-electoral-college-12678652"
+    },
+    {
+      "title": "X News: Democrats Split on Leadership After Medicare for All Poll Surge",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121433493091873215"
+    },
+    {
+      "title": "X News: Bernie Sanders Urges Democrats to Deliver Medicare for All and Bold Reforms",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121060325088968854"
+    },
+    {
+      "title": "Activists call for Pressley to launch House speaker bid against Jeffries",
+      "site": "Semafor",
+      "date": "Nov 13, 2026",
+      "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries"
+    },
+    {
+      "title": "John Thune vows Senate GOP will maximize lame duck legislative push",
+      "site": "Fox News",
+      "date": "Nov 14, 2026",
+      "href": "https://www.foxnews.com/politics/senate-republicans-plan-54-day-blitz-push-trumps-agenda-before-democrats-seize-power"
+    },
+    {
+      "title": "X News: Sen. Kennedy Urges GOP to Pursue Reconciliation Bill in Lame-Duck Session",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121818351349690588"
+    },
+    {
+      "title": "X News: Conservatives Blast Thune Over Senate Inaction After GOP Midterm Losses",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121632801959346219"
+    },
+    {
+      "title": "X News: GOP Frustration Boils Over Thune's Senate Schedule Blocking Trump's Recess Appointments",
+      "site": "X News",
+      "date": "Nov 14, 2026",
+      "href": "https://x.com/i/trending/2121606545142063459"
+    },
+    {
+      "title": "Fact check: Did Hakeem Jeffries say he wants to re-import deported DACA recipients and pay them?",
+      "site": "What the Fact",
+      "date": "Nov 13, 2026",
+      "href": "https://whatthefact.app/fact-checks/2026-11-13-jeffries-bring-back-deported-daca-recipients-and-pay-them"
+    },
+    {
+      "title": "Rep. Al Green Demands Trump Resign or Face Impeachment, Will Force House Vote as Early as Next Week",
+      "site": "Office of Rep. Al Green",
+      "date": "Nov 12, 2026",
+      "href": "https://algreen.house.gov/media/press-releases/rep-al-green-demands-trump-resign-or-face-impeachment-will-force-house-vote"
+    }
+  ],
+  "narratives": [
+    {
+      "id": "faa-ground-stop",
+      "momentum": 92,
+      "volumeIndex": 95.1,
+      "accelIndex": 100.0,
+      "coverageIndex": 70.0,
+      "posts24h": 18733,
+      "posts7d": 37276,
+      "priorDailyAvg": 3090.5,
+      "accel": 6.06,
+      "outlets": 7,
+      "trendingUS": false,
+      "query": "(FAA OR \"ground stop\" OR \"air traffic\" OR groundstop) (Buttigieg OR \"Mayor Pete\" OR cyberattack OR \"cyber attack\" OR hacked OR sabotage) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 1
+        },
+        {
+          "label": "Nov 9",
+          "value": 2
+        },
+        {
+          "label": "Nov 10",
+          "value": 3
+        },
+        {
+          "label": "Nov 11",
+          "value": 2
+        },
+        {
+          "label": "Nov 12",
+          "value": 3
+        },
+        {
+          "label": "Nov 13",
+          "value": 7993
+        },
+        {
+          "label": "Nov 14",
+          "value": 26494
+        },
+        {
+          "label": "Nov 15*",
+          "value": 2778
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 1372
+        },
+        {
+          "label": "12 AM",
+          "value": 990
+        },
+        {
+          "label": "1 AM",
+          "value": 851
+        },
+        {
+          "label": "2 AM",
+          "value": 629
+        },
+        {
+          "label": "3 AM",
+          "value": 569
+        },
+        {
+          "label": "4 AM",
+          "value": 487
+        },
+        {
+          "label": "5 AM",
+          "value": 576
+        },
+        {
+          "label": "6 AM",
+          "value": 579
+        },
+        {
+          "label": "7 AM",
+          "value": 669
+        },
+        {
+          "label": "8 AM",
+          "value": 818
+        },
+        {
+          "label": "9 AM",
+          "value": 937
+        },
+        {
+          "label": "10 AM",
+          "value": 759
+        },
+        {
+          "label": "11 AM",
+          "value": 964
+        },
+        {
+          "label": "12 PM",
+          "value": 1006
+        },
+        {
+          "label": "1 PM",
+          "value": 911
+        },
+        {
+          "label": "2 PM",
+          "value": 826
+        },
+        {
+          "label": "3 PM",
+          "value": 683
+        },
+        {
+          "label": "4 PM",
+          "value": 719
+        },
+        {
+          "label": "5 PM",
+          "value": 839
+        },
+        {
+          "label": "6 PM",
+          "value": 771
+        },
+        {
+          "label": "7 PM",
+          "value": 639
+        },
+        {
+          "label": "8 PM",
+          "value": 666
+        },
+        {
+          "label": "9 PM",
+          "value": 627
+        },
+        {
+          "label": "10 PM",
+          "value": 552
+        },
+        {
+          "label": "11 PM*",
+          "value": 294
+        }
+      ],
+      "title": "FAA ground stop, Saturday night: Duffy blames L3Harris, Hochul wants him out, 'Mayor Pete' still lingers",
+      "side": "Right",
+      "defaultOpen": true,
+      "sentiment": "Blame-shifting, now split between a contractor and the last secretary",
+      "sentimentNote": "In a relevancy sample of posts since noon ET Saturday, a large share of matches were automated @grok replies restating the official L3Harris explanation. Right-leaning posts we opened still blamed 'Mayor Pete' for leaving a failing system, while a thinner strand repeated cyberattack theories — including one post circulating an Alex Jones claim of a Chinese attack. This is a read of that sample, not a poll.",
+      "summary": "The official story moved Saturday. At a Department of Transportation press conference, Transportation Secretary Sean Duffy said a contractor for L3Harris — the FAA's legacy telecom provider, which Duffy said owns the network — was switching old copper lines to fiber at a remote facility when a router 'started flooding other routers' with 'over 1,000 connection attempts every four to five seconds,' knocking communications and radar feeds off-kilter. He said investigators were still deciding whether that was 'incompetence,' meaning user or installation error, or a faulty router, and that 'we don’t believe' it was a cyberattack. FAA Administrator Bryan Bedford was blunter: 'We see zero evidence of anything nefarious, and zero evidence of anything AI-related,' CNBC and MS NOW reported. The ground stop itself ended Friday at about 8:15 PM ET, but the mess continued all day: CNBC, citing FlightAware as of 9:00 PM ET Saturday, said nearly 6,500 U.S. flights were canceled and more than 8,000 were delayed. Democrats used the day to preview oversight. House Homeland Security Democrats told the administration to 'preserve all documents and emails,' and New York Gov. Kathy Hochul said 'Sean Duffy must resign, or President Trump must remove him immediately,' accusing him of being 'more focused on starring in his own reality show than addressing the crisis at his agency.' President Trump stayed mostly silent, USA Today and MS NOW noted, except to share a quote from Sen. John Kennedy that additional FAA funding 'should be a stand alone Bill.' On the Right, the 'Mayor Pete left a failing system' frame from this morning is still in circulation, and none of the FAA terms were still on the U.S. X trends list tonight.",
+      "talkingPoints": [
+        "Buttigieg had four years and left a failing system in place.",
+        "Give Duffy the $50 billion and stop playing politics with air traffic control.",
+        "Hochul wants a scalp instead of a fix — this is aging copper, not a conspiracy.",
+        "They say 'no cyberattack' every time — the investigation isn't finished."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Transportation Secretary Sean Duffy and FAA Administrator Bryan Bedford at Saturday's DOT briefing; New York Gov. Kathy Hochul's resignation demand; House Homeland Security Democrats ('Oversight is coming'); House Democratic Leader Hakeem Jeffries, who called it 'the latest in a series of unacceptable air travel incidents,' per MS NOW; Sen. John Kennedy, whose FAA-funding quote Trump shared; and @MichaelARothman (1,358 views) restating Mullin's Friday 'no cyber attack' line. A lower-engagement right-leaning post from @zeroDEIUSA kept the 'Mayor Pete' frame going. Automated @grok replies were a visible share of the query matches.",
+      "whyItWorks": "A miserable travel weekend needs a villain. Officials handed the Right a contractor to blame and a funding ask, while 'Mayor Pete did it too' still borrows a real 2023 precedent. Democrats handed the other side a resignation demand and an oversight threat, so both coalitions can work the same outage.",
+      "audience": "Pro-administration posters defending Duffy, conservative media audiences, travelers still stuck Saturday night, and Democrats preparing January oversight. A left-leaning counter-strand is calling for Duffy's resignation and a full investigation.",
+      "counter": "Hold today's officials to their own Saturday timeline: L3Harris, one remote site, a flooded router, and a root-cause report that still has not been published. 'We don’t believe so' and 'zero evidence' are not the same as a finished investigation. Don't overclaim the other way either — aging systems failed under this administration, and several Congresses underfunded them.",
+      "factChecks": [
+        {
+          "claim": "A cyberattack caused Friday's nationwide FAA ground stop.",
+          "rating": "Officials say no — no public root-cause report yet",
+          "detail": "On Saturday, Duffy said 'we don’t believe' a foreign cyberattack caused the outage, and Bedford said there was 'zero evidence of anything nefarious.' SecurityWeek, which we re-opened tonight, had already reported no signs of hacking and an FBI look at a software update. Officials still have not published a finished root-cause report, so the honest rating remains official denial plus an unfinished investigation.",
+          "href": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/",
+          "outlet": "SecurityWeek"
+        },
+        {
+          "claim": "The FAA's new AI-assisted SMART system caused the ground stop.",
+          "rating": "Denied again by officials Saturday",
+          "detail": "Bedford said Saturday there was 'zero evidence of anything AI-related,' and Duffy had already called the SMART tool 'completely disconnected' from the outage. We did not independently verify the vendor architecture; this rating restates the officials' Saturday denial, reported by CNBC and MS NOW.",
+          "href": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
+          "outlet": "CNBC"
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour (11:00–11:45 PM ET). Volume stayed elevated all day, with a midday bump around the Saturday briefings, rather than a single Friday-evening spike.",
+      "sources": [
+        {
+          "title": "Nationwide ground stop followed contractor upgrade to L3Harris telecommunication system: DOT’s Duffy",
+          "site": "CNBC",
+          "date": "Nov 14, 2026",
+          "href": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html"
+        },
+        {
+          "title": "Democrats in Congress vow accountability for aviation ground stop",
+          "site": "USA Today",
+          "date": "Nov 14, 2026",
+          "href": "https://www.usatoday.com/story/news/politics/2026/11/14/democrats-oversight-congress-investigation-nationwide-ground-stop-trump/92781114007/"
+        },
+        {
+          "title": "‘We don’t believe so’: Duffy dismisses cyberattack as cause for air traffic shutdown",
+          "site": "MS NOW",
+          "date": "Nov 14, 2026",
+          "href": "https://www.ms.now/news/faa-sean-duffy-nationwide-ground-stop-flights-canceled"
+        },
+        {
+          "title": "Duffy criticizes FAA provider L3Harris for mishap that led to ground stop",
+          "site": "Washington Examiner",
+          "date": "Nov 14, 2026",
+          "href": "https://www.washingtonexaminer.com/policy/infrastructure/4803968/duffy-criticize-faa-l3harris-ground-stop/"
+        },
+        {
+          "title": "Gov. Hochul calls on Duffy to resign after FAA meltdown grounds nation's flights",
+          "site": "Gothamist",
+          "date": "Nov 14, 2026",
+          "href": "https://gothamist.com/news/gov-hochul-calls-on-duffy-to-resign-after-faa-meltdown-grounds-nations-flights"
+        },
+        {
+          "title": "Statement From Governor Kathy Hochul",
+          "site": "New York Governor's Office",
+          "date": "Nov 14, 2026",
+          "href": "https://www.governor.ny.gov/news/statement-governor-kathy-hochul-183"
+        },
+        {
+          "title": "ICYMI: Duffy provides update on restoration of airspace following nationwide ground stop",
+          "site": "U.S. Department of Transportation",
+          "date": "Nov 14, 2026",
+          "href": "https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace"
+        },
+        {
+          "title": "L3Harris Statement on the Nov. 13 Ground Stop",
+          "site": "L3Harris",
+          "date": "Nov 14, 2026",
+          "href": "https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop"
+        },
+        {
+          "title": "No signs of hacking in FAA ground stop as FBI reportedly probes software update",
+          "site": "SecurityWeek",
+          "date": "Nov 14, 2026",
+          "href": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/"
+        },
+        {
+          "title": "X News: FAA Ground Stop Grounds 3,500 Flights After Telecom Glitch",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121410066234413555"
+        },
+        {
+          "title": "X News: FAA Ground Stop Strands Thousands, Sparks Buttigieg Criticism",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121818353522401418"
+        }
+      ]
+    },
+    {
+      "id": "van-hollen-schumer",
+      "momentum": 72,
+      "volumeIndex": 100.0,
+      "accelIndex": 45.7,
+      "coverageIndex": 40.0,
+      "posts24h": 31000,
+      "posts7d": 166800,
+      "priorDailyAvg": 22633.3,
+      "accel": 1.37,
+      "outlets": 4,
+      "trendingUS": false,
+      "query": "(\"Van Hollen\" OR VanHollen) (Schumer OR \"majority leader\" OR leader OR challenge OR challenging OR bid) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 1379
+        },
+        {
+          "label": "Nov 9",
+          "value": 13028
+        },
+        {
+          "label": "Nov 10",
+          "value": 16850
+        },
+        {
+          "label": "Nov 11",
+          "value": 7705
+        },
+        {
+          "label": "Nov 12",
+          "value": 4383
+        },
+        {
+          "label": "Nov 13",
+          "value": 81560
+        },
+        {
+          "label": "Nov 14",
+          "value": 36131
+        },
+        {
+          "label": "Nov 15*",
+          "value": 5764
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 1823
+        },
+        {
+          "label": "12 AM",
+          "value": 1336
+        },
+        {
+          "label": "1 AM",
+          "value": 883
+        },
+        {
+          "label": "2 AM",
+          "value": 689
+        },
+        {
+          "label": "3 AM",
+          "value": 625
+        },
+        {
+          "label": "4 AM",
+          "value": 610
+        },
+        {
+          "label": "5 AM",
+          "value": 567
+        },
+        {
+          "label": "6 AM",
+          "value": 685
+        },
+        {
+          "label": "7 AM",
+          "value": 812
+        },
+        {
+          "label": "8 AM",
+          "value": 984
+        },
+        {
+          "label": "9 AM",
+          "value": 1232
+        },
+        {
+          "label": "10 AM",
+          "value": 1234
+        },
+        {
+          "label": "11 AM",
+          "value": 1659
+        },
+        {
+          "label": "12 PM",
+          "value": 1761
+        },
+        {
+          "label": "1 PM",
+          "value": 1550
+        },
+        {
+          "label": "2 PM",
+          "value": 1632
+        },
+        {
+          "label": "3 PM",
+          "value": 1986
+        },
+        {
+          "label": "4 PM",
+          "value": 1889
+        },
+        {
+          "label": "5 PM",
+          "value": 1614
+        },
+        {
+          "label": "6 PM",
+          "value": 1665
+        },
+        {
+          "label": "7 PM",
+          "value": 1404
+        },
+        {
+          "label": "8 PM",
+          "value": 1311
+        },
+        {
+          "label": "9 PM",
+          "value": 1225
+        },
+        {
+          "label": "10 PM",
+          "value": 1077
+        },
+        {
+          "label": "11 PM*",
+          "value": 747
+        }
+      ],
+      "title": "Van Hollen vs. Schumer — Fetterman's walk-away threat and a Sunday-show blitz",
+      "side": "Far Left",
+      "sentiment": "Insurgent on the left, apocalyptic on the Israel split",
+      "sentimentNote": "In a relevancy sample of posts since noon ET Saturday, the clip that moved was Sen. John Fetterman telling Fox News' Kayleigh McEnany that a Van Hollen win could be a red line for staying in the party, citing Van Hollen's record on Israel. Progressive posts we opened treated that threat as proof Van Hollen is the right pick. This is a read of that sample, not a poll.",
+      "summary": "This remains the biggest conversation we tracked by raw volume — 31,000 posts in the last 24 hours — but it has cooled sharply from this morning's 61,541, as Friday's announcement spike rolls into the prior-day average. The new Saturday fuel was internal and televised. Posts we opened circulated a Fox News interview in which Sen. John Fetterman said a Van Hollen victory 'would be troubling' and that he could leave the Democratic Party over Van Hollen's criticism of Israel. Van Hollen, who on Friday called himself 'the underdog' and claimed 'more than 10' private commitments, is booked Sunday on ABC's This Week (alongside Duffy), and The Hill's Sunday-show listings also had him on CNN's State of the Union and Fox News Sunday; we opened the ABC booking page and could not open The Hill page, so we are not treating that as a fully retrieved article. A Washington Examiner tally we opened still had 15 public backers for Schumer and four for Van Hollen (Sens. Bernie Sanders and Jeff Merkley and Sens.-elect Abdul El-Sayed and Peggy Flanagan), plus a longer list of members who have opposed Schumer without endorsing Van Hollen. Al Jazeera's Saturday analysis likewise found Schumer likely to keep the job on the strength of the midterm wave, with Sen. Ruben Gallego's 'World Series' line still the defense.",
+      "talkingPoints": [
+        "Fetterman's threat is the point: Schumer's coalition would rather keep the filibuster and the Israel status quo than listen to voters.",
+        "Van Hollen is still the underdog — Sunday shows are how you change a whip count.",
+        "Schumer says he has the votes; make him prove it in December.",
+        "End the filibuster and deliver what the midterm wave was for."
+      ],
+      "amplifiers": "Named voices in coverage and posts we opened: Sen. John Fetterman on Fox News, as circulated by @BelannF (138 likes, 97 reposts, 5,633 views) and @ATNewsChannel; Sen. Chris Van Hollen, booked on Sunday shows; Sen. Ruben Gallego, quoted in Al Jazeera; and @gremloe (37 likes), who argued that Mark Levin's anger 'lends credibility' to replacing Schumer with Van Hollen. X News continued to cluster the leadership fight Saturday night.",
+      "whyItWorks": "A leadership race stays alive when every new clip is a loyalty test. Fetterman's walk-away threat turns an inside whip count into a story about the party's identity, which both progressives and the Right are happy to amplify.",
+      "audience": "Progressive Democrats and anti-war voters pushing to replace Schumer; Jewish and pro-Israel Democrats alarmed by the Fetterman clip; and right-leaning accounts treating it as proof of a Democratic civil war.",
+      "counter": "Separate the clips from the math. The public whip we can document tonight is still lopsided toward Schumer. Ask both men, on Sunday and before the caucus vote, for a yes-or-no on the filibuster, Iran-war funding, and the first ethics bill, and let the count follow the answers.",
+      "factChecks": [],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Volume stayed in the thousands most of Saturday, with a mid-afternoon bump as the Fetterman interview circulated, but well below Friday's peak.",
+      "sources": [
+        {
+          "title": "Schumer leads Van Hollen in early majority leader endorsements",
+          "site": "Washington Examiner",
+          "date": "Nov 14, 2026",
+          "href": "https://www.washingtonexaminer.com/news/senate/4802873/chuck-schumer-chris-van-hollen-majority-leader-whip-count-versus-noncommittal-members-thus-far/"
+        },
+        {
+          "title": "Why US Democrats are expected to keep Schumer and Jeffries in power",
+          "site": "Al Jazeera",
+          "date": "Nov 14, 2026",
+          "href": "https://www.aljazeera.com/news-analysis/2026/11/14/why-us-democrats-are-expected-to-keep-schumer-and-jeffries-in-power"
+        },
+        {
+          "title": "Transportation Secretary Sean Duffy & Sen. Chris Van Hollen, Sunday on “This Week”",
+          "site": "ABC News",
+          "date": "Nov 13, 2026",
+          "href": "https://abcnews.go.com/Politics/sen-chris-van-hollen-rep-mike-turner-sunday/story?id=138126575"
+        },
+        {
+          "title": "X News: Van Hollen Challenges Schumer for Senate Democratic Leadership",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121336533076586981"
+        },
+        {
+          "title": "X News: Democrats Debate Ending Senate Filibuster After Majority Win",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121735156897927352"
+        },
+        {
+          "title": "@BelannF circulates Fetterman Fox News clip on Van Hollen (138 likes, 97 reposts)",
+          "site": "X",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/BelannF/status/2121683981099749387"
+        }
+      ]
+    },
+    {
+      "id": "electoral-college",
+      "momentum": 63,
+      "volumeIndex": 94.1,
+      "accelIndex": 46.3,
+      "coverageIndex": 10.0,
+      "posts24h": 16819,
+      "posts7d": 89217,
+      "priorDailyAvg": 12066.3,
+      "accel": 1.39,
+      "outlets": 1,
+      "trendingUS": false,
+      "query": "(\"Electoral College\" OR \"popular vote compact\" OR NPVIC OR \"National Popular Vote\") lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 7713
+        },
+        {
+          "label": "Nov 9",
+          "value": 9729
+        },
+        {
+          "label": "Nov 10",
+          "value": 11890
+        },
+        {
+          "label": "Nov 11",
+          "value": 5204
+        },
+        {
+          "label": "Nov 12",
+          "value": 4191
+        },
+        {
+          "label": "Nov 13",
+          "value": 29670
+        },
+        {
+          "label": "Nov 14",
+          "value": 17527
+        },
+        {
+          "label": "Nov 15*",
+          "value": 3293
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 807
+        },
+        {
+          "label": "12 AM",
+          "value": 626
+        },
+        {
+          "label": "1 AM",
+          "value": 373
+        },
+        {
+          "label": "2 AM",
+          "value": 294
+        },
+        {
+          "label": "3 AM",
+          "value": 217
+        },
+        {
+          "label": "4 AM",
+          "value": 217
+        },
+        {
+          "label": "5 AM",
+          "value": 248
+        },
+        {
+          "label": "6 AM",
+          "value": 327
+        },
+        {
+          "label": "7 AM",
+          "value": 458
+        },
+        {
+          "label": "8 AM",
+          "value": 526
+        },
+        {
+          "label": "9 AM",
+          "value": 565
+        },
+        {
+          "label": "10 AM",
+          "value": 691
+        },
+        {
+          "label": "11 AM",
+          "value": 940
+        },
+        {
+          "label": "12 PM",
+          "value": 1145
+        },
+        {
+          "label": "1 PM",
+          "value": 1255
+        },
+        {
+          "label": "2 PM",
+          "value": 1257
+        },
+        {
+          "label": "3 PM",
+          "value": 945
+        },
+        {
+          "label": "4 PM",
+          "value": 898
+        },
+        {
+          "label": "5 PM",
+          "value": 916
+        },
+        {
+          "label": "6 PM",
+          "value": 821
+        },
+        {
+          "label": "7 PM",
+          "value": 783
+        },
+        {
+          "label": "8 PM",
+          "value": 760
+        },
+        {
+          "label": "9 PM",
+          "value": 705
+        },
+        {
+          "label": "10 PM",
+          "value": 632
+        },
+        {
+          "label": "11 PM*",
+          "value": 413
+        }
+      ],
+      "title": "Popular-vote compact: still a 2028 alarm on the Right, cooling from Friday's spike",
+      "side": "Right",
+      "sentiment": "Constitutional alarm, less urgent than yesterday",
+      "sentimentNote": "We did not pull a fresh relevancy sample large enough to re-score sentiment independently tonight; hourly volume stayed in the hundreds to low thousands all Saturday without a new spike. Coverage we opened is still the compact-and-2028 argument from earlier this week. This is a read of that thinner Saturday signal, not a poll.",
+      "summary": "The Right's 'partisan end run around the Constitution' frame is still the third-largest conversation we tracked, with 16,819 posts in the last 24 hours — down from 25,559 this morning, and decelerating to 1.39 times its prior daily average. We did not find a new Saturday official action that reset the story. The underlying fight is unchanged: after Democratic statehouse gains, the National Popular Vote Interstate Compact sits at 222 electoral votes, 48 short of the 270 it needs to take effect, and Nevada Gov.-elect Aaron Ford's support is the hook the Right has been using all week. A Newsweek report we re-opened tonight (published Nov 6, and still the most detailed account we could retrieve) quotes Vikram Amar calling talk of implementing the compact in time for 2028 'nonsensical' and warning that more than a year would be needed 'in a way that is unlikely to have major glitches.' That caveat is not what is traveling on the Right, which is still selling a 2028 deadline and a 'California picks your president' fear.",
+      "talkingPoints": [
+        "This is a partisan end run around the Constitution.",
+        "If the compact kicks in, California and New York will pick the president.",
+        "It would take effect for 2028 unless red states fight it now.",
+        "Even some legal supporters say 2028 is a fantasy — don't trust the sales pitch, or the timeline."
+      ],
+      "amplifiers": "Named voices in the Newsweek report we opened: Patrick Rosenstiel of National Popular Vote; law professor Vikram Amar; and political scientists Steven Rogers and Thad Kousser. Saturday's X volume continued without a new named breakout post in the coverage we retrieved tonight.",
+      "whyItWorks": "It turns an abstract compact into a concrete fear with a deadline. '48 votes short' sounds close, and Ford's earlier comments gave the Right a fresh villain in a newly blue state.",
+      "audience": "Conservative voters, small-state partisans, and 2028-watchers. Pro-reform Democrats are still pitching 'one person, one vote.'",
+      "counter": "Be precise: the compact pledges electors; it does not repeal the Electoral College, and whether it needs congressional approval is an open legal question. Amar, a supporter, told Newsweek that making it operational for 2028 would take more than a year. Don't promise abolition — or block it — on a fake clock.",
+      "factChecks": [],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Volume tapered from Friday night, then rebuilt through Saturday afternoon without matching Friday's peak.",
+      "sources": [
+        {
+          "title": "Blue Tsunami May Have Outsized 2028 Impact as Left Eyes Electoral College",
+          "site": "Newsweek",
+          "date": "Nov 6, 2026",
+          "href": "https://www.newsweek.com/blue-tsunami-2028-impact-left-eyes-electoral-college-12678652"
+        }
+      ]
+    },
+    {
+      "id": "medicare-for-all",
+      "momentum": 52,
+      "volumeIndex": 78.1,
+      "accelIndex": 29.0,
+      "coverageIndex": 20.0,
+      "posts24h": 3203,
+      "posts7d": 25348,
+      "priorDailyAvg": 3690.8,
+      "accel": 0.87,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "(\"Medicare for All\" OR M4A) (Schumer OR Jeffries OR \"Lis Smith\" OR hubris OR leadership OR \"El-Sayed\" OR TrumpCare) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 2256
+        },
+        {
+          "label": "Nov 9",
+          "value": 3671
+        },
+        {
+          "label": "Nov 10",
+          "value": 3203
+        },
+        {
+          "label": "Nov 11",
+          "value": 2203
+        },
+        {
+          "label": "Nov 12",
+          "value": 1899
+        },
+        {
+          "label": "Nov 13",
+          "value": 7740
+        },
+        {
+          "label": "Nov 14",
+          "value": 4006
+        },
+        {
+          "label": "Nov 15*",
+          "value": 370
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 213
+        },
+        {
+          "label": "12 AM",
+          "value": 161
+        },
+        {
+          "label": "1 AM",
+          "value": 142
+        },
+        {
+          "label": "2 AM",
+          "value": 134
+        },
+        {
+          "label": "3 AM",
+          "value": 132
+        },
+        {
+          "label": "4 AM",
+          "value": 105
+        },
+        {
+          "label": "5 AM",
+          "value": 102
+        },
+        {
+          "label": "6 AM",
+          "value": 103
+        },
+        {
+          "label": "7 AM",
+          "value": 115
+        },
+        {
+          "label": "8 AM",
+          "value": 118
+        },
+        {
+          "label": "9 AM",
+          "value": 133
+        },
+        {
+          "label": "10 AM",
+          "value": 169
+        },
+        {
+          "label": "11 AM",
+          "value": 181
+        },
+        {
+          "label": "12 PM",
+          "value": 164
+        },
+        {
+          "label": "1 PM",
+          "value": 143
+        },
+        {
+          "label": "2 PM",
+          "value": 159
+        },
+        {
+          "label": "3 PM",
+          "value": 153
+        },
+        {
+          "label": "4 PM",
+          "value": 144
+        },
+        {
+          "label": "5 PM",
+          "value": 137
+        },
+        {
+          "label": "6 PM",
+          "value": 125
+        },
+        {
+          "label": "7 PM",
+          "value": 113
+        },
+        {
+          "label": "8 PM",
+          "value": 100
+        },
+        {
+          "label": "9 PM",
+          "value": 73
+        },
+        {
+          "label": "10 PM",
+          "value": 45
+        },
+        {
+          "label": "11 PM*",
+          "value": 39
+        }
+      ],
+      "title": "Medicare for All as the litmus test — Jayapal still withholding Jeffries, volume cools",
+      "side": "Far Left",
+      "sentiment": "Demanding, but no longer spiking",
+      "sentimentNote": "Coverage we opened Saturday is the same litmus-test argument with a new named holdout: Rep. Pramila Jayapal telling Talking Points Memo, as quoted by Al Jazeera, that she is withholding support for Jeffries unless he commits to advancing Medicare for All, and that 'you can’t beat somebody with nobody.' Hourly X volume fell through the evening. This is a read of that sample, not a poll.",
+      "summary": "Medicare for All is still the policy test progressives are applying to Democratic leaders, but the X conversation has cooled: 3,203 posts in the last 24 hours, down from 8,474 this morning, and below its prior daily average (accel 0.87). Al Jazeera's Saturday analysis is the new reporting we opened — Jayapal is withholding her speakership support unless Jeffries commits to advancing Medicare for All, while Rep. Alexandria Ocasio-Cortez, asked by CNN whether she supported Jeffries, answered, 'The race is unopposed. Yeah.' X News continued to circulate the KFF finding that 84 percent of Democrats back a national Medicare for All plan, and Friday's Lis Smith 'height of hubris' clip is still in the bloodstream of this query even as raw volume fades. We tried and failed to open a Saturday Hill story whose headline said Jeffries backed lowering the Medicare age; we are not treating that as a retrieved article.",
+      "talkingPoints": [
+        "84% of Democrats want Medicare for All — why won't Schumer and Jeffries?",
+        "Jayapal is right to withhold her vote until there's a commitment.",
+        "Lis Smith calling it 'hubris' is the establishment telling the base to sit down.",
+        "A lowered Medicare age is not Medicare for All."
+      ],
+      "amplifiers": "Named voices in coverage we opened: Rep. Pramila Jayapal, quoted by Al Jazeera from Talking Points Memo; Rep. Alexandria Ocasio-Cortez's 'the race is unopposed' answer, also in that piece; and X News's continuing wrap of the KFF poll and 'step aside' calls.",
+      "whyItWorks": "A big polling number makes a factional demand feel like majority opinion, and tying it to the speaker's vote gives activists a concrete lever even when they don't have a candidate.",
+      "audience": "Progressive Democrats, health-care activists, and the same audience organizing against Schumer and Jeffries.",
+      "counter": "Use the whole polling picture, not just the Democratic topline. Ask leaders for a named first-100-days health bill and a vote schedule rather than treating a withheld speaker vote as a substitute for a bill.",
+      "factChecks": [],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Volume drifted down through the afternoon and evening.",
+      "sources": [
+        {
+          "title": "Why US Democrats are expected to keep Schumer and Jeffries in power",
+          "site": "Al Jazeera",
+          "date": "Nov 14, 2026",
+          "href": "https://www.aljazeera.com/news-analysis/2026/11/14/why-us-democrats-are-expected-to-keep-schumer-and-jeffries-in-power"
+        },
+        {
+          "title": "X News: Democrats Split on Leadership After Medicare for All Poll Surge",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121433493091873215"
+        },
+        {
+          "title": "X News: Bernie Sanders Urges Democrats to Deliver Medicare for All and Bold Reforms",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121060325088968854"
+        }
+      ]
+    },
+    {
+      "id": "pressley-speaker",
+      "momentum": 45,
+      "volumeIndex": 75.4,
+      "accelIndex": 10.0,
+      "coverageIndex": 20.0,
+      "posts24h": 2425,
+      "posts7d": 50573,
+      "priorDailyAvg": 8024.7,
+      "accel": 0.3,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "Pressley (Jeffries OR Speaker OR speakership OR challenge) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 241
+        },
+        {
+          "label": "Nov 9",
+          "value": 389
+        },
+        {
+          "label": "Nov 10",
+          "value": 1087
+        },
+        {
+          "label": "Nov 11",
+          "value": 19504
+        },
+        {
+          "label": "Nov 12",
+          "value": 15041
+        },
+        {
+          "label": "Nov 13",
+          "value": 10800
+        },
+        {
+          "label": "Nov 14",
+          "value": 3019
+        },
+        {
+          "label": "Nov 15*",
+          "value": 492
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 149
+        },
+        {
+          "label": "12 AM",
+          "value": 168
+        },
+        {
+          "label": "1 AM",
+          "value": 89
+        },
+        {
+          "label": "2 AM",
+          "value": 57
+        },
+        {
+          "label": "3 AM",
+          "value": 38
+        },
+        {
+          "label": "4 AM",
+          "value": 63
+        },
+        {
+          "label": "5 AM",
+          "value": 37
+        },
+        {
+          "label": "6 AM",
+          "value": 49
+        },
+        {
+          "label": "7 AM",
+          "value": 46
+        },
+        {
+          "label": "8 AM",
+          "value": 76
+        },
+        {
+          "label": "9 AM",
+          "value": 70
+        },
+        {
+          "label": "10 AM",
+          "value": 90
+        },
+        {
+          "label": "11 AM",
+          "value": 86
+        },
+        {
+          "label": "12 PM",
+          "value": 95
+        },
+        {
+          "label": "1 PM",
+          "value": 149
+        },
+        {
+          "label": "2 PM",
+          "value": 173
+        },
+        {
+          "label": "3 PM",
+          "value": 139
+        },
+        {
+          "label": "4 PM",
+          "value": 116
+        },
+        {
+          "label": "5 PM",
+          "value": 132
+        },
+        {
+          "label": "6 PM",
+          "value": 111
+        },
+        {
+          "label": "7 PM",
+          "value": 90
+        },
+        {
+          "label": "8 PM",
+          "value": 104
+        },
+        {
+          "label": "9 PM",
+          "value": 119
+        },
+        {
+          "label": "10 PM",
+          "value": 112
+        },
+        {
+          "label": "11 PM*",
+          "value": 67
+        }
+      ],
+      "title": "Draft Pressley for Speaker — still a movement without a candidate",
+      "side": "Far Left",
+      "sentiment": "Hopeful but fading",
+      "sentimentNote": "Coverage we re-opened Saturday night is unchanged from Friday: activists and a petition pushing, and Pressley's camp not running. Al Jazeera's Saturday analysis treats the speaker's race as effectively unopposed. Hourly X volume stayed in the low hundreds. This is a read of that sample, not a poll.",
+      "summary": "The Draft Pressley effort is still moving, but more slowly: 2,425 posts in the last 24 hours, down from 6,143 this morning, at 0.30 times its prior daily average. Semafor, which we re-opened tonight, still stands as the status report — activists want Rep. Ayanna Pressley to challenge Hakeem Jeffries, a spokesperson said she is in 'active conversations with Leader Jeffries,' and people familiar with her comments said she has privately denied interest and has not sounded out colleagues. Al Jazeera likewise described Jeffries as facing 'a different kind of challenge' than Schumer, with no prominent opponent, and quoted Ocasio-Cortez saying the race is unopposed. The November 18–19 House Democratic leadership elections are still the deadline. We found no Saturday announcement of a bid.",
+      "talkingPoints": [
+        "Speaker Pressley: she already fights for what voters elected us to do.",
+        "Call your representative before the Nov. 18 caucus vote.",
+        "An unopposed Jeffries race is the problem, not the answer."
+      ],
+      "amplifiers": "Named voices in coverage we opened: Semafor's Nov 13 report and Pressley spokesperson Ricardo Sanchez; Rep. Alexandria Ocasio-Cortez, quoted in Al Jazeera; and the New Democrat Coalition's endorsement of Jeffries, also in that piece.",
+      "whyItWorks": "A petition and a preferred name let activists contest a coronation even when the preferred name isn't running. The deadline does the rest of the work.",
+      "audience": "Progressive Democrats and activists already organizing against Jeffries. Most of the incoming caucus, on the reporting we opened, still expects Jeffries to win.",
+      "counter": "Don't invent a candidacy. If the demand is a policy commitment — Medicare for All, Israel aid, the Iran war — make that the ask of the actual speaker candidate, not of a draft campaign that has no candidate.",
+      "factChecks": [
+        {
+          "claim": "Ayanna Pressley has launched a challenge to Hakeem Jeffries for House speaker.",
+          "rating": "False as of Nov 13 — no bid announced Saturday either",
+          "detail": "Semafor reported Friday that Pressley has privately said she does not want the role and has not sought colleagues' support. We re-opened that article tonight and found no Saturday announcement reversing it. Al Jazeera's Saturday analysis still treats the race as unopposed.",
+          "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries",
+          "outlet": "Semafor"
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Volume stayed modest, with a small afternoon bump, well below this week's midweek peak.",
+      "sources": [
+        {
+          "title": "Activists call for Pressley to launch House speaker bid against Jeffries",
+          "site": "Semafor",
+          "date": "Nov 13, 2026",
+          "href": "https://www.semafor.com/article/11/13/2026/activists-call-for-pressley-to-launch-house-speaker-bid-against-jeffries"
+        },
+        {
+          "title": "Why US Democrats are expected to keep Schumer and Jeffries in power",
+          "site": "Al Jazeera",
+          "date": "Nov 14, 2026",
+          "href": "https://www.aljazeera.com/news-analysis/2026/11/14/why-us-democrats-are-expected-to-keep-schumer-and-jeffries-in-power"
+        }
+      ]
+    },
+    {
+      "id": "save-act-filibuster",
+      "momentum": 44,
+      "volumeIndex": 76.9,
+      "accelIndex": 5.7,
+      "coverageIndex": 20.0,
+      "posts24h": 2855,
+      "posts7d": 105637,
+      "priorDailyAvg": 17130.3,
+      "accel": 0.17,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "(\"SAVE America Act\" OR \"SAVE Act\") (Trump OR Thune OR Senate OR filibuster) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 9416
+        },
+        {
+          "label": "Nov 9",
+          "value": 18583
+        },
+        {
+          "label": "Nov 10",
+          "value": 9454
+        },
+        {
+          "label": "Nov 11",
+          "value": 21617
+        },
+        {
+          "label": "Nov 12",
+          "value": 20502
+        },
+        {
+          "label": "Nov 13",
+          "value": 21102
+        },
+        {
+          "label": "Nov 14",
+          "value": 4625
+        },
+        {
+          "label": "Nov 15*",
+          "value": 338
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 231
+        },
+        {
+          "label": "12 AM",
+          "value": 134
+        },
+        {
+          "label": "1 AM",
+          "value": 88
+        },
+        {
+          "label": "2 AM",
+          "value": 82
+        },
+        {
+          "label": "3 AM",
+          "value": 42
+        },
+        {
+          "label": "4 AM",
+          "value": 57
+        },
+        {
+          "label": "5 AM",
+          "value": 62
+        },
+        {
+          "label": "6 AM",
+          "value": 49
+        },
+        {
+          "label": "7 AM",
+          "value": 104
+        },
+        {
+          "label": "8 AM",
+          "value": 103
+        },
+        {
+          "label": "9 AM",
+          "value": 168
+        },
+        {
+          "label": "10 AM",
+          "value": 209
+        },
+        {
+          "label": "11 AM",
+          "value": 245
+        },
+        {
+          "label": "12 PM",
+          "value": 136
+        },
+        {
+          "label": "1 PM",
+          "value": 172
+        },
+        {
+          "label": "2 PM",
+          "value": 171
+        },
+        {
+          "label": "3 PM",
+          "value": 134
+        },
+        {
+          "label": "4 PM",
+          "value": 140
+        },
+        {
+          "label": "5 PM",
+          "value": 109
+        },
+        {
+          "label": "6 PM",
+          "value": 81
+        },
+        {
+          "label": "7 PM",
+          "value": 99
+        },
+        {
+          "label": "8 PM",
+          "value": 78
+        },
+        {
+          "label": "9 PM",
+          "value": 58
+        },
+        {
+          "label": "10 PM",
+          "value": 66
+        },
+        {
+          "label": "11 PM*",
+          "value": 37
+        }
+      ],
+      "title": "SAVE Act in the lame duck — Kennedy wants reconciliation, the base still blames Thune",
+      "side": "Right",
+      "sentiment": "Frustrated, and no longer spiking",
+      "sentimentNote": "X News clusters we retrieved Saturday still treat the SAVE America Act as proof the Senate GOP squandered its majority, now with Sen. John Kennedy urging a last reconciliation bill. Hourly volume is a few hundred posts at most, far below this week's midweek peak. This is a read of that sample, not a poll.",
+      "summary": "The SAVE America Act is still the Right's measuring stick for Senate failure, but the conversation has decelerated hard: 2,855 posts in the last 24 hours, down from 12,912 this morning, and only 0.17 times its prior daily average — the slowest accel in this set, because the seven-day total is still huge. The Saturday wrinkle is a lame-duck push, not a new vote. X News clustered Sen. John Kennedy urging Republicans to try a reconciliation package — voter-integrity measures, military funding, air-traffic-control money — before Democrats take over, and Trump shared Kennedy's plan, including a line that FAA funding 'should be a stand alone Bill.' A Fox News Digital report we opened quotes a Senate GOP resolution to 'maximize the 54 days' and do 'everything humanly possible to pass a reconciliation bill before Jan. 3,' and has Sen. Ron Johnson saying election-integrity funding could be 'part of it.' Thune, in that same report, said any reconciliation bill has to stay 'pretty narrow' to have 'any chance of passing.' No floor vote happened Saturday; the Senate is still due back Monday.",
+      "talkingPoints": [
+        "Thune refused to nuke the filibuster to pass the SAVE America Act.",
+        "Use reconciliation in the lame duck — Kennedy is right that not trying is the failure.",
+        "The Senate is where Trump's agenda goes to die.",
+        "Voters passed voter ID at the ballot box — Washington won't."
+      ],
+      "amplifiers": "Named voices in coverage we opened: Sen. John Kennedy, whose plan Trump shared, as wrapped by X News and mentioned in USA Today's FAA story; Senate Majority Leader John Thune and Sen. Ron Johnson, quoted by Fox News Digital; and X News clusters blasting Senate inaction after the midterms.",
+      "whyItWorks": "It gives the base a single failed bill that stands in for the whole lame duck. Reconciliation sounds like a loophole they were owed, and '54 days' is a countdown.",
+      "audience": "MAGA voters already angry at Senate GOP leaders, election-integrity activists, and conservatives who want a last partisan bill before January.",
+      "counter": "Reconciliation is not a magic wand — it has to survive the Senate rules referee, and Thune is already warning that a stuffed bill dies. If the demand is a floor vote, ask for the text and the Byrd-rule ruling, not just another speech.",
+      "factChecks": [],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Saturday's hourly counts were a fraction of earlier in the week.",
+      "sources": [
+        {
+          "title": "John Thune vows Senate GOP will maximize lame duck legislative push",
+          "site": "Fox News",
+          "date": "Nov 14, 2026",
+          "href": "https://www.foxnews.com/politics/senate-republicans-plan-54-day-blitz-push-trumps-agenda-before-democrats-seize-power"
+        },
+        {
+          "title": "X News: Sen. Kennedy Urges GOP to Pursue Reconciliation Bill in Lame-Duck Session",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121818351349690588"
+        },
+        {
+          "title": "X News: Conservatives Blast Thune Over Senate Inaction After GOP Midterm Losses",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121632801959346219"
+        }
+      ]
+    },
+    {
+      "id": "thune-adjourn",
+      "momentum": 42,
+      "volumeIndex": 68.3,
+      "accelIndex": 14.3,
+      "coverageIndex": 20.0,
+      "posts24h": 1170,
+      "posts7d": 17609,
+      "priorDailyAvg": 2739.8,
+      "accel": 0.43,
+      "outlets": 2,
+      "trendingUS": false,
+      "query": "Thune (adjourn OR adjourned OR adjournment OR recess OR \"recess appointments\" OR \"recess appointment\" OR weekend) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 691
+        },
+        {
+          "label": "Nov 9",
+          "value": 862
+        },
+        {
+          "label": "Nov 10",
+          "value": 3431
+        },
+        {
+          "label": "Nov 11",
+          "value": 1111
+        },
+        {
+          "label": "Nov 12",
+          "value": 3825
+        },
+        {
+          "label": "Nov 13",
+          "value": 6170
+        },
+        {
+          "label": "Nov 14",
+          "value": 1298
+        },
+        {
+          "label": "Nov 15*",
+          "value": 221
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 53
+        },
+        {
+          "label": "12 AM",
+          "value": 32
+        },
+        {
+          "label": "1 AM",
+          "value": 23
+        },
+        {
+          "label": "2 AM",
+          "value": 10
+        },
+        {
+          "label": "3 AM",
+          "value": 9
+        },
+        {
+          "label": "4 AM",
+          "value": 11
+        },
+        {
+          "label": "5 AM",
+          "value": 14
+        },
+        {
+          "label": "6 AM",
+          "value": 20
+        },
+        {
+          "label": "7 AM",
+          "value": 60
+        },
+        {
+          "label": "8 AM",
+          "value": 125
+        },
+        {
+          "label": "9 AM",
+          "value": 106
+        },
+        {
+          "label": "10 AM",
+          "value": 106
+        },
+        {
+          "label": "11 AM",
+          "value": 80
+        },
+        {
+          "label": "12 PM",
+          "value": 44
+        },
+        {
+          "label": "1 PM",
+          "value": 54
+        },
+        {
+          "label": "2 PM",
+          "value": 32
+        },
+        {
+          "label": "3 PM",
+          "value": 40
+        },
+        {
+          "label": "4 PM",
+          "value": 43
+        },
+        {
+          "label": "5 PM",
+          "value": 51
+        },
+        {
+          "label": "6 PM",
+          "value": 36
+        },
+        {
+          "label": "7 PM",
+          "value": 67
+        },
+        {
+          "label": "8 PM",
+          "value": 59
+        },
+        {
+          "label": "9 PM",
+          "value": 45
+        },
+        {
+          "label": "10 PM",
+          "value": 26
+        },
+        {
+          "label": "11 PM*",
+          "value": 24
+        }
+      ],
+      "title": "Thune, recess appointments, and the weekend off — anger is still there, volume isn't",
+      "side": "Right",
+      "sentiment": "Betrayed, and burning out",
+      "sentimentNote": "X News we retrieved Saturday still circulates the charge that adjourning instead of recessing blocked Trump's recess appointments. Hourly X volume rose a little after 8:00 AM ET, then settled back into the dozens. This is a read of that sample, not a poll.",
+      "summary": "The recess-appointment fight is still live in conservative media, but it is no longer a spike: 1,170 posts in the last 24 hours, down from 2,890 this morning, at 0.43 times the prior daily average. The Senate remains adjourned until 3:00 PM Monday, Nov. 16. X News summarized the Saturday argument: critics say adjourning rather than recessing, plus pro forma sessions, is why Trump has no recess appointments, while Thune's office points to a 54-day confirmation push. Fox News Digital, in the same lame-duck report we opened for the SAVE Act card, quotes Thune promising to extend the calendar and 'finish this legislative session strong.' There was no new adjournment vote Saturday — this is leftover anger plus Kennedy's 'saddle up' push, not a fresh procedural event.",
+      "talkingPoints": [
+        "Thune's weekend off is a middle finger to Republican voters.",
+        "Adjourn, don't recess, and Trump can't make recess appointments.",
+        "Every day off is a nominee Democrats will never confirm."
+      ],
+      "amplifiers": "Named voices in coverage we opened: Senate Majority Leader John Thune, quoted by Fox News Digital; X News clusters on recess appointments and Senate inaction; and Sen. John Kennedy's lame-duck appeal, which Trump amplified.",
+      "whyItWorks": "It turns a parliamentary distinction — adjourn versus recess — into a story about betrayal. The audience already believes the Senate leader is the problem; the weekend is just the exhibit.",
+      "audience": "Trump-aligned voters who wanted recess appointments and a last burst of confirmations before January.",
+      "counter": "Name the actual calendar: the Senate is due back Monday, and Thune has already promised longer days and a confirmation sprint. If the demand is a recess for appointments, say so; if it's floor time, the test is next week, not this weekend's silence.",
+      "factChecks": [],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. A morning bump faded by mid-afternoon.",
+      "sources": [
+        {
+          "title": "John Thune vows Senate GOP will maximize lame duck legislative push",
+          "site": "Fox News",
+          "date": "Nov 14, 2026",
+          "href": "https://www.foxnews.com/politics/senate-republicans-plan-54-day-blitz-push-trumps-agenda-before-democrats-seize-power"
+        },
+        {
+          "title": "X News: GOP Frustration Boils Over Thune's Senate Schedule Blocking Trump's Recess Appointments",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121606545142063459"
+        },
+        {
+          "title": "X News: Conservatives Blast Thune Over Senate Inaction After GOP Midterm Losses",
+          "site": "X News",
+          "date": "Nov 14, 2026",
+          "href": "https://x.com/i/trending/2121632801959346219"
+        }
+      ]
+    },
+    {
+      "id": "jeffries-daca",
+      "momentum": 37,
+      "volumeIndex": 63.6,
+      "accelIndex": 11.0,
+      "coverageIndex": 10.0,
+      "posts24h": 716,
+      "posts7d": 13660,
+      "priorDailyAvg": 2157.3,
+      "accel": 0.33,
+      "outlets": 1,
+      "trendingUS": false,
+      "query": "Jeffries (DACA OR deported OR deportees OR \"remedial assistance\" OR reparations) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 14
+        },
+        {
+          "label": "Nov 9",
+          "value": 15
+        },
+        {
+          "label": "Nov 10",
+          "value": 34
+        },
+        {
+          "label": "Nov 11",
+          "value": 7136
+        },
+        {
+          "label": "Nov 12",
+          "value": 4589
+        },
+        {
+          "label": "Nov 13",
+          "value": 908
+        },
+        {
+          "label": "Nov 14",
+          "value": 920
+        },
+        {
+          "label": "Nov 15*",
+          "value": 44
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 66
+        },
+        {
+          "label": "12 AM",
+          "value": 38
+        },
+        {
+          "label": "1 AM",
+          "value": 37
+        },
+        {
+          "label": "2 AM",
+          "value": 39
+        },
+        {
+          "label": "3 AM",
+          "value": 27
+        },
+        {
+          "label": "4 AM",
+          "value": 24
+        },
+        {
+          "label": "5 AM",
+          "value": 27
+        },
+        {
+          "label": "6 AM",
+          "value": 59
+        },
+        {
+          "label": "7 AM",
+          "value": 60
+        },
+        {
+          "label": "8 AM",
+          "value": 84
+        },
+        {
+          "label": "9 AM",
+          "value": 65
+        },
+        {
+          "label": "10 AM",
+          "value": 41
+        },
+        {
+          "label": "11 AM",
+          "value": 22
+        },
+        {
+          "label": "12 PM",
+          "value": 20
+        },
+        {
+          "label": "1 PM",
+          "value": 14
+        },
+        {
+          "label": "2 PM",
+          "value": 16
+        },
+        {
+          "label": "3 PM",
+          "value": 12
+        },
+        {
+          "label": "4 PM",
+          "value": 11
+        },
+        {
+          "label": "5 PM",
+          "value": 5
+        },
+        {
+          "label": "6 PM",
+          "value": 5
+        },
+        {
+          "label": "7 PM",
+          "value": 15
+        },
+        {
+          "label": "8 PM",
+          "value": 10
+        },
+        {
+          "label": "9 PM",
+          "value": 5
+        },
+        {
+          "label": "10 PM",
+          "value": 10
+        },
+        {
+          "label": "11 PM*",
+          "value": 4
+        }
+      ],
+      "title": "'Jeffries wants to pay deported DACA recipients' — still misleading, still fading",
+      "side": "Right",
+      "sentiment": "Outraged, and running out of steam",
+      "sentimentNote": "We re-opened the What the Fact rating tonight and checked Saturday hourly volume: the copy-paste headline from Friday is still around, but the hourly counts fell into the single digits by evening. This is a read of that thinner signal, not a poll.",
+      "summary": "The Right's 'remedial assistance means your tax dollars' frame is still on the board, but it is fading: 716 posts in the last 24 hours, down from 907 this morning, at 0.33 times its prior daily average, with hourly counts falling to four by the 11:00 PM ET Saturday partial bar. The underlying PBS NewsHour exchange has not changed. House Democratic Leader Hakeem Jeffries answered 'Certainly' when asked whether he would support bringing back DACA recipients deported under the current administration, and said people treated 'unfairly and unjustly' should get 'remedial assistance.' He did not say that assistance was cash. What the Fact, which we re-opened tonight, still rates the 'bring them back and pay them' caption misleading. We found no new Saturday interview that tightens or walks back the phrase.",
+      "talkingPoints": [
+        "Democrats want to re-import deported illegal immigrants.",
+        "'Remedial assistance' means your tax dollars paying deportees.",
+        "This is what a Speaker Jeffries would do on day one."
+      ],
+      "amplifiers": "The What the Fact rating we re-opened tonight, plus the same PBS interview and Fox News write-up that launched the claim Friday. No new high-engagement Saturday amplifier turned up in the coverage we opened.",
+      "whyItWorks": "A vague phrase is easy to turn into a check. 'Remedial assistance' sounds like a program, and 'pay them' is the version that travels.",
+      "audience": "Restrictionist conservatives and accounts already primed to attack a Speaker Jeffries. The hourly fade suggests the claim is not finding a new audience tonight.",
+      "counter": "Quote the whole exchange: he endorsed bringing deported DACA recipients back and used an undefined phrase. He did not announce a payment program. Ask his office what 'remedial assistance' means before treating a caption as policy.",
+      "factChecks": [
+        {
+          "claim": "Hakeem Jeffries said he wants to bring back deported DACA recipients and pay them.",
+          "rating": "Misleading (What the Fact)",
+          "detail": "What the Fact, which we re-opened tonight, rates the payment half of the caption misleading. Jeffries did say 'Certainly' to bringing deported DACA recipients back, and he used the phrase 'remedial assistance,' but he did not say that assistance was cash, and his office has not defined it.",
+          "href": "https://whatthefact.app/fact-checks/2026-11-13-jeffries-bring-back-deported-daca-recipients-and-pay-them",
+          "outlet": "What the Fact"
+        }
+      ],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Counts fell steadily after mid-morning.",
+      "sources": [
+        {
+          "title": "Fact check: Did Hakeem Jeffries say he wants to re-import deported DACA recipients and pay them?",
+          "site": "What the Fact",
+          "date": "Nov 13, 2026",
+          "href": "https://whatthefact.app/fact-checks/2026-11-13-jeffries-bring-back-deported-daca-recipients-and-pay-them"
+        }
+      ]
+    },
+    {
+      "id": "impeachment-push",
+      "momentum": 35,
+      "volumeIndex": 61.2,
+      "accelIndex": 13.0,
+      "coverageIndex": 0.0,
+      "posts24h": 562,
+      "posts7d": 9197,
+      "priorDailyAvg": 1439.2,
+      "accel": 0.39,
+      "outlets": 0,
+      "trendingUS": false,
+      "query": "(AOC OR \"Ocasio-Cortez\" OR \"Al Green\") (impeach OR impeachment OR impeaching OR justices) lang:en",
+      "daily": [
+        {
+          "label": "Nov 8*",
+          "value": 24
+        },
+        {
+          "label": "Nov 9",
+          "value": 54
+        },
+        {
+          "label": "Nov 10",
+          "value": 110
+        },
+        {
+          "label": "Nov 11",
+          "value": 2416
+        },
+        {
+          "label": "Nov 12",
+          "value": 2770
+        },
+        {
+          "label": "Nov 13",
+          "value": 3019
+        },
+        {
+          "label": "Nov 14",
+          "value": 710
+        },
+        {
+          "label": "Nov 15*",
+          "value": 94
+        }
+      ],
+      "hourly": [
+        {
+          "label": "11 PM",
+          "value": 51
+        },
+        {
+          "label": "12 AM",
+          "value": 26
+        },
+        {
+          "label": "1 AM",
+          "value": 18
+        },
+        {
+          "label": "2 AM",
+          "value": 13
+        },
+        {
+          "label": "3 AM",
+          "value": 15
+        },
+        {
+          "label": "4 AM",
+          "value": 15
+        },
+        {
+          "label": "5 AM",
+          "value": 15
+        },
+        {
+          "label": "6 AM",
+          "value": 27
+        },
+        {
+          "label": "7 AM",
+          "value": 25
+        },
+        {
+          "label": "8 AM",
+          "value": 45
+        },
+        {
+          "label": "9 AM",
+          "value": 34
+        },
+        {
+          "label": "10 AM",
+          "value": 17
+        },
+        {
+          "label": "11 AM",
+          "value": 21
+        },
+        {
+          "label": "12 PM",
+          "value": 19
+        },
+        {
+          "label": "1 PM",
+          "value": 16
+        },
+        {
+          "label": "2 PM",
+          "value": 34
+        },
+        {
+          "label": "3 PM",
+          "value": 26
+        },
+        {
+          "label": "4 PM",
+          "value": 19
+        },
+        {
+          "label": "5 PM",
+          "value": 12
+        },
+        {
+          "label": "6 PM",
+          "value": 20
+        },
+        {
+          "label": "7 PM",
+          "value": 23
+        },
+        {
+          "label": "8 PM",
+          "value": 21
+        },
+        {
+          "label": "9 PM",
+          "value": 22
+        },
+        {
+          "label": "10 PM",
+          "value": 21
+        },
+        {
+          "label": "11 PM*",
+          "value": 7
+        }
+      ],
+      "title": "Al Green's impeachment push — still on the calendar, barely still in the feed",
+      "side": "Far Left",
+      "sentiment": "Determined, and mostly ignored today",
+      "sentimentNote": "We opened Rep. Al Green's Nov 12 press release tonight and found no Saturday follow-up article we could retrieve. Hourly X volume was in the teens and twenties most of the day. This is a thin signal, not a poll.",
+      "summary": "The far-left impeachment push is the quietest card in this set: 562 posts in the last 24 hours, down from 2,459 this morning, at 0.39 times its prior daily average. The factual predicate is unchanged. On Nov 12, Rep. Al Green said he would force a House vote on articles of impeachment against President Trump 'as early as next week,' and we re-opened his office's press release tonight. We did not find a new Saturday news story advancing or killing that plan, and we are not inventing one. The House is not in a position to finish an impeachment before January, and this query is fading unless a forced vote actually appears on the calendar.",
+      "talkingPoints": [
+        "Al Green is forcing the vote — every Democrat should be on the record.",
+        "Investigations, subpoenas, and impeachment are what voters elected Democrats to do."
+      ],
+      "amplifiers": "Rep. Al Green's Nov 12 floor speech and press release, which we re-opened tonight. No new Saturday amplifier turned up in the coverage we were able to retrieve.",
+      "whyItWorks": "A forced vote is a loyalty test even when it is doomed. The audience wants names on a roll call, not a process argument.",
+      "audience": "The most anti-Trump slice of the Democratic base. Saturday's volume suggests that audience has moved on to leadership fights and the FAA fight for now.",
+      "counter": "If the demand is a vote, ask for the date and the text of the articles. Don't treat a press release as a majority strategy — Democrats do not take the House until January.",
+      "factChecks": [],
+      "hourlyNote": "Hourly X post counts for this query, labeled in ET. The window runs from 11:00 PM ET Friday, Nov 13, through 11:45 PM ET Saturday, Nov 14. The first '11 PM' bar is Friday; '11 PM*' is the partial Saturday hour. Volume stayed low all day.",
+      "sources": [
+        {
+          "title": "Rep. Al Green Demands Trump Resign or Face Impeachment, Will Force House Vote as Early as Next Week",
+          "site": "Office of Rep. Al Green",
+          "date": "Nov 12, 2026",
+          "href": "https://algreen.house.gov/media/press-releases/rep-al-green-demands-trump-resign-or-face-impeachment-will-force-house-vote"
+        }
+      ]
+    }
+  ]
+}
