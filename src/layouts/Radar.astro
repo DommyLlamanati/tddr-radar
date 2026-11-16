@@ -1,0 +1,178 @@
+---
+/**
+ * Redesigned layout (Tailwind + shadcn/ui). Same share and SEO meta as Base.astro.
+ * Pages not yet moved to this layout keep using Base.astro.
+ */
+import "../styles/radar.css";
+import "@fontsource/big-shoulders-display/latin-700";
+import "@fontsource/big-shoulders-display/latin-800";
+import "@fontsource/outfit/latin-400";
+import "@fontsource/outfit/latin-500";
+import "@fontsource/outfit/latin-600";
+import "@fontsource/outfit/latin-700";
+import "@fontsource/ibm-plex-mono/latin-400";
+import "@fontsource/ibm-plex-mono/latin-500";
+import { Image } from "astro:assets";
+import mascot from "../assets/og/mascot.png";
+import { allSnapshots } from "../lib/snapshots";
+import { dashboardPath, disinfoPath, isEveningSnapshot, shortSnapshotDate, snapshotSwitchLabel } from "../lib/dates";
+import {
+  DEFAULT_OG_IMAGE,
+  OG_HEIGHT,
+  OG_WIDTH,
+  SITE_NAME,
+  absoluteUrl,
+  clip,
+} from "../lib/share";
+
+interface Props {
+  title: string;
+  description: string;
+  snapshotId?: string;
+  shareTitle?: string;
+  image?: string;
+  imageAlt?: string;
+  ogType?: "website" | "article";
+  canonicalPath?: string;
+}
+
+const { title, description: rawDescription, snapshotId, shareTitle, image, imageAlt, ogType = "website", canonicalPath } =
+  Astro.props;
+const description = clip(rawDescription, 200);
+const snapshots = await allSnapshots();
+const latest = snapshots[0];
+if (!latest) throw new Error("No snapshots found.");
+const active = snapshots.find((entry) => entry.data.id === snapshotId) ?? latest;
+const ids = snapshots.map((entry) => entry.data.id);
+const fullTitle = title.includes("TDDR") ? title : `${title} · TDDR Narrative Tracker`;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const narrativesHref = dashboardPath(active.data.id, latest.data.id);
+const disinfoHref = disinfoPath(active.data.id);
+const canonical = absoluteUrl(canonicalPath ?? (path === "/" ? "/" : path));
+const ogTitle = shareTitle ?? (title.includes("TDDR") ? title : `${title} · ${SITE_NAME}`);
+const ogImage = absoluteUrl(image ?? DEFAULT_OG_IMAGE);
+const ogImageAlt = imageAlt ?? `${SITE_NAME}: rising opposition narratives from the Right and the Far Left.`;
+const onDisinfo = path === disinfoHref || path === "/disinfo";
+const onAbout = path === "/about";
+const onNarratives = !onDisinfo && !onAbout && path !== "/snapshots";
+
+/** Same labels as the old switch; bare dates get AM/PM so morning and evening editions are distinct. */
+function pillLabel(index: number): string {
+  const id = ids[index];
+  const label = snapshotSwitchLabel(ids, index);
+  return label === shortSnapshotDate(id) ? `${label} ${isEveningSnapshot(id) ? "PM" : "AM"}` : label;
+}
+
+function onDay(id: string): boolean {
+  if (path === "/snapshots") return false;
+  if (path === `/snapshots/${id}` || path.startsWith(`/snapshots/${id}/`)) return true;
+  return id === latest!.data.id && (path === "/" || path === "/disinfo" || path.startsWith("/narratives"));
+}
+
+const navLink =
+  "rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground aria-[current=page]:bg-muted aria-[current=page]:text-foreground";
+const pill =
+  "shrink-0 rounded-full border px-3 py-1 font-mono text-xs whitespace-nowrap text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground aria-[current=page]:border-primary aria-[current=page]:bg-primary aria-[current=page]:font-medium aria-[current=page]:text-primary-foreground";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content={String(OG_WIDTH)} />
+    <meta property="og:image:height" content={String(OG_HEIGHT)} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+    <title>{fullTitle}</title>
+  </head>
+  <body class="min-h-screen">
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground"
+      >Skip to content</a
+    >
+    <div class="h-1 w-full bg-primary" aria-hidden="true"></div>
+    <header class="sticky top-0 z-40 border-b bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+      <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6">
+        <a href="/" class="group flex items-center gap-2.5" aria-label="TDDR Radar home">
+          <span class="rounded-md bg-primary px-1.5 pb-0.5 pt-1 font-display text-xl font-extrabold leading-none tracking-wide text-primary-foreground">TDDR</span>
+          <span class="font-display text-xl font-extrabold uppercase leading-none tracking-wider">Radar</span>
+        </a>
+        <nav class="ml-auto hidden items-center gap-1 md:flex" aria-label="Primary">
+          <a class={navLink} href={narrativesHref} aria-current={onNarratives ? "page" : undefined}>Narratives</a>
+          <a class={navLink} href={disinfoHref} aria-current={onDisinfo ? "page" : undefined}>Disinformation</a>
+          <a class={navLink} href="/about" aria-current={onAbout ? "page" : undefined}>Methodology</a>
+        </nav>
+        <Image
+          src={mascot}
+          alt=""
+          width={36}
+          height={36}
+          loading="eager"
+          class="ml-auto size-9 rounded-full border border-primary/40 bg-muted object-contain p-0.5 md:ml-2"
+        />
+      </div>
+      <nav class="mx-auto flex max-w-6xl gap-1 px-4 pb-2 md:hidden" aria-label="Primary mobile">
+        <a class={navLink} href={narrativesHref} aria-current={onNarratives ? "page" : undefined}>Narratives</a>
+        <a class={navLink} href={disinfoHref} aria-current={onDisinfo ? "page" : undefined}>Disinfo</a>
+        <a class={navLink} href="/about" aria-current={onAbout ? "page" : undefined}>Methodology</a>
+      </nav>
+      <div class="border-t">
+        <nav class="scrollbar-none mx-auto flex max-w-6xl items-center gap-2 overflow-x-auto px-4 py-2 sm:px-6" aria-label="Snapshots">
+          <span class="shrink-0 font-mono text-[0.65rem] uppercase tracking-widest text-muted-foreground">Editions</span>
+          {
+            snapshots.map((entry, index) => (
+              <a class={pill} href={dashboardPath(entry.data.id, latest.data.id)} aria-current={onDay(entry.data.id) ? "page" : undefined}>
+                {pillLabel(index)}
+              </a>
+            ))
+          }
+          <a class={pill} href="/snapshots" aria-current={path === "/snapshots" ? "page" : undefined}>Archive</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 sm:pt-12">
+      <slot />
+    </main>
+
+    <footer class="border-t bg-card/40">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div class="flex items-center gap-3">
+          <Image src={mascot} alt="TDDR mascot" width={48} height={48} loading="eager" class="size-12 object-contain" />
+          <div>
+            <p class="font-display text-lg font-extrabold uppercase tracking-wider">TDDR Radar</p>
+            <p class="text-sm text-muted-foreground">Too Dumb Didn't Read. A research snapshot, not a live feed.</p>
+            <p class="font-mono text-xs text-muted-foreground">Updated {active.data.updatedLabel}</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <a class="text-muted-foreground hover:text-primary" href="/about">How momentum is scored</a>
+          <a class="text-muted-foreground hover:text-primary" href={disinfoHref}>Fact-checked claims</a>
+          <a class="text-muted-foreground hover:text-primary" href="/snapshots">Archive</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

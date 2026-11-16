@@ -1,0 +1,199 @@
+---
+import { ArrowRight, Info, ShieldAlert, TrendingUp, Hash, Layers } from "lucide-react";
+import type { Snapshot } from "../../data/schema";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Badge } from "../ui/badge";
+import { Separator } from "../ui/separator";
+import NarrativeBoard from "./NarrativeBoard";
+import { MomentumBar, MomentumScore, NewBadge, SideBadge, Sparkline, TrendBadge } from "./bits";
+import { countSides, factCheckCount, fmt } from "../../lib/format";
+import { disinfoPath, isEveningSnapshot, narrativePath } from "../../lib/dates";
+import { clip, isNewNarrative, rankedNarratives, shortTitle, stripNewPrefix } from "../../lib/share";
+
+interface Props {
+  snapshot: Snapshot;
+  isLatest: boolean;
+}
+
+const { snapshot, isLatest } = Astro.props;
+const ranked = rankedNarratives(snapshot);
+const top = ranked[0];
+const runnersUp = ranked.slice(1, 3);
+const sides = countSides(snapshot.narratives);
+const facts = factCheckCount(snapshot.narratives);
+const hottest = snapshot.narratives.reduce((best, n) => (n.posts24h > best.posts24h ? n : best));
+const narrativeBase = `/snapshots/${snapshot.id}/narratives`;
+const disinfoHref = disinfoPath(snapshot.id);
+const edition = isEveningSnapshot(snapshot.id) ? "Evening edition" : "Morning edition";
+const rightPct = Math.round((sides.right / snapshot.narratives.length) * 100);
+const statLabel = "font-mono text-[0.68rem] uppercase tracking-widest text-muted-foreground";
+---
+
+<section class="grid gap-8 lg:grid-cols-12 lg:gap-10" aria-labelledby="page-title">
+  <div class="flex flex-col gap-5 lg:col-span-7">
+    <div class="flex flex-wrap items-center gap-2">
+      <Badge variant="accent">
+        <span class="relative flex size-1.5"><span class="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60"></span><span class="relative inline-flex size-1.5 rounded-full bg-primary"></span></span>
+        {isLatest ? "Latest" : "Archived"} · {edition}
+      </Badge>
+      <span class="font-mono text-xs text-muted-foreground">{snapshot.updatedLabel}</span>
+    </div>
+    <h1 id="page-title" class="font-display text-6xl font-extrabold uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-8xl">
+      Rising<br /><span class="text-primary">narratives</span>
+    </h1>
+    <p class="max-w-xl text-lg font-medium leading-snug text-foreground/90">
+      What the Right and the Far Left are pushing against Democrats right now, scored 0–100 for momentum.
+    </p>
+    <p class="hidden max-w-2xl text-[0.95rem] leading-relaxed text-muted-foreground sm:block">{snapshot.summary}</p>
+    <details class="group sm:hidden">
+      <summary class="cursor-pointer list-none text-[0.95rem] leading-relaxed text-muted-foreground">
+        <span class="line-clamp-4 group-open:line-clamp-none">{snapshot.summary}</span>
+        <span class="mt-1 inline-block font-mono text-xs uppercase tracking-widest text-primary group-open:hidden">Read full briefing</span>
+      </summary>
+    </details>
+  </div>
+
+  <aside class="lg:col-span-5" aria-label="Top riser">
+    <Card className="relative gap-4 overflow-hidden border-primary/40 bg-gradient-to-b from-primary/[0.07] to-card py-6 shadow-[0_0_0_1px_rgb(230_255_61/0.08),0_20px_60px_-30px_rgb(230_255_61/0.35)]">
+      <CardHeader className="gap-3 px-6">
+        <div class="flex items-center justify-between">
+          <span class="flex items-center gap-1.5 font-mono text-[0.7rem] uppercase tracking-widest text-primary"><TrendingUp className="size-3.5" /> #1 riser</span>
+          <TrendBadge accel={top.accel} />
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <SideBadge side={top.side} />
+          {isNewNarrative(top) ? <NewBadge /> : null}
+        </div>
+        <a href={narrativePath(snapshot.id, top.id)} class="group">
+          <h2 class="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-wide group-hover:text-primary sm:text-4xl">
+            {stripNewPrefix(top.title)}
+          </h2>
+        </a>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-4 px-6">
+        <div class="flex items-end justify-between gap-4">
+          <div class="flex items-baseline gap-1.5">
+            <MomentumScore value={top.momentum} className="text-6xl text-primary" />
+            <span class="font-mono text-xs text-muted-foreground">/100 momentum</span>
+          </div>
+          <Sparkline points={top.daily} side={top.side} width={120} height={40} />
+        </div>
+        <MomentumBar value={top.momentum} side={top.side} size="lg" />
+        <p class="font-mono text-xs text-muted-foreground">{fmt(top.posts24h)} X posts in 24h · {top.accel.toFixed(2)}× prior daily avg</p>
+        <Separator />
+        <ol class="flex flex-col gap-3">
+          {
+            runnersUp.map((n, i) => (
+              <li>
+                <a href={narrativePath(snapshot.id, n.id)} class="group grid grid-cols-[1.5rem_1fr_auto] items-center gap-3">
+                  <span class="font-display text-xl font-extrabold text-muted-foreground">{i + 2}</span>
+                  <span class="min-w-0">
+                    <span class="block truncate text-sm font-semibold group-hover:text-primary">{shortTitle(stripNewPrefix(n.title))}</span>
+                    <MomentumBar value={n.momentum} side={n.side} size="sm" className="mt-1.5" />
+                  </span>
+                  <MomentumScore value={n.momentum} className="text-2xl" />
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+        <a href={narrativePath(snapshot.id, top.id)} class="inline-flex items-center gap-1.5 self-start rounded-md bg-primary px-3.5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+          Read the brief <ArrowRight className="size-4" />
+        </a>
+      </CardContent>
+    </Card>
+  </aside>
+</section>
+
+<section class="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Snapshot stats">
+  <Card className="gap-3 py-4">
+    <CardContent className="flex flex-col gap-2 px-4">
+      <span class={`${statLabel} flex items-center gap-1.5`}><Layers className="size-3.5" /> Narratives</span>
+      <MomentumScore value={snapshot.narratives.length} className="text-4xl sm:text-5xl" />
+      <div class="flex h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden="true">
+        <span class="bg-side-right" style={`width:${rightPct}%`}></span><span class="flex-1 bg-side-left"></span>
+      </div>
+      <span class="text-xs text-muted-foreground"><span class="text-side-right">{sides.right} Right</span> · <span class="text-side-left">{sides.left} Far Left</span></span>
+    </CardContent>
+  </Card>
+  <a href={narrativePath(snapshot.id, hottest.id)} class="group">
+    <Card className="h-full gap-3 py-4 transition-colors group-hover:border-primary/50">
+      <CardContent className="flex flex-col gap-2 px-4">
+        <span class={`${statLabel} flex items-center gap-1.5`}><TrendingUp className="size-3.5" /> Biggest 24h</span>
+        <MomentumScore value={hottest.posts24h} className="text-4xl sm:text-5xl" />
+        <span class="line-clamp-2 text-xs text-muted-foreground">{fmt(hottest.posts24h)} posts · {shortTitle(stripNewPrefix(hottest.title))}</span>
+      </CardContent>
+    </Card>
+  </a>
+  <Card className="gap-3 py-4">
+    <CardContent className="flex flex-col gap-2 px-4">
+      <span class={`${statLabel} flex items-center gap-1.5`}><Hash className="size-3.5" /> U.S. X trends</span>
+      <MomentumScore value={snapshot.trends.names.length} className="text-4xl sm:text-5xl" />
+      <span class="line-clamp-2 text-xs text-muted-foreground" title={snapshot.trends.detail}>{clip(snapshot.trends.detail, 90)}</span>
+    </CardContent>
+  </Card>
+  <a href={disinfoHref} class="group">
+    <Card className="h-full gap-3 py-4 transition-colors group-hover:border-primary/50">
+      <CardContent className="flex flex-col gap-2 px-4">
+        <span class={`${statLabel} flex items-center gap-1.5`}><ShieldAlert className="size-3.5" /> Fact-checks</span>
+        <MomentumScore value={facts} className="text-4xl sm:text-5xl" />
+        <span class="line-clamp-2 text-xs text-muted-foreground">{clip(snapshot.factCheckOutletsDetail, 90)}</span>
+      </CardContent>
+    </Card>
+  </a>
+</section>
+
+<section id="feed" class="mt-14 scroll-mt-32" aria-labelledby="board-heading">
+  <div class="mb-5 flex flex-col gap-2">
+    <span class="font-mono text-[0.7rem] uppercase tracking-widest text-primary">The board</span>
+    <h2 id="board-heading" class="font-display text-4xl font-extrabold uppercase leading-none tracking-wide sm:text-5xl">Every narrative, ranked</h2>
+    <p class="max-w-2xl text-sm text-muted-foreground">{snapshot.feedCaption}</p>
+  </div>
+  <div class="mb-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+    <span class="flex items-center gap-1.5"><span class="h-1.5 w-6 rounded-full bg-side-right"></span> Right</span>
+    <span class="flex items-center gap-1.5"><span class="h-1.5 w-6 rounded-full bg-side-left"></span> Far Left</span>
+    <span>Bar = momentum score (0–100) · arrow = 24h pace vs. prior daily average · line = daily X posts</span>
+  </div>
+  <NarrativeBoard client:load narratives={snapshot.narratives} narrativeBase={narrativeBase} />
+</section>
+
+<section class="mt-10" aria-label="What opposition means">
+  <Card className="gap-3 border-dashed bg-transparent">
+    <CardContent className="flex gap-4">
+      <Info className="mt-0.5 size-5 shrink-0 text-primary" />
+      <div class="text-sm leading-relaxed text-muted-foreground">
+        <p class="mb-1 font-semibold text-foreground">{snapshot.oppositionNote.lead}</p>
+        <p>{snapshot.oppositionNote.body}</p>
+      </div>
+    </CardContent>
+  </Card>
+</section>
+
+<section id="sources" class="mt-10" aria-labelledby="sources-heading">
+  <details class="group rounded-xl border bg-card">
+    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4">
+      <span>
+        <span id="sources-heading" class="font-display text-xl font-extrabold uppercase tracking-wide">Sources</span>
+        <span class="ml-2 font-mono text-xs text-muted-foreground">{snapshot.sourceList.length} links</span>
+      </span>
+      <span class="font-mono text-xs text-primary group-open:hidden">Show</span>
+      <span class="hidden font-mono text-xs text-primary group-open:inline">Hide</span>
+    </summary>
+    <div class="border-t px-5 py-4">
+      <p class="mb-4 text-sm text-muted-foreground">{snapshot.sourceListIntro}</p>
+      <ol class="grid gap-3 sm:grid-cols-2">
+        {
+          snapshot.sourceList.map((s, i) => (
+            <li class="flex gap-3 text-sm">
+              <span class="font-mono text-xs text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
+              <span>
+                <a class="font-medium hover:text-primary" href={s.href} target="_blank" rel="noreferrer noopener">{s.title}</a>
+                {s.site || s.date ? <span class="block font-mono text-xs text-muted-foreground">{[s.site, s.date].filter(Boolean).join(" · ")}</span> : null}
+              </span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </details>
+</section>

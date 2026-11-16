@@ -1,6 +1,6 @@
 ---
-import Base from "../layouts/Base.astro";
-import Dashboard from "../components/Dashboard.astro";
+import Radar from "../layouts/Radar.astro";
+import HomeView from "../components/radar/HomeView.astro";
 import { latestSnapshot } from "../lib/snapshots";
 import { homeShare, ogImagePath, rankedNarratives, shortTitle } from "../lib/share";
 
@@ -10,7 +10,7 @@ const top = rankedNarratives(snapshot)[0];
 const imageAlt = `TDDR Radar: top rising narrative, ${shortTitle(top.title)} (${top.side}, momentum ${top.momentum}).`;
 ---
 
-<Base
+<Radar
   title="Rising narratives"
   description={share.description}
   shareTitle={share.title}
@@ -18,5 +18,5 @@ const imageAlt = `TDDR Radar: top rising narrative, ${shortTitle(top.title)} (${
   imageAlt={imageAlt}
   snapshotId={snapshot.id}
 >
-  <Dashboard snapshot={snapshot} />
-</Base>
+  <HomeView snapshot={snapshot} isLatest />
+</Radar>
