@@ -1,0 +1,76 @@
+---
+import { AlertTriangle, ShieldAlert } from "lucide-react";
+import type { Snapshot } from "../../data/schema";
+import { Badge } from "../ui/badge";
+import { Card, CardContent } from "../ui/card";
+import DisinfoBoard from "./DisinfoBoard";
+import SourceLinks from "./SourceLinks.astro";
+import { ratingVariant } from "./bits";
+import { dashboardPath, isEveningSnapshot } from "../../lib/dates";
+import { editionLabel } from "../../lib/share";
+import { allSnapshots } from "../../lib/snapshots";
+
+interface Props {
+  snapshot: Snapshot;
+}
+
+const { snapshot } = Astro.props;
+const latestId = (await allSnapshots())[0]?.data.id ?? snapshot.id;
+const narrativeBase = `/snapshots/${snapshot.id}/narratives`;
+const items = snapshot.narratives.flatMap((narrative) =>
+  narrative.factChecks.map((fact) => ({
+    narrativeId: narrative.id,
+    narrativeTitle: narrative.title,
+    side: narrative.side,
+    claim: fact.claim,
+    rating: fact.rating,
+    detail: fact.detail,
+    href: fact.href,
+    outlet: fact.outlet,
+  })),
+);
+const tones = { danger: 0, warning: 0, accent: 0 };
+for (const item of items) tones[ratingVariant(item.rating)] += 1;
+const outlets = new Set(items.map((i) => i.outlet)).size;
+const statLabel = "font-mono text-[0.68rem] uppercase tracking-widest text-muted-foreground";
+---
+
+<section class="flex flex-col gap-5" aria-labelledby="page-title">
+  <div class="flex flex-wrap items-center gap-2">
+    <Badge variant="accent"><ShieldAlert /> {isEveningSnapshot(snapshot.id) ? "Evening edition" : "Morning edition"}</Badge>
+    <span class="font-mono text-xs text-muted-foreground">{snapshot.updatedLabel}</span>
+  </div>
+  <h1 id="page-title" class="font-display text-6xl font-extrabold uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-8xl">
+    Disinfo<br /><span class="text-primary">tracker</span>
+  </h1>
+  <p class="max-w-2xl text-[0.95rem] leading-relaxed text-muted-foreground">{snapshot.disinfo.caption}</p>
+</section>
+
+<section class="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Fact-check stats">
+  <Card className="gap-2 py-4"><CardContent className="flex flex-col gap-1.5 px-4"><span class={statLabel}>Fact-checks</span><span class="font-display text-5xl font-extrabold leading-none">{items.length}</span><span class="text-xs text-muted-foreground">from {outlets} outlet{outlets === 1 ? "" : "s"}</span></CardContent></Card>
+  <Card className="gap-2 py-4"><CardContent className="flex flex-col gap-1.5 px-4"><span class={statLabel}>False / unsupported</span><span class="font-display text-5xl font-extrabold leading-none text-danger">{tones.danger}</span><span class="text-xs text-muted-foreground">red ratings</span></CardContent></Card>
+  <Card className="gap-2 py-4"><CardContent className="flex flex-col gap-1.5 px-4"><span class={statLabel}>Misleading / context</span><span class="font-display text-5xl font-extrabold leading-none text-warn">{tones.warning}</span><span class="text-xs text-muted-foreground">amber ratings</span></CardContent></Card>
+  <Card className="gap-2 py-4"><CardContent className="flex flex-col gap-1.5 px-4"><span class={statLabel}>Other ratings</span><span class="font-display text-5xl font-extrabold leading-none text-primary">{tones.accent}</span><span class="text-xs text-muted-foreground">mixed or true</span></CardContent></Card>
+</section>
+
+<section class="mt-10" aria-label="Fact-checked claims">
+  <DisinfoBoard client:load items={items} narrativeBase={narrativeBase} />
+</section>
+
+<section class="mt-8" aria-label="Caveat">
+  <div class="flex gap-3 rounded-xl border border-warn/30 bg-warn/[0.06] px-4 py-4 text-sm leading-relaxed sm:px-5">
+    <AlertTriangle className="mt-0.5 size-5 shrink-0 text-warn" />
+    <div>
+      <p class="mb-1 font-semibold text-foreground">{snapshot.disinfo.caveatLead}</p>
+      <p class="text-muted-foreground">{snapshot.disinfo.caveatBody}</p>
+    </div>
+  </div>
+</section>
+
+<section class="mt-10" aria-labelledby="fc-sources">
+  <h2 id="fc-sources" class="mb-4 font-display text-2xl font-extrabold uppercase tracking-wide">Fact-check sources</h2>
+  <SourceLinks links={snapshot.disinfo.links} columns />
+  <p class="mt-3 text-xs text-muted-foreground">
+    Each claim links to its narrative inside the <a class="text-primary hover:underline" href={dashboardPath(snapshot.id, latestId)}>{editionLabel(snapshot.id)}</a> snapshot.
+  </p>
+</section>

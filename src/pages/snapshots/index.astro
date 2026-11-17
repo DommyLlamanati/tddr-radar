@@ -1,9 +1,11 @@
 ---
-import Base from "../../layouts/Base.astro";
+import Radar from "../../layouts/Radar.astro";
+import { Badge } from "../../components/ui/badge";
+import { MomentumBar, SideBadge } from "../../components/radar/bits";
 import { allSnapshots } from "../../lib/snapshots";
 import { countSides, factCheckCount } from "../../lib/format";
-import { disinfoPath } from "../../lib/dates";
-import { clip, editionLabel, SITE_NAME } from "../../lib/share";
+import { dashboardPath, disinfoPath, isEveningSnapshot } from "../../lib/dates";
+import { clip, editionLabel, longEditionLabel, rankedNarratives, shortTitle, SITE_NAME, stripNewPrefix } from "../../lib/share";
 
 const snapshots = await allSnapshots();
 const latest = snapshots[0].data;
@@ -12,33 +14,53 @@ const description = clip(
 );
 ---
 
-<Base title="Snapshot archive" description={description} shareTitle={`Snapshot archive · ${SITE_NAME}`}>
-  <p class="eyebrow">Archive</p>
-  <h1>Snapshots</h1>
-  <p class="lede">
-    The desk keeps one file per close. The homepage is always the latest
-    <code>updatedAt</code>. Open a day to see that morning’s or night’s narratives and fact-checks.
-  </p>
-  <ol class="source-list">
+<Radar title="Snapshot archive" description={description} shareTitle={`Snapshot archive · ${SITE_NAME}`}>
+  <section class="flex flex-col gap-5" aria-labelledby="page-title">
+    <span class="font-mono text-[0.7rem] uppercase tracking-widest text-primary">Archive</span>
+    <h1 id="page-title" class="font-display text-6xl font-extrabold uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-8xl">
+      Every<br /><span class="text-primary">snapshot</span>
+    </h1>
+    <p class="max-w-2xl text-[0.95rem] leading-relaxed text-muted-foreground">
+      The desk keeps one file per close. The homepage is always the latest <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">updatedAt</code>.
+      Open a day to see that morning’s or night’s narratives and fact-checks. {snapshots.length} snapshots so far.
+    </p>
+  </section>
+
+  <ol class="mt-10 grid gap-3 md:grid-cols-2">
     {
       snapshots.map((entry, index) => {
         const data = entry.data;
         const sides = countSides(data.narratives);
         const facts = factCheckCount(data.narratives);
-        const href = index === 0 ? "/" : `/snapshots/${data.id}`;
+        const href = dashboardPath(data.id, latest.id);
+        const top = rankedNarratives(data)[0];
         return (
-          <li>
-            <a href={href}>{data.title}</a>
-            <p class="source-meta">
-              {data.updatedLabel} · {data.narratives.length} narratives ({sides.right} Right, {sides.left} Far Left) · {facts} fact-checks
-            </p>
-            <p class="hero-links">
-              <a href={href}>Narratives</a>
-              <a href={disinfoPath(data.id)}>Disinformation</a>
-            </p>
+          <li class="flex min-w-0">
+            <article class="flex w-full min-w-0 flex-col gap-3 rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 sm:p-5">
+              <div class="flex flex-wrap items-center gap-2">
+                {index === 0 ? <Badge variant="default">Latest</Badge> : null}
+                <Badge variant="outline">{isEveningSnapshot(data.id) ? "Evening" : "Morning"}</Badge>
+                <span class="font-mono text-xs text-muted-foreground">{data.updatedLabel}</span>
+              </div>
+              <a href={href} class="group">
+                <h2 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-wide group-hover:text-primary">{longEditionLabel(data.id)}</h2>
+              </a>
+              <div class="flex flex-col gap-1.5">
+                <span class="font-mono text-[0.65rem] uppercase tracking-widest text-muted-foreground">Top narrative</span>
+                <span class="flex min-w-0 items-center gap-2"><SideBadge side={top.side} /><span class="min-w-0 truncate text-sm font-semibold">{shortTitle(stripNewPrefix(top.title))}</span><span class="ml-auto font-display text-2xl font-extrabold">{top.momentum}</span></span>
+                <MomentumBar value={top.momentum} side={top.side} size="sm" />
+              </div>
+              <p class="flex flex-wrap gap-x-1.5 font-mono text-xs text-muted-foreground">
+                {data.narratives.length} narratives · <span class="text-side-right">{sides.right} Right</span> · <span class="text-side-left">{sides.left} Far Left</span> · {facts} fact-checks
+              </p>
+              <div class="mt-auto flex gap-2 pt-1 text-sm">
+                <a href={href} class="rounded-md bg-primary px-3 py-1.5 font-semibold text-primary-foreground transition-opacity hover:opacity-90">Narratives</a>
+                <a href={disinfoPath(data.id)} class="rounded-md border px-3 py-1.5 font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground">Disinformation</a>
+              </div>
+            </article>
           </li>
         );
       })
     }
   </ol>
-</Base>
+</Radar>

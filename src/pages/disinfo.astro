@@ -1,7 +1,7 @@
 ---
-import Base from "../layouts/Base.astro";
+import Radar from "../layouts/Radar.astro";
 import { disinfoShare, editionLabel, factCheckTotal, ogDisinfoImagePath } from "../lib/share";
-import DisinfoView from "../components/DisinfoView.astro";
+import DisinfoView from "../components/radar/DisinfoView.astro";
 import { latestSnapshot } from "../lib/snapshots";
 
 const snapshot = (await latestSnapshot()).data;
@@ -9,7 +9,7 @@ const share = disinfoShare(snapshot);
 const imageAlt = `TDDR Radar disinformation tracker, ${editionLabel(snapshot.id)}: ${factCheckTotal(snapshot)} fact-checks.`;
 ---
 
-<Base
+<Radar
   title="Disinformation tracker"
   description={share.description}
   shareTitle={share.title}
@@ -18,4 +18,4 @@ const imageAlt = `TDDR Radar disinformation tracker, ${editionLabel(snapshot.id)
   snapshotId={snapshot.id}
 >
   <DisinfoView snapshot={snapshot} />
-</Base>
+</Radar>

@@ -1,8 +1,15 @@
 ---
-import Base from "../layouts/Base.astro";
-import SourceList from "../components/SourceList.astro";
+import Radar from "../layouts/Radar.astro";
+import SourceLinks from "../components/radar/SourceLinks.astro";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Progress } from "../components/ui/progress";
+import { Separator } from "../components/ui/separator";
+import { MomentumScore, SideBadge } from "../components/radar/bits";
+import { Info } from "lucide-react";
 import { latestSnapshot } from "../lib/snapshots";
 import { fmt } from "../lib/format";
+import { stripNewPrefix } from "../lib/share";
+import { RISER_RULES, STATUS_RULES } from "../lib/history";
 
 const snapshot = (await latestSnapshot()).data;
 const formula = snapshot.formula;
@@ -10,122 +17,153 @@ const ranked = [...snapshot.narratives].sort((a, b) => b.momentum - a.momentum);
 const percent = (weight: number) => `${Math.round(weight * 100)}%`;
 const description =
   "How TDDR Radar scores opposition narrative momentum from X post volume, acceleration, outlet coverage, and the U.S. trends list.";
+const parts = [
+  {
+    weight: formula.volumeWeight,
+    title: "Volume index",
+    body: `100 × log10(1 + last-24h posts) / log10(1 + ${fmt(formula.volumeCeilingPosts)}). The ceiling is the highest last-24h count in this set. Window: ${formula.last24hWindow}.`,
+  },
+  {
+    weight: formula.accelWeight,
+    title: "Acceleration index",
+    body: `100 × min(last-24h / prior daily average, ${formula.accelCap}) / ${formula.accelCap}. A triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6. Window: ${formula.sevenDayWindow}.`,
+  },
+  {
+    weight: formula.coverageWeight,
+    title: "Coverage index",
+    body: `${formula.coverageOutletPoints} × min(outlets, ${formula.coverageOutletCap}) / ${formula.coverageOutletCap}, plus ${formula.trendBonus} if the topic was on the U.S. X trends list. Trend objects did not include tweet_count, so trend volumes are not invented.`,
+  },
+];
+const h2 = "font-display text-3xl font-extrabold uppercase tracking-wide";
+const eyebrow = "font-mono text-[0.7rem] uppercase tracking-widest text-primary";
+const th = "px-3 py-2.5 text-left font-mono text-[0.65rem] font-medium uppercase tracking-widest text-muted-foreground";
 ---
 
-<Base title="Methodology" description={description} shareTitle="How the momentum score works · TDDR Radar">
-  <p class="eyebrow">About</p>
-  <h1>How this was built</h1>
-  <p class="lede">
-    TDDR Narrative Tracker is the first piece of an AI-based Democratic think tank for TDDR
-    (Too Dumb Didn't Read). The dashboard shows the latest research snapshot. These notes
-    explain that snapshot. They are not a live model.
-  </p>
+<Radar title="Methodology" description={description} shareTitle="How the momentum score works · TDDR Radar">
+  <section class="flex flex-col gap-5" aria-labelledby="page-title">
+    <span class={eyebrow}>Methodology</span>
+    <h1 id="page-title" class="font-display text-6xl font-extrabold uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-8xl">
+      How the<br /><span class="text-primary">radar works</span>
+    </h1>
+    <p class="max-w-2xl text-lg font-medium leading-snug text-foreground/90">
+      TDDR Narrative Tracker is the first piece of an AI-based Democratic think tank for TDDR (Too Dumb Didn't Read). The dashboard
+      shows the latest research snapshot. These notes explain that snapshot. They are not a live model.
+    </p>
+    <div class="flex max-w-3xl flex-col gap-3 text-[0.95rem] leading-relaxed text-muted-foreground">
+      {snapshot.methodology.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </section>
 
-  {
-    snapshot.methodology.map((paragraph) => (
-      <p class="summary">{paragraph}</p>
-    ))
-  }
+  <section class="mt-14" aria-labelledby="formula">
+    <span class={eyebrow}>Formula</span>
+    <h2 id="formula" class={`${h2} mt-2`}>Momentum score</h2>
+    <div class="mt-4 overflow-x-auto rounded-xl border border-primary/30 bg-primary/[0.06] px-4 py-3 font-mono text-sm">
+      Score = <span class="text-primary">{percent(formula.volumeWeight)}</span> volume index + <span class="text-primary">{percent(formula.accelWeight)}</span> acceleration index + <span class="text-primary">{percent(formula.coverageWeight)}</span> coverage index
+    </div>
+    <div class="mt-4 grid gap-3 md:grid-cols-3">
+      {
+        parts.map((p) => (
+          <Card className="gap-3">
+            <CardHeader className="gap-3">
+              <span class="font-display text-5xl font-extrabold leading-none text-primary">{percent(p.weight)}</span>
+              <Progress value={p.weight * 100} className="h-1.5" aria-label={`${p.title} weight ${percent(p.weight)}`} />
+              <CardTitle className="text-lg">{p.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm leading-relaxed text-muted-foreground">{p.body}</CardContent>
+          </Card>
+        ))
+      }
+    </div>
+    <p class="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+      Cards label acceleration as Accelerating hard at 3× or more, Rising from 1.2×, Holding from 0.8×, and Cooling below that. The
+      published momentum number is the snapshot’s rounded composite. This page does not recompute it.
+    </p>
+  </section>
 
-  <div class="section-head">
-    <p class="eyebrow">Formula</p>
-    <h2>Momentum score</h2>
-  </div>
-  <p class="equation">
-    Score = {percent(formula.volumeWeight)} volume index + {percent(formula.accelWeight)} acceleration
-    index + {percent(formula.coverageWeight)} coverage index
-  </p>
-  <div class="formula-grid">
-    <article class="formula-card">
-      <strong>{percent(formula.volumeWeight)}</strong>
-      <h3>Volume index</h3>
-      <p>
-        100 × log10(1 + last-24h posts) / log10(1 + {fmt(formula.volumeCeilingPosts)}). The ceiling
-        is the highest last-24h count in this set. Window: {formula.last24hWindow}.
-      </p>
-    </article>
-    <article class="formula-card">
-      <strong>{percent(formula.accelWeight)}</strong>
-      <h3>Acceleration index</h3>
-      <p>
-        100 × min(last-24h / prior daily average, {formula.accelCap}) / {formula.accelCap}. A
-        triple-or-higher average scores 100. Prior daily average is (7-day total − last 24h) / 6.
-        Window: {formula.sevenDayWindow}.
-      </p>
-    </article>
-    <article class="formula-card">
-      <strong>{percent(formula.coverageWeight)}</strong>
-      <h3>Coverage index</h3>
-      <p>
-        {formula.coverageOutletPoints} × min(outlets, {formula.coverageOutletCap}) / {formula.coverageOutletCap},
-        plus {formula.trendBonus} if the topic was on the U.S. X trends list. Trend objects did not
-        include tweet_count, so trend volumes are not invented.
-      </p>
-    </article>
-  </div>
-  <p class="note">
-    Cards label acceleration as Accelerating hard at 3× or more, Rising from 1.2×, Holding from
-    0.8×, and Cooling below that. The published momentum number is the snapshot’s rounded
-    composite. This page does not recompute it.
-  </p>
+  <section class="mt-14" aria-labelledby="history-rules">
+    <span class={eyebrow}>History and What's new</span>
+    <h2 id="history-rules" class={`${h2} mt-2`}>Following a narrative over time</h2>
+    <div class="mt-4 grid gap-3 md:grid-cols-3">
+      <Card className="gap-2"><CardHeader><CardTitle className="text-lg">Matching</CardTitle></CardHeader><CardContent className="text-sm leading-relaxed text-muted-foreground">Same slug across snapshots means the same narrative. A short hand-checked list covers renamed slugs, and a brand-new slug joins an older one on the same side only if their titles share 60%+ of their key words and the older one was seen in the last two snapshots.</CardContent></Card>
+      <Card className="gap-2"><CardHeader><CardTitle className="text-lg">Status</CardTitle></CardHeader><CardContent className="text-sm leading-relaxed text-muted-foreground">Rising = up {STATUS_RULES.risingDelta}+ points on its previous sighting, or new. Fading = {STATUS_RULES.fadingBelowPeak}+ points below its own peak. At peak = otherwise on the board. Gone = not in the latest snapshot.</CardContent></Card>
+      <Card className="gap-2"><CardHeader><CardTitle className="text-lg">What's new</CardTitle></CardHeader><CardContent className="text-sm leading-relaxed text-muted-foreground">Each snapshot is compared with the one right before it. A big riser gained {RISER_RULES.momentumDelta}+ momentum points, or at least doubled its 24-hour X posts to {fmt(RISER_RULES.postsFloor)} or more.</CardContent></Card>
+    </div>
+    <p class="mt-3 text-sm"><a class="text-primary hover:underline" href="/narratives">See every narrative's history →</a></p>
+  </section>
 
-  <div class="section-head">
-    <h2>Indices in this snapshot</h2>
-  </div>
-  <div class="table-wrap">
-    <table class="data">
-      <thead>
-        <tr>
-          <th>Narrative</th>
-          <th>Side</th>
-          <th>Volume</th>
-          <th>Accel</th>
-          <th>Coverage</th>
-          <th>Momentum</th>
-          <th>Posts, 24h</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          ranked.map((narrative) => (
-            <tr>
-              <td>
-                <a href={`/snapshots/${snapshot.id}/narratives/${narrative.id}`}>{narrative.title}</a>
-              </td>
-              <td>{narrative.side}</td>
-              <td>{narrative.volumeIndex}</td>
-              <td>{narrative.accelIndex}</td>
-              <td>{narrative.coverageIndex}</td>
-              <td>{narrative.momentum}</td>
-              <td>{fmt(narrative.posts24h)}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
+  <section class="mt-14" aria-labelledby="indices">
+    <h2 id="indices" class={h2}>Indices in this snapshot</h2>
+    <p class="mt-1 font-mono text-xs text-muted-foreground">{snapshot.updatedLabel}</p>
+    <div class="mt-4 overflow-x-auto rounded-xl border bg-card">
+      <table class="w-full min-w-[720px] border-collapse text-sm">
+        <thead class="border-b bg-muted/40">
+          <tr>
+            <th class={th}>Narrative</th>
+            <th class={th}>Side</th>
+            <th class={`${th} text-right`}>Volume</th>
+            <th class={`${th} text-right`}>Accel</th>
+            <th class={`${th} text-right`}>Coverage</th>
+            <th class={`${th} text-right`}>Momentum</th>
+            <th class={`${th} text-right`}>Posts, 24h</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y">
+          {
+            ranked.map((n) => (
+              <tr class="transition-colors hover:bg-muted/40">
+                <td class="max-w-md px-3 py-2.5">
+                  <a class="font-medium leading-snug hover:text-primary" href={`/snapshots/${snapshot.id}/narratives/${n.id}`}>{stripNewPrefix(n.title)}</a>
+                </td>
+                <td class="px-3 py-2.5"><SideBadge side={n.side} /></td>
+                <td class="px-3 py-2.5 text-right font-mono tabular-nums">{n.volumeIndex}</td>
+                <td class="px-3 py-2.5 text-right font-mono tabular-nums">{n.accelIndex}</td>
+                <td class="px-3 py-2.5 text-right font-mono tabular-nums">{n.coverageIndex}</td>
+                <td class="px-3 py-2.5 text-right"><MomentumScore value={n.momentum} className="text-2xl" /></td>
+                <td class="px-3 py-2.5 text-right font-mono tabular-nums">{fmt(n.posts24h)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  <div class="section-head">
-    <h2>{snapshot.oppositionNote.lead}</h2>
-  </div>
-  <p>{snapshot.oppositionNote.body}</p>
-  <p class="note">
-    Counts were pulled {snapshot.countsPulledLabel}. U.S. trends were pulled at {snapshot.trends.pulledAtLabel}: {snapshot.trends.detail}.
-  </p>
+  <section class="mt-14" aria-labelledby="opposition">
+    <Card className="gap-3 border-dashed bg-transparent">
+      <CardContent className="flex gap-4">
+        <Info className="mt-1 size-5 shrink-0 text-primary" />
+        <div class="text-sm leading-relaxed text-muted-foreground">
+          <h2 id="opposition" class="mb-1 text-base font-semibold text-foreground">{snapshot.oppositionNote.lead}</h2>
+          <p>{snapshot.oppositionNote.body}</p>
+          <Separator className="my-3" />
+          <p class="text-xs">Counts were pulled {snapshot.countsPulledLabel}. U.S. trends were pulled at {snapshot.trends.pulledAtLabel}: {snapshot.trends.detail}.</p>
+        </div>
+      </CardContent>
+    </Card>
+  </section>
 
-  <div class="section-head">
-    <h2>Adding the next snapshot</h2>
-  </div>
-  <p>
-    Drop a new JSON file in <code>src/data/snapshots/</code> named for its date (add <code>-pm</code> for a second,
-    evening snapshot that day). The file’s <code>id</code> must match that name, and <code>updatedAt</code> plus <code>updatedLabel</code>
-    must carry the snapshot’s own Eastern Time timestamp. The site renders whichever snapshot has
-    the latest <code>updatedAt</code>. See the README for the schema and the ingestion hook.
-  </p>
+  <section class="mt-14" aria-labelledby="next">
+    <h2 id="next" class={h2}>Adding the next snapshot</h2>
+    <p class="mt-3 max-w-3xl text-[0.95rem] leading-relaxed text-muted-foreground">
+      Drop a new JSON file in <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">src/data/snapshots/</code> named for its date (add
+      <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">-pm</code> for a second, evening snapshot that day). The file’s
+      <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">id</code> must match that name, and
+      <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">updatedAt</code> plus
+      <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">updatedLabel</code> must carry the snapshot’s own Eastern Time timestamp. The
+      site renders whichever snapshot has the latest <code class="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">updatedAt</code>. See the
+      README for the schema and the ingestion hook.
+    </p>
+  </section>
 
-  <div class="section-head">
-    <h2>Source list</h2>
-    <p class="section-dek">{snapshot.sourceListIntro}</p>
-  </div>
-  <SourceList links={snapshot.sourceList} numbered />
-</Base>
+  <section class="mt-14" aria-labelledby="sources">
+    <h2 id="sources" class={h2}>Source list</h2>
+    <p class="mb-4 mt-1 max-w-3xl text-sm text-muted-foreground">{snapshot.sourceListIntro}</p>
+    <details class="group">
+      <summary class="mb-3 inline-flex cursor-pointer list-none items-center gap-2 rounded-md border px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-primary hover:border-primary/50">
+        <span class="group-open:hidden">Show all {snapshot.sourceList.length} sources</span>
+        <span class="hidden group-open:inline">Hide sources</span>
+      </summary>
+      <SourceLinks links={snapshot.sourceList} numbered columns />
+    </details>
+  </section>
+</Radar>

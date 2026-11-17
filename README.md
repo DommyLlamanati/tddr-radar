@@ -149,7 +149,7 @@ Astro 7, TypeScript, React islands for filtering and sorting, Tailwind 4. Narrat
 
 ## Link previews
 
-Every page ships Open Graph and Twitter card tags (`src/layouts/Base.astro`, text in `src/lib/share.ts`).
+Every page ships Open Graph and Twitter card tags (`src/layouts/Radar.astro`, text in `src/lib/share.ts`). All pages use the shadcn/ui + Tailwind redesign (`src/components/ui/`, `src/components/radar/`, `src/styles/radar.css`).
 Preview images (1200x630 PNG) are rendered at build time with satori and resvg:
 
 - `/og/<snapshot-id>.png` for each snapshot page and the homepage

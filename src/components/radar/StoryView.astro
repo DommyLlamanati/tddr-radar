@@ -6,7 +6,7 @@ import { Badge } from "../ui/badge";
 import { Separator } from "../ui/separator";
 import { Progress } from "../ui/progress";
 import StoryCharts from "./StoryCharts";
-import { MomentumBar, MomentumScore, NewBadge, SideBadge, Sparkline, TrendBadge, TrendInline } from "./bits";
+import { MomentumBar, MomentumScore, NewBadge, SideBadge, Sparkline, TrendBadge, TrendInline, ratingVariant } from "./bits";
 import { fmt } from "../../lib/format";
 import { dashboardPath, narrativePath } from "../../lib/dates";
 import { editionLabel, isNewNarrative, stripNewPrefix } from "../../lib/share";
@@ -30,13 +30,6 @@ const isNew = isNewNarrative(n);
 const historyIndex = await narrativeHistory();
 const historySlug = historyIndex.canonical.get(n.id) ?? n.id;
 const thread = historyIndex.bySlug.get(historySlug);
-
-function ratingVariant(rating: string): "danger" | "warning" | "accent" {
-  const r = rating.toLowerCase();
-  if (/false|fabricat|pants|wrong|no evidence|unsupported/.test(r)) return "danger";
-  if (/mislead|missing|mixed|half|lacks|exagger|out of context|unproven/.test(r)) return "warning";
-  return "accent";
-}
 
 const parts = [
   { label: "Volume", value: n.volumeIndex },
@@ -152,7 +145,7 @@ const dt = "font-mono text-[0.68rem] uppercase tracking-widest text-muted-foregr
             <Card className="gap-3 py-4">
               <CardHeader className="gap-2 px-4">
                 <div class="flex flex-wrap items-center gap-2">
-                  <Badge variant={ratingVariant(f.rating)}>{f.rating}</Badge>
+                  <Badge variant={ratingVariant(f.rating)} className="max-w-full whitespace-normal text-left">{f.rating}</Badge>
                   <span class="font-mono text-xs text-muted-foreground">{f.outlet}</span>
                 </div>
                 <p class="font-semibold leading-snug">“{f.claim.replace(/^["“']+|["”']+$/g, "")}”</p>

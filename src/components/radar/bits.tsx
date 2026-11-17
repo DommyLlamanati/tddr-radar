@@ -164,3 +164,11 @@ export function StatusBadge({ status, className }: { status: keyof typeof STATUS
     </Badge>
   );
 }
+
+/** Fact-check rating color: red for false/unsupported, amber for misleading/missing context, lime otherwise. */
+export function ratingVariant(rating: string): "danger" | "warning" | "accent" {
+  const r = rating.toLowerCase();
+  if (/false|fabricat|pants|wrong|no evidence|unsupported/.test(r)) return "danger";
+  if (/mislead|missing|mixed|half|lacks|exagger|out of context|unproven/.test(r)) return "warning";
+  return "accent";
+}

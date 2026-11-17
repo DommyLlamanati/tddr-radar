@@ -1,20 +1,24 @@
 ---
-import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import Radar from "../layouts/Radar.astro";
+import mascot from "../assets/og/mascot.png";
 ---
 
-<Base
-  title="Page not found"
-  description="That page is not in the TDDR Narrative Tracker."
->
-  <p class="eyebrow">404</p>
-  <h1>That page is not in this snapshot.</h1>
-  <p class="lede">
-    The tracker only publishes narratives from the latest research file. Head back to the feed
-    or the disinformation list.
-  </p>
-  <p class="hero-links">
-    <a href="/">Rising narratives</a>
-    <a href="/disinfo">Disinformation tracker</a>
-    <a href="/about">Methodology</a>
-  </p>
-</Base>
+<Radar title="Page not found" description="That page is not in the TDDR Narrative Tracker.">
+  <section class="mx-auto flex max-w-2xl flex-col items-center gap-5 py-10 text-center sm:py-16">
+    <Image src={mascot} alt="TDDR mascot" width={120} height={122} loading="eager" class="size-28 object-contain" />
+    <span class="font-mono text-[0.7rem] uppercase tracking-widest text-primary">404</span>
+    <h1 class="font-display text-5xl font-extrabold uppercase leading-[0.9] tracking-tight sm:text-7xl">
+      That page is not<br /><span class="text-primary">in this snapshot</span>
+    </h1>
+    <p class="text-muted-foreground">
+      The tracker only publishes narratives from the latest research file. Head back to the feed or the disinformation list.
+    </p>
+    <div class="flex flex-wrap justify-center gap-2 text-sm">
+      <a href="/" class="rounded-md bg-primary px-3.5 py-2 font-semibold text-primary-foreground hover:opacity-90">Rising narratives</a>
+      <a href="/narratives" class="rounded-md border px-3.5 py-2 font-medium text-muted-foreground hover:border-primary/50 hover:text-foreground">Narrative history</a>
+      <a href="/disinfo" class="rounded-md border px-3.5 py-2 font-medium text-muted-foreground hover:border-primary/50 hover:text-foreground">Disinformation tracker</a>
+      <a href="/about" class="rounded-md border px-3.5 py-2 font-medium text-muted-foreground hover:border-primary/50 hover:text-foreground">Methodology</a>
+    </div>
+  </section>
+</Radar>
