@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Separator } from "../ui/separator";
 import NarrativeBoard from "./NarrativeBoard";
+import WhatsNewStrip from "./WhatsNewStrip.astro";
 import { MomentumBar, MomentumScore, NewBadge, SideBadge, Sparkline, TrendBadge } from "./bits";
 import { countSides, factCheckCount, fmt } from "../../lib/format";
 import { disinfoPath, isEveningSnapshot, narrativePath } from "../../lib/dates";
@@ -28,6 +29,8 @@ const edition = isEveningSnapshot(snapshot.id) ? "Evening edition" : "Morning ed
 const rightPct = Math.round((sides.right / snapshot.narratives.length) * 100);
 const statLabel = "font-mono text-[0.68rem] uppercase tracking-widest text-muted-foreground";
 ---
+
+<WhatsNewStrip snapshotId={snapshot.id} />
 
 <section class="grid gap-8 lg:grid-cols-12 lg:gap-10" aria-labelledby="page-title">
   <div class="flex flex-col gap-5 lg:col-span-7">

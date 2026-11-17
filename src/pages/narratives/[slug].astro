@@ -1,0 +1,42 @@
+---
+import Radar from "../../layouts/Radar.astro";
+import HistoryView from "../../components/radar/HistoryView.astro";
+import type { NarrativeHistory } from "../../lib/history";
+import { snapshotShortLabel, STATUS_LABEL } from "../../lib/history";
+import { narrativeHistory } from "../../lib/snapshots";
+import { clip, ogHistoryImagePath, shortTitle, SITE_NAME, stripNewPrefix } from "../../lib/share";
+
+export async function getStaticPaths() {
+  const index = await narrativeHistory();
+  const pages = index.histories.map((history) => ({ params: { slug: history.slug }, props: { history, redirectTo: null } }));
+  // Older slugs of a narrative redirect to its current history page.
+  const redirects = [...index.canonical.entries()]
+    .filter(([from, to]) => from !== to && !index.bySlug.has(from))
+    .map(([from, to]) => ({ params: { slug: from }, props: { history: index.bySlug.get(to)!, redirectTo: `/narratives/${to}` } }));
+  return [...pages, ...redirects];
+}
+
+const { history, redirectTo } = Astro.props as { history: NarrativeHistory; redirectTo: string | null };
+if (redirectTo) return Astro.redirect(redirectTo, 301);
+
+const index = await narrativeHistory();
+const title = stripNewPrefix(history.title);
+const n = history.appearances.length;
+const now = history.current
+  ? `${STATUS_LABEL[history.status].toLowerCase()} at ${history.last.momentum}`
+  : `gone after ${snapshotShortLabel(history.last.snapshotId)}`;
+const description = clip(
+  `${history.side} narrative tracked across ${n} TDDR Radar snapshot${n === 1 ? "" : "s"} since ${snapshotShortLabel(history.first.snapshotId)}. Peak momentum ${history.peak.momentum} on ${snapshotShortLabel(history.peak.snapshotId)}; now ${now}.`,
+);
+---
+
+<Radar
+  title={`History: ${shortTitle(title)}`}
+  description={description}
+  shareTitle={`${shortTitle(title)}: first sighting to ${history.current ? "now" : "fade"} · ${SITE_NAME}`}
+  image={ogHistoryImagePath(history.slug)}
+  imageAlt={clip(`${SITE_NAME} narrative history: ${title} (${history.side}, peak momentum ${history.peak.momentum}).`)}
+  ogType="article"
+>
+  <HistoryView history={history} index={index} />
+</Radar>

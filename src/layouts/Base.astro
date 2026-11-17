@@ -53,8 +53,7 @@ const disinfoHref = disinfoPath(active.data.id);
 const narrativesCurrent =
   path === narrativesHref ||
   path === `/snapshots/${active.data.id}` ||
-  path.startsWith(`/snapshots/${active.data.id}/narratives`) ||
-  (active.data.id === latest.data.id && path.startsWith("/narratives"));
+  path.startsWith(`/snapshots/${active.data.id}/narratives`);
 const canonical = absoluteUrl(canonicalPath ?? (path === "/" ? "/" : path));
 const ogTitle = shareTitle ?? (title.includes("TDDR") ? title : `${title} · ${SITE_NAME}`);
 const ogImage = absoluteUrl(image ?? DEFAULT_OG_IMAGE);
@@ -119,6 +118,7 @@ const disinfoCurrent = path === disinfoHref || (active.data.id === latest.data.i
         </a>
         <nav class="nav" aria-label="Primary">
           <a href={narrativesHref} aria-current={narrativesCurrent ? "page" : undefined}>Narratives</a>
+          <a href="/narratives">History</a>
           <a href={disinfoHref} aria-current={disinfoCurrent ? "page" : undefined}>Disinformation</a>
           <a href="/about" aria-current={path === "/about" ? "page" : undefined}>Methodology</a>
         </nav>

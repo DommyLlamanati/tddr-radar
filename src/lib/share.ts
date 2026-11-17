@@ -133,3 +133,9 @@ export function narrativeShare(snapshot: Snapshot, narrative: Narrative) {
     imageAlt: clip(`${narrative.title} (${narrative.side}, momentum ${narrative.momentum}). ${SITE_NAME}, ${editionLabel(snapshot.id)}.`),
   };
 }
+
+export function ogHistoryImagePath(slug: string): string {
+  return `/og/narratives/${slug}.png`;
+}
+
+export const OG_HISTORY_INDEX_IMAGE = "/og/history.png";

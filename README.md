@@ -158,3 +158,10 @@ Preview images (1200x630 PNG) are rendered at build time with satori and resvg:
 
 Fonts and the mascot watermark live in `src/assets/og/`, so the build makes no network calls.
 New snapshot JSON files get their own images and meta automatically.
+
+## Narrative history and What's new
+
+- `/narratives` lists every narrative ever tracked; `/narratives/<slug>` follows one across every snapshot (AM and PM) with a momentum chart, first sighting, peak, status, and a timeline linking to each snapshot's story page. Built at build time from `src/data/snapshots/*.json`; no schema change.
+- Matching (see `src/lib/history.ts`): same slug, then the hand-checked `SLUG_ALIASES` list for renamed slugs, then a strict title fallback (same side, 60%+ shared key words, older card seen in the last 2 snapshots). Each history uses its most recent slug; old slugs redirect.
+- Status: rising = +5 on its previous sighting or new in the latest snapshot; fading = 8+ below its own peak; at peak = otherwise on the board; gone = not in the latest snapshot.
+- What's new (homepage and each snapshot page) compares with the immediately previous snapshot. Big riser = +8 momentum points, or 24h X posts at least doubled to 1,000+.

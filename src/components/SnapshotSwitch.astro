@@ -14,7 +14,7 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 function onDay(id: string): boolean {
   if (path === "/snapshots") return false;
   if (path === `/snapshots/${id}` || path.startsWith(`/snapshots/${id}/`)) return true;
-  return id === latestId && (path === "/" || path === "/disinfo" || path.startsWith("/narratives"));
+  return id === latestId && (path === "/" || path === "/disinfo");
 }
 ---
 

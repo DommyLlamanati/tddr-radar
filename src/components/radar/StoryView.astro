@@ -10,7 +10,9 @@ import { MomentumBar, MomentumScore, NewBadge, SideBadge, Sparkline, TrendBadge,
 import { fmt } from "../../lib/format";
 import { dashboardPath, narrativePath } from "../../lib/dates";
 import { editionLabel, isNewNarrative, stripNewPrefix } from "../../lib/share";
-import { allSnapshots } from "../../lib/snapshots";
+import { allSnapshots, narrativeHistory } from "../../lib/snapshots";
+import { historyPath } from "../../lib/history";
+import { History } from "lucide-react";
 
 interface Props {
   snapshot: Snapshot;
@@ -25,6 +27,9 @@ const { snapshot, narrative: n, rank, total, higher, lower } = Astro.props;
 const latestId = (await allSnapshots())[0]?.data.id ?? snapshot.id;
 const desk = dashboardPath(snapshot.id, latestId);
 const isNew = isNewNarrative(n);
+const historyIndex = await narrativeHistory();
+const historySlug = historyIndex.canonical.get(n.id) ?? n.id;
+const thread = historyIndex.bySlug.get(historySlug);
 
 function ratingVariant(rating: string): "danger" | "warning" | "accent" {
   const r = rating.toLowerCase();
@@ -48,6 +53,9 @@ const dt = "font-mono text-[0.68rem] uppercase tracking-widest text-muted-foregr
   </a>
   <span class="text-muted-foreground/50">/</span>
   <span class="font-mono text-xs text-muted-foreground">{editionLabel(snapshot.id)}</span>
+  <a href={historyPath(historySlug)} class="ml-auto inline-flex items-center gap-1.5 rounded-md border border-primary/40 px-2.5 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+    <History className="size-3.5" /> Full history{thread ? ` · ${thread.appearances.length} snapshot${thread.appearances.length === 1 ? "" : "s"}` : ""}
+  </a>
 </nav>
 
 <header class="flex flex-col gap-4">
@@ -101,6 +109,9 @@ const dt = "font-mono text-[0.68rem] uppercase tracking-widest text-muted-foregr
           </dl>
         </CardContent>
       </Card>
+      <a href={historyPath(historySlug)} class="inline-flex items-center justify-center gap-1.5 rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+        <History className="size-4" /> Full history: first sighting to now
+      </a>
       <a href="/about" class="px-1 text-xs text-muted-foreground underline-offset-4 hover:text-primary hover:underline">How the momentum score is built →</a>
     </div>
   </aside>

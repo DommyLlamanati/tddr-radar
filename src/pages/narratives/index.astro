@@ -1,0 +1,22 @@
+---
+import Radar from "../../layouts/Radar.astro";
+import HistoryIndexView from "../../components/radar/HistoryIndexView.astro";
+import { narrativeHistory } from "../../lib/snapshots";
+import { clip, OG_HISTORY_INDEX_IMAGE, SITE_NAME } from "../../lib/share";
+
+const index = await narrativeHistory();
+const live = index.histories.filter((h) => h.current).length;
+const description = clip(
+  `Every narrative TDDR Radar has tracked, followed across all ${index.snapshots.length} morning and evening snapshots: first sighting, peak, and fade. ${index.histories.length} narratives, ${live} on the board now.`,
+);
+---
+
+<Radar
+  title="Narrative history"
+  description={description}
+  shareTitle={`Narrative history: first sighting to fade · ${SITE_NAME}`}
+  image={OG_HISTORY_INDEX_IMAGE}
+  imageAlt={`${SITE_NAME}: every tracked narrative, from first sighting to fade.`}
+>
+  <HistoryIndexView index={index} />
+</Radar>

@@ -1,0 +1,17 @@
+---
+import { RISER_RULES, STATUS_RULES } from "../../lib/history";
+interface Props { compact?: boolean }
+---
+
+<details class="group rounded-xl border bg-card/50 text-sm">
+  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3">
+    <span class="font-mono text-[0.7rem] uppercase tracking-widest text-muted-foreground">How narratives are matched and labeled</span>
+    <span class="font-mono text-xs text-primary group-open:hidden">Show</span>
+    <span class="hidden font-mono text-xs text-primary group-open:inline">Hide</span>
+  </summary>
+  <div class="flex flex-col gap-2 border-t px-4 py-3 leading-relaxed text-muted-foreground">
+    <p><span class="font-semibold text-foreground">Matching.</span> A narrative is the same story across snapshots when it keeps the same slug. A short hand-checked list covers slugs that changed (for example, the Nov 11 popular-vote card became "electoral-college"). A brand-new slug also joins an older narrative on the same side if their titles share at least 60% of their key words and the older one was on the board in the last two snapshots. Each history uses its most recent slug.</p>
+    <p><span class="font-semibold text-foreground">Status.</span> Rising = up {STATUS_RULES.risingDelta}+ points on its previous sighting, or new in the latest snapshot. Fading = {STATUS_RULES.fadingBelowPeak}+ points below its own peak. At peak = still on the board and within {STATUS_RULES.fadingBelowPeak} points of its peak. Gone = not in the latest snapshot.</p>
+    <p><span class="font-semibold text-foreground">What's new.</span> Each snapshot is compared with the one right before it (mornings with the previous evening, evenings with that morning). A big riser gained {RISER_RULES.momentumDelta}+ momentum points, or at least doubled its 24-hour X posts to {RISER_RULES.postsFloor.toLocaleString("en-US")} or more.</p>
+  </div>
+</details>

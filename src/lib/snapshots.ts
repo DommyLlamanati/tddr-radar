@@ -26,3 +26,14 @@ export async function snapshotById(id: string) {
   }
   return found;
 }
+
+let historyCache: Promise<import("./history").HistoryIndex> | undefined;
+
+/** Every narrative followed across every snapshot. Built once per build. */
+export function narrativeHistory() {
+  historyCache ??= (async () => {
+    const { buildHistory } = await import("./history");
+    return buildHistory((await allSnapshots()).map((entry) => entry.data));
+  })();
+  return historyCache;
+}

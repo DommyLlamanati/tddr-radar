@@ -147,3 +147,20 @@ export function Sparkline({
     </svg>
   );
 }
+
+const STATUS_STYLE = {
+  rising: { label: "Rising", variant: "warning" as const, Icon: ArrowUpRight },
+  peaked: { label: "At peak", variant: "accent" as const, Icon: ArrowRight },
+  fading: { label: "Fading", variant: "outline" as const, Icon: ArrowDownRight },
+  gone: { label: "Gone", variant: "secondary" as const, Icon: null },
+};
+
+export function StatusBadge({ status, className }: { status: keyof typeof STATUS_STYLE; className?: string }) {
+  const s = STATUS_STYLE[status];
+  return (
+    <Badge variant={s.variant} className={className}>
+      {s.Icon ? <s.Icon aria-hidden="true" /> : <span className="size-1.5 rounded-full bg-muted-foreground" aria-hidden="true" />}
+      {s.label}
+    </Badge>
+  );
+}

@@ -1,6 +1,8 @@
 import type { Narrative, Snapshot } from "../data/schema";
 import type { OgCard } from "./og-image";
 import { fmt } from "./format";
+import type { HistoryIndex, NarrativeHistory } from "./history";
+import { snapshotShortLabel, STATUS_LABEL } from "./history";
 import { factCheckTotal, isNewNarrative, stripNewPrefix, longEditionLabel, rankedNarratives, shortTitle, topFactCheck } from "./share";
 
 export function snapshotCard(snapshot: Snapshot): OgCard {
@@ -72,5 +74,39 @@ export function narrativeCard(snapshot: Snapshot, narrative: Narrative): OgCard 
     side: narrative.side,
     momentum: narrative.momentum,
     footer: [line.length <= 64 ? line : posts],
+  };
+}
+
+/** Narrative history card: the arc from first sighting to now. */
+export function historyCard(history: NarrativeHistory, index: HistoryIndex): OgCard {
+  const tone = history.status === "rising" ? "warn" : history.status === "peaked" ? "accent" : "danger";
+  const latest = index.snapshots[index.snapshots.length - 1];
+  const until = history.current ? "now" : snapshotShortLabel(history.last.snapshotId);
+  const n = history.appearances.length;
+  return {
+    edition: `${snapshotShortLabel(history.first.snapshotId)} – ${history.current ? snapshotShortLabel(latest.id) : until}`,
+    kicker: "Narrative history",
+    headline: stripNewPrefix(history.title),
+    side: history.side,
+    badge: { label: `${STATUS_LABEL[history.status]} · peak ${history.peak.momentum}`, tone },
+    footer: [
+      `First seen ${snapshotShortLabel(history.first.snapshotId)} · peak ${history.peak.momentum} on ${snapshotShortLabel(history.peak.snapshotId)}`,
+      `${n} snapshot${n === 1 ? "" : "s"} · ${history.current ? `now ${history.last.momentum}` : `last seen ${until}`}`,
+    ],
+  };
+}
+
+export function historyIndexCard(index: HistoryIndex): OgCard {
+  const latest = index.snapshots[index.snapshots.length - 1];
+  const live = index.histories.filter((h) => h.current).length;
+  const top = [...index.histories].sort((a, b) => b.peak.momentum - a.peak.momentum)[0];
+  return {
+    edition: longEditionLabel(latest.id),
+    kicker: "Narrative history",
+    headline: "Every narrative, from first sighting to fade",
+    footer: [
+      `${index.histories.length} narratives across ${index.snapshots.length} snapshots · ${live} on the board now`,
+      top ? `Highest peak: ${shortTitle(stripNewPrefix(top.title))} · ${top.peak.momentum}` : "",
+    ].filter(Boolean),
   };
 }
